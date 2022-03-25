@@ -1,0 +1,637 @@
+body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: #EEEEEE;
+    background-repeat: no-repeat;
+      font-family: 'Cairo', sans-serif;
+      text-align: right;
+}
+
+input,
+textarea {
+    background-color: #F3E5F5;
+    padding: 8px 0px 8px 0px !important;
+    width: 100%;
+    border-radius: 0 !important;
+    box-sizing: border-box;
+    border: none !important;
+    border-bottom: 1px solid #F3E5F5 !important;
+    font-size: 18px !important;
+    color: #000 !important;
+    font-weight: 300;
+    font-family: 'Cairo', sans-serif;
+}
+
+input:focus,
+textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid #fff !important;
+    outline-width: 0;
+    font-weight: 400
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
+
+.card {
+    border-radius: 0;
+    border: none;
+    position: relative
+}
+
+.card1 {
+    width: 50%
+}
+
+.card2 {
+    width: 50%;
+    height: 700px;
+    background-color: #E8EAF6
+}
+
+#image {
+    width: 100%;
+    height: 100%;
+    margin: auto
+}
+
+#logo {
+    position: absolute
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem
+}
+
+.form-control-placeholder {
+    position: absolute;
+    top: 0;
+    padding: 7px 0 0 0;
+    transition: all 300ms;
+    opacity: 0.5
+}
+
+.form-control:focus+.form-control-placeholder,
+.form-control:valid+.form-control-placeholder {
+    font-size: 80%;
+    transform: translate3d(0, -100%, 0);
+    opacity: 1
+}
+
+.btn-gray {
+    border-radius: 50px;
+    color: #fff;
+    background-color: #89ad50;
+    padding: 8px 40px
+}
+
+.btn-gray:hover {
+    color: #fff;
+    background-color: #89ad50;
+}
+
+a {
+    color: #000
+}
+
+a:hover {
+    color: #000
+}
+
+#google {
+    width: 20px;
+    height: 20px
+}
+
+.bottom {
+    bottom:10%;
+    position: absolute;
+    width: 100%
+}
+
+.sm-text {
+    font-size: 15px
+}
+
+@media screen and (max-width: 1200px) {
+    .card1 {
+        width: 100%;
+        padding: 30px 30px
+    }
+
+    .bottom {
+        position: relative
+    }
+
+    .card2 {
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px !important
+    }
+
+    .card2 {
+        height: 400px
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+label{font-family: 'Cairo', sans-serif;}
+
+ p{color: #47597e;}
+
+
+ /* كونتينر اللي بعمل الموقع ريسبونسف مع تحديد الحواف و الجوانب فوق و تحت يمين و شمال */
+  .container-fluid{
+    padding: 2% 15% ;
+  }
+.color-sections{
+   background-color:#dbe6fd ;
+ color: #47597e;
+
+}
+
+
+.white-sections{
+  background-color: #fff;
+
+}
+
+.navbar{z-index: 10;
+
+}
+
+ #title{
+text-align:center;
+   text-align: left;
+
+ }
+
+/* الاستخدام الكونتينر الجاخز من البوستراب بس مع اختلاف عن الباقي */
+/* معناه انو الكونينر اللي جوا الاي دي تايتل  */
+ #title .container-fluid{
+ padding:5% 15% 2%;
+ }
+
+ .big-header{font-family: 'Cairo', sans-serif;
+ font-size: 2rem;
+ line-height: 1.5;
+ font-weight:700;
+ text-align: right;
+color:#47597e;
+}
+
+
+
+ .navbar{
+     /* جوانب الموقع هنا للتاكد انو لا يوجد مسافة مختلفة عن الموقع */
+   padding: 0 0 4.5rem;
+ }
+
+
+
+ /* logostyle navebar */
+ .navbar-brand{
+font-family:"ubuntu";
+font-size: 2.5rem;
+font-weight: bold;
+
+}
+.nav-item{padding:0 20px;
+}
+.nav-link{
+  font-family: "Montserrat-light";
+font-size:1.2rem;
+color:#171717;
+
+}
+
+.dawnload-button{
+
+   margin: 5% 3% 5% 0;
+
+}
+
+ /* col-lg-6 استخدم 60 بالمءة من الايتم الام التي هي  */
+.title-img{ width:80%;
+  /* فنكشن تابع ل سيسس عشان اعمل روتيت */
+ transform: rotate(-25deg);
+ position: absolute;
+left: 5%;
+bottom: 5%;
+padding-top: 50px;
+margin-bottom: 7px;
+
+ /* استخدمتها لانو في بوسيشن */
+
+/* هاي في حال كانت الشاشة 991 و اصغر اعمل هاي التغيرات */
+}
+
+@media (max-width:991px)
+
+{
+  .title-img
+  {
+  position: static;
+  /* عشان يكون ماشي مع الفلو */
+  transform: rotate(0);
+  }
+
+}
+
+/* كلاسس الجزء الثاني */
+#features{
+
+
+position: relative;
+z-index: 1;
+}
+#features1{
+
+
+position: relative;
+z-index: 1;
+}
+
+.feature-title{font-size: 1.2rem;}
+.feature-box{
+  text-align: center;
+}
+
+.icon{
+  margin-bottom: 1rem;
+
+color:#47597e;
+}
+
+.icon:hover{
+  color:#293b5f;
+}
+/* ____________________________________________________________ */
+#testimonials
+{
+text-align: center;
+background-color: #F3F3F3;
+color: #fff;
+}
+
+.testimonials-images{
+  width: 65%;
+height: 60%;
+  margin: 10px;
+
+padding-top: 20px;
+}
+.testimonials-text{
+
+font-size: 2rem;
+line-height: 1.5;
+padding-bottom: 90px;
+}
+
+
+/* ____________________________________________________________ */
+#press
+{
+text-align: center;
+background-color: #ef8172;
+color: #47597e;
+padding-bottom: 5%;}
+
+.press-logo
+{width: 10%;
+margin: 20px 10px 50px;
+}
+#pricing{ padding: 100px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  text-align: center;
+
+}
+.section-heading{font-size: 1.5rem;
+  padding-top: 10px;
+  padding-bottom: 5px;
+line-height: 1.5;}
+
+.pricing-colume{
+  padding: 3% 2%;
+
+}
+.price-text{
+  font-family: 'Montserrat-bold', sans-serif;
+font-size: 1rem;
+line-height: 2.5;}
+
+
+#cta{
+  text-align: center;
+  height: 250px;
+  color: #343a40;
+
+}
+
+/* ليس لة داعي لانه مشمول */
+/* #cta{
+  text-align: center;
+background-color:#ff4c68 ;
+color: #fff;
+font-family: 'Montserrat-bold', sans-serif;
+font-size: 1.5rem;
+} */
+
+
+
+#footer{background-color: #47597e;
+
+text-align: center;
+color: #fff;
+}
+
+#container{
+   background-color:#dbe6fd ;
+ color: #47597e;
+
+}
+#myInput {
+   padding: 20px;
+   margin-top: -6px;
+   border: 0;
+   border-radius: 0;
+   background: #f1f1f1;
+ }
+
+.wrimagecard{
+	margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-align:center;
+    position: relative;
+    background: #fff;
+    box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+.wrimagecard .fa{
+	position: relative;
+    font-size: 50px;
+}
+.wrimagecard-topimage_header{
+padding: 35px;
+}
+a.wrimagecard:hover, .wrimagecard-topimage:hover {
+    box-shadow: 1px 2px 4px 0px rgba(46,61,73,0.2);
+}
+.wrimagecard-topimage a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.wrimagecard-topimage_title {
+padding: 10px 12px;
+    height: 80px;
+    padding-bottom: 0.75rem;
+    position: relative;
+}
+.wrimagecard-topimage a {
+    border-bottom: none;
+    text-decoration: none;
+    color: #525c65;
+    transition: color 0.3s ease;
+}
+
+body {
+      margin-top: 20 px;
+      color: #1a202c;
+      text-align: right;
+      background-color: #eee;
+    }
+
+    .main-body {
+      padding: 15 px;
+    }
+
+    .card {
+      box-shadow: 0 1 px 3 px 0 rgba(0, 0, 0, .1), 0 1 px 2 px 0 rgba(0, 0, 0, .06);
+    }
+
+    .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break -word;
+      background-color: #fff;
+      background-clip: border - box;
+      border: 0 solid rgba(0, 0, 0, .125);
+      border-radius: .25 rem;
+    }
+
+    .card-body {
+      flex: 11 auto;
+      min-height: 1 px;
+      padding: 1rem;
+    }
+
+    .gutters-sm {
+      margin-right: -8 px;
+      margin-left: -8 px;
+    }
+
+    .gutters-sm>.col,
+    .gutters-sm>[class *=col-] {
+      padding-right: 8 px;
+      padding-left: 8 px;
+    }
+
+    .mb-3,
+    .my-3 {
+      margin-bottom: 1 rem !important;
+    }
+
+    .bg-gray-300 {
+      background-color: #e2e8f0;
+    }
+
+    .h-100 {
+      height: 100% !important;
+    }
+
+    .shadow-none {
+      box-shadow: none !important;
+    }
+	
+	
+	
+/************************/
+	
+	
+	.badger-overlay {
+    position: absolute;
+    left: 0%;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 100;
+    -webkit-transition: width 1s ease, height 1s ease;
+    -moz-transition: width 1s ease, height 1s ease;
+    -o-transition: width 1s ease, height 1s ease;
+    transition: width 0.4s ease, height 0.4s ease
+}
+
+	/* ================== Badge CSS ========================*/
+	.badger {
+		margin: 0;
+		padding: 0;
+		color: white;
+		padding: 10px 10px;
+		font-size: 12px;
+		text-align: center;
+		line-height: normal;
+		text-transform: uppercase;
+		background: #ed1b24;
+	}
+
+	.badger::before, .badger::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		margin: 0 -1px;
+		width: 100%;
+		height: 100%;
+		background: inherit;
+		min-width: 55px
+	}
+
+	.badger::before {
+		right: 100%
+	}
+
+	.badger::after {
+		left: 100%
+	}
+
+	/* ================== Badge Position CSS ========================*/
+	.top-left {
+		position: absolute;
+		top: 0;
+		left: 0;
+		-ms-transform: translateX(-30%) translateY(0%) rotate(-45deg);
+		-webkit-transform: translateX(-30%) translateY(0%) rotate(-45deg);
+		transform: translateX(-30%) translateY(0%) rotate(-45deg);
+		-ms-transform-origin: top right;
+		-webkit-transform-origin: top right;
+		transform-origin: top right;
+	}
+
+	.top-right {
+		position: absolute;
+		top: 0;
+		right: 0;
+		-ms-transform: translateX(30%) translateY(0%) rotate(45deg);
+		-webkit-transform: translateX(30%) translateY(0%) rotate(45deg);
+		transform: translateX(30%) translateY(0%) rotate(45deg);
+		-ms-transform-origin: top left;
+		-webkit-transform-origin: top left;
+		transform-origin: top left;
+	}
+
+	.bottom-left {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		-ms-transform: translateX(-30%) translateY(0%) rotate(45deg);
+		-webkit-transform: translateX(-30%) translateY(0%) rotate(45deg);
+		transform: translateX(-30%) translateY(0%) rotate(45deg);
+		-ms-transform-origin: bottom right;
+		-webkit-transform-origin: bottom right;
+		transform-origin: bottom right;
+	}
+
+	.bottom-right {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		-ms-transform: translateX(30%) translateY(0%) rotate(-45deg);
+		-webkit-transform: translateX(30%) translateY(0%) rotate(-45deg);
+		transform: translateX(30%) translateY(0%) rotate(-45deg);
+		-ms-transform-origin: bottom left;
+		-webkit-transform-origin: bottom left;
+		transform-origin: bottom left;
+	}
+
+	.top-full {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		text-align: center;
+	}
+
+	.middle-full {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		-ms-transform: translateX(0%) translateY(-50%) rotate(0deg);
+		-webkit-transform: translateX(0%) translateY(-50%) rotate(0deg);
+		transform: translateX(0%) translateY(-50%) rotate(0deg);
+	}
+
+	.bottom-fuld {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		text-align: center;
+	}
+
+	/* ================== Badge color CSS ========================*/
+
+	.overlay-graduate{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0px;
+	}
+
+	.breadcrumb-item + .breadcrumb-item::before {
+
+    float: right;
+    padding-left: .5rem;}
