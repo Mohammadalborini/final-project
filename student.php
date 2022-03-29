@@ -37,7 +37,7 @@
       font-family: 'Cairo', sans-serif;
       text-align: right;
 			}
-			</style>
+	</style>
 		
 	</head>	
 	<body onfocus="validatePage('ih3i0verml03pv2u9nns8jujq7+3180605071','2022-03-21 20:25:34')">
