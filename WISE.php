@@ -2,7 +2,7 @@
 <html dir="rtl">
 <head>
 	<title>
-		انا محترم وبوريني شطب
+	الخدمات الأكاديمية والتسجيل الذاتي
 	</title>
 
 		<meta charset="utf-8">
