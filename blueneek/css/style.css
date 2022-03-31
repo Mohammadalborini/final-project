@@ -280,8 +280,6 @@ button {
      font-size: 16px;
      line-height: 20px;
      text-transform: uppercase;
-    
-
 }
 
 .navigation.navbar-dark .navbar-nav .nav-link:focus,
@@ -314,6 +312,7 @@ button {
      margin-top: -20px;
      right: 0;
 }
+
 .header_information::before {
      width: 84px;
      height: 98px;
