@@ -2,9 +2,7 @@
    "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-    <title>
-    بوابة خدمات العاملين        
-    <title>
+    <title>   بوابة خدمات العاملين</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="icon" href="http://grades.wise.edu.jo:8889/assets/images/wiseicon.ico">
 </head>
