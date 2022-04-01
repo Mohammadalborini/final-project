@@ -28,7 +28,7 @@
 				  <div class="card card1">
 					<img style=" width:20%; margin:0 auto 0 auto; padding-top:10%; padding-bottom:0px;" src="http://grades.wise.edu.jo:8889/assets/images/logo.png" alt="">
 
-					  <form method="post">
+					  <form method="post" action="login.php">
 						<input type="hidden" name="alfa_token" value="38ca51eeb239de6a0cb5e17dc10d77c4">
 						  <div class="row justify-content-center ">
 
