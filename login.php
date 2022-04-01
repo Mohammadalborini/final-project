@@ -51,6 +51,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 mysqli_stmt_store_result($stmt);
                 
                 // Check if username exists, if yes then verify password
+                // NOT WORKING HERE
                 if(mysqli_stmt_num_rows($stmt) == 1){                    
                     // Bind result variables
                     mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
