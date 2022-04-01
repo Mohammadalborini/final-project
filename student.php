@@ -186,7 +186,7 @@
 													<medium>جريدة المواد </medium>
 												</a>	
                                                 <hr>
-                                                <i class="far fa-copy fa-fw "></i>
+                                                <i class="fas fa-copy"></i>
 												<a onclick="return openofferedCourses()" href="#">
 													<medium>التدريب العملي </medium>
 												</a>												
