@@ -1,3 +1,11 @@
+<?php
+
+session_start();
+
+include("coniction.php");
+
+?>
+
 <!DOCTYPE html>
 <html dir="rtl">
 
