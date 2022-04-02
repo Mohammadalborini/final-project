@@ -74,16 +74,88 @@ $student_id = $_SESSION['Student_id'];
 								<div class="d-flex flex-column align-items-center text-center">
 								<img src="data:image/jpeg;base64,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" alt="محمد عبد الحكيم توفيق عبد الله" class="rounded-circle" width="120" height="120" loading="lazy">
 									<div class="mt-3">
-										<h4>محمد عبد الحكيم توفيق عبد الله</h4>
+										<?php
+											$sql = "SELECT Fall_name FROM student where Student_id = $student_id ";
+											$result = mysqli_query($con, $sql);
+										   if (mysqli_num_rows($result) > 0) {
+											   while ($row = mysqli_fetch_assoc($result)) {
+												   $text1 = $row['Fall_name'];
+												   echo '<h4>';
+												   echo $text1;     
+												   echo '</h4>';  		
+											   }
+											}
+										?>
+										
 										
 										<p class="text-secondary mb-1 mt-3">التخصص</p>
-										<p class="text-muted font-size-sm">هندسة البرمجيات</p>
+										<?php
+											$sql = "SELECT Specialization FROM student where Student_id = $student_id ";
+											$result = mysqli_query($con, $sql);
+										   if (mysqli_num_rows($result) > 0) {
+											   while ($row = mysqli_fetch_assoc($result)) {
+												   $text2 = $row['Specialization'];
+												   echo '<P class="text-muted font-size-sm">';
+												   echo $text2;     
+												   echo '</P>';  		
+											   }
+											}
+										?>
+										
 										
 										<p class="text-secondary mb-1 mt-3">الرقم الجامعي</p>
-										<p class="text-muted font-size-sm">3180605071</p>
+										<?php
+											$sql = "SELECT Student_id FROM student where Student_id = $student_id ";
+											$result = mysqli_query($con, $sql);
+										   if (mysqli_num_rows($result) > 0) {
+											   while ($row = mysqli_fetch_assoc($result)) {
+												   $text3 = $row['Student_id'];
+												   echo '<P class="text-muted font-size-sm">';
+												   echo $text3;     
+												   echo '</P>';  		
+											   }
+											}
+										?>
+										
 
-										<p class="text-secondary mb-1 mt-3">المرشد الأكاديمي</p><p class="text-muted font-size-sm">عيسى علي العتوم</p>										<p class="text-muted font-size-sm"><a href="https://outlook.office.com/owa" dir="ltr">3180605071@std.wise.edu.jo</a></p>
-										<form method="POST" action="./logout.php">
+										<p class="text-secondary mb-1 mt-3">المرشد الأكاديمي</p>
+										<?php
+											$sql = "SELECT Academic_advisor FROM student where Student_id = $student_id ";
+											$result = mysqli_query($con, $sql);
+										   if (mysqli_num_rows($result) > 0) {
+											   while ($row = mysqli_fetch_assoc($result)) {
+												   $text3 = $row['Academic_advisor'];
+												   echo '<P class="text-muted font-size-sm">';
+												   echo $text3;     
+												   echo '</P>';  		
+											   }
+											}
+										?>
+								
+
+										<p class="text-muted font-size-sm">
+										<?php
+											$sql = "SELECT * FROM student where Student_id = $student_id ";
+											$result = mysqli_query($con, $sql);
+										   if (mysqli_num_rows($result) > 0) {
+											   while ($row = mysqli_fetch_assoc($result)) {
+												   $text4 = $row['Email'];
+												   $text5 = $row['outlook'];
+
+												   echo '<a href="';
+												   echo $text5;
+												   echo '" dir="ltr">';
+
+												   echo $text4;
+												   echo '</a></p>';
+												   
+												    		
+											   }
+											}
+										?>	
+										
+										
+										<form method="POST" action="logout.php">
 											<button type="submit" name="submit" value="الخروج من النظام" class="btn btn-outline-primary">تسجيل الخروج</button>
 										</form>
 									</div>
