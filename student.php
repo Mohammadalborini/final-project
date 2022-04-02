@@ -4,6 +4,8 @@ session_start();
 
 include("coniction.php");
 
+$student_id = $_SESSION['Student_id'];
+
 ?>
 
 <!DOCTYPE html>
