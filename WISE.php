@@ -45,11 +45,12 @@ include("coniction.php");
 								<div class="form-group mt-5"> <input type="text" name="username" id="name" class="form-control" required=""> <label class="form-control-placeholder" for="name">	اسم المستخدم</label> </div>
 								<div class="form-group mt-4"> <input type="password" name="password" id="mail" class="form-control" required=""> <label class="form-control-placeholder" for="mail">كلمة المرور</label> </div>
 								<div class="row justify-content-center my-3"> <button type="submit" name="login" value="login" class="btn btn-success rounded-pill pr-5 pl-5">الدخول</button> </div>
-							</div>
-							
-													  
+							</div>					  
 						  </div>
 					  </form>
+					  <?php if (isset($error)): ?>
+                    			<span style="color: red;"><?php echo $error; ?></span><br><br>
+                   				<?php endif ?>
 					
 				  </div>
 
