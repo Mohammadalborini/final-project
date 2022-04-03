@@ -14,7 +14,19 @@ $student_id = $_SESSION['Student_id'];
 		<head>
 		<meta charset="utf-8">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-		<title>محمد عبد الحكيم توفيق عبد الله </title> 
+		<?php
+			$sql = "SELECT Fall_name FROM student where Student_id = $student_id ";
+				$result = mysqli_query($con, $sql);
+				if (mysqli_num_rows($result) > 0) {
+					while ($row = mysqli_fetch_assoc($result)) {
+							$text1 = $row['Fall_name'];
+							echo '<title>';
+	   					    echo $text1;     
+						    echo '</title>';  		
+							}
+						}
+				?>
+	
 		
 		<!-- google font -->
 		<link rel="icon" href="http://grades.wise.edu.jo:8889/assets/images/wiseicon.ico">
