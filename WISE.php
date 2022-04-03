@@ -2,6 +2,8 @@
 session_start();
 
 include("coniction.php");
+
+$error = $_SESSION['errora'];
 ?>
 
 <!DOCTYPE html>
