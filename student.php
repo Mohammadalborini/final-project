@@ -292,10 +292,30 @@ $student_id = $_SESSION['Student_id'];
 													<medium>جريدة المواد </medium>
 												</a>	
                                                 <hr>
-                                                <i class="fas fa-copy"></i>
-												<a onclick="return openofferedCourses()" href="#">
-													<medium>التدريب العملي </medium>
-												</a>												
+												<?php
+											$sql = "SELECT The_number_of_hours_spent FROM student where Student_id = $student_id ";
+											$result = mysqli_query($con, $sql);
+										   if (mysqli_num_rows($result) > 0) {
+											   while ($row = mysqli_fetch_assoc($result)) {
+												   $text9 = $row['The_number_of_hours_spent'];
+												   if ($text9 >=90){	
+													   echo ' <i class="fas fa-copy"></i>
+													   <a href="#">
+														   <medium>التدريب العملي </medium>
+													   </a>	';
+
+												   }else{
+													   /*echo '<i class="fas fa-copy"></i>'; */ 
+													   echo '
+													   <P>
+														   <medium>التدريب العملي </medium>
+													   </P>';
+
+												   }	
+											   }
+											}
+										?>
+																			
 											</div>
 											
 											<div class="col-md-6 col-sm-12">
