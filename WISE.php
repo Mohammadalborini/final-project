@@ -3,7 +3,7 @@ session_start();
 
 include("coniction.php");
 
-$error = $_SESSION['errora'];
+$error = $_SESSION['error'];
 ?>
 
 <!DOCTYPE html>
@@ -51,8 +51,8 @@ $error = $_SESSION['errora'];
 						  </div>
 					  </form>
 					  <?php if (isset($error)): ?>
-                    			<span style="color: red;"><?php echo $error; ?></span><br><br>
-                   				<?php endif ?>
+                    			<span style="color: red;  margin-right: 175px;"><?php echo $error; ?></span><br><br>
+                   				<?php  endif ?>
 					
 				  </div>
 
