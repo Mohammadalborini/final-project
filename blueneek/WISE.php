@@ -4,6 +4,8 @@ session_start();
 include("coniction.php");
 
 $error = $_SESSION['error'];
+
+
 ?>
 
 <!DOCTYPE html>
@@ -52,7 +54,9 @@ $error = $_SESSION['error'];
 					  </form>
 					  <?php if (isset($error)): ?>
                     			<span style="color: red;  margin-right: 175px;"><?php echo $error; ?></span><br><br>
-                   				<?php  endif ?>
+                   				<?php
+								$_SESSION['error'] = null; 
+								endif ?>
 					
 				  </div>
 

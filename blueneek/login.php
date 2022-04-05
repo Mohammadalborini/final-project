@@ -29,7 +29,7 @@ if($_SERVER['REQUEST_METHOD']== "POST")
             header("Location: student.php");
             die;
         }else{
-        
+            
             $_SESSION['error'] = "Wrong username or password";
             header("Location: WISE.php");
           
