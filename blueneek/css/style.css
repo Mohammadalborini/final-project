@@ -706,14 +706,6 @@ button {
      padding-top: 90px;
 }
 
-.footer h3 {
-     color: #fff;
-     font-weight: 500;
-     font-size: 17px;
-     line-height: 20px;
-     text-align: left;
-     padding-bottom: 20px;
-}
 
 .footer_form {
      display: flex;
@@ -785,27 +777,4 @@ ul.cont li {
 
 
 /** end footer **/
-
-
-/** inner page css **/
-
-.margin_to90 .footer {
-     margin-top: 90px;
-}
-
-.ourwork {
-     margin: 90px 0 60px 0;
-}
-
-.our_box {
-     margin-bottom: 30px;
-}
-
-.our_box figure {
-     margin: 0;
-}
-
-.our_box figure img {
-     width: 100%;
-}
 
