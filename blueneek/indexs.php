@@ -81,7 +81,7 @@
       <div id="myCarousel" class="carousel slide banner_main" data-ride="carousel">
          <div class="carousel-inner">
             <div class="carousel-item active">
-               <img class="first-slide" src="image/WISE.png" alt="First slide" style="width: 100rem; height: 60rem; ">
+               <img class="first-slide" src="https://www.aalalbayt.org/wp-content/uploads/2020/06/wise-logo-border.png" alt="First slide" >
                <div class="container">
                   
                </div>
