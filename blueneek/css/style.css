@@ -350,6 +350,10 @@ button {
      font-weight: 300;
      line-height: 22px;
      text-align: center;
+     margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
 }
 
 

@@ -77,7 +77,7 @@
       <div id="myCarousel" class="carousel slide banner_main" data-ride="carousel">
          <div class="carousel-inner">
             <div class="carousel-item active">
-               <img class="first-slide" src="image/WISE.png" alt="First slide" style="height: 950px; wigth:100%">
+               <img class="first-slide" src="https://alghad.com/wp-content/uploads/2019/11/rymf0eow.jpg" alt="First slide" style="height: 950px; wigth:100%">
                <div class="container">
                   
                </div>
