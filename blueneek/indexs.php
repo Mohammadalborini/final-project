@@ -66,7 +66,7 @@
                               font-weight: 300;
                               line-height: 22px;
                               text-align: start;"> التدريب العملي</h1>
-                              <div class="sign_btn"><a href="#">Log out</a></div>
+                              <div class="sign_btn"><a href="logout.php">Log out</a></div>
                            </div>
                         </nav>
                      </div>
