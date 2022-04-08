@@ -31,6 +31,47 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <style>
+         .sign_r a{
+            text-decoration: none;
+                position: absolute;
+                top: 70%;
+                left: 60%;
+                background: #00aeef;
+                display: inline-block;
+                padding: 15px 135px;
+                border-radius: 20px;
+                color: #fff;
+                font-size: 35px;
+         }
+         .sign_r a:hover{
+            color: #fff;
+            background: #000;
+         }
+
+         .sign_l a{
+            text-decoration: none;
+                position: absolute;
+                top: 70%;
+                left: 10%;
+                background: #00aeef;
+                display: inline-block;
+                padding: 15px 95px;
+                border-radius: 20px;
+                color: #fff;
+                font-size: 35px;
+         }
+         .sign_l a:hover{
+            color: #fff;
+            background: #000;
+         }
+         .copyright {
+     margin-top: auto;
+     padding: 20px 0px;
+     background-color: #00aeef;
+}
+
+      </style>
    </head>
    <!-- body -->
    <body class="main-layout">
@@ -68,7 +109,7 @@
                                     margin-right: 350px;
                                     font-family: serif;
                                     "> التدريب العملي</h1>
-                              <div class="sign_btn"><a href="logout.php">Log out</a></div>
+                              <div class="sign_btn"><a href="#">Log out</a></div>
                            </div>
                         </nav>
                      </div>
@@ -83,9 +124,11 @@
       <div id="myCarousel" class="carousel slide banner_main" data-ride="carousel">
          <div class="carousel-inner">
             <div class="carousel-item active">
-               <img class="first-slide" src="https://alghad.com/wp-content/uploads/2019/11/rymf0eow.jpg" alt="First slide" style="height: 950px; wigth:100%">
+               <img class="first-slide" src="image/banner.jpg" alt="First slide" style="height: 610px; width:100%">
                <div class="container">
-                  
+               <div class="sign_r"><a href="logout.php">البحث عن شركة</a></div>
+
+               <div class="sign_l"><a href="logout.php">المساعدة في ايجاد شركة؟</a></div>
                </div>
             </div>
          </div>
