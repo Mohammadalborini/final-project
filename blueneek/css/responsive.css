@@ -71,6 +71,10 @@
     .clients .titlepage span {
         margin-left: 28px;
     }
+    .collapse h1{
+        font-size: 25px;
+        margin-right: 50px;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
