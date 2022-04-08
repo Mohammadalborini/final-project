@@ -61,7 +61,13 @@
                            <span class="navbar-toggler-icon"></span>
                            </button>
                            <div class="collapse navbar-collapse" id="navbarsExample04">
-                              <h1> التدريب العملي</h1>
+                              <h1 style=" color: #fff;
+                                    font-size: 50px;
+                                    font-weight: bold;
+                                    line-height: 22px;
+                                    margin-right: 350px;
+                                    font-family: serif;
+                                    "> التدريب العملي</h1>
                               <div class="sign_btn"><a href="logout.php">Log out</a></div>
                            </div>
                         </nav>
