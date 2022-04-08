@@ -300,7 +300,7 @@ $student_id = $_SESSION['Student_id'];
 												   $text9 = $row['The_number_of_hours_spent'];
 												   if ($text9 >=90){	
 													   echo ' <i class="fas fa-copy"></i>
-													   <a href="indexs.php">
+													   <a href="indexs.php" target="_blanke">
 														   <medium>التدريب العملي </medium>
 													   </a>	';
 
