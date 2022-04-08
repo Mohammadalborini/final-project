@@ -346,14 +346,11 @@ button {
 
 .collapse h1{
      color: #fff;
-     font-size: 40px;
-     font-weight: 300;
-     line-height: 22px;
-     text-align: center;
-     margin: auto;
-  width: 60%;
-  border: 3px solid #73AD21;
-  padding: 10px;
+                                    font-size: 50px;
+                                    font-weight: bold;
+                                    line-height: 22px;
+                                    margin-right: 350px;
+                                    font-family: serif;
 }
 
 
