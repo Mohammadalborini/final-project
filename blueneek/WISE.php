@@ -3,6 +3,7 @@ session_start();
 
 include("coniction.php");
 
+$error = null;
 $error = $_SESSION['error'];
 
 
