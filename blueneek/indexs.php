@@ -61,11 +61,7 @@
                            <span class="navbar-toggler-icon"></span>
                            </button>
                            <div class="collapse navbar-collapse" id="navbarsExample04">
-                              <h1 style="color: #fff;
-                              font-size: 40px;
-                              font-weight: 300;
-                              line-height: 22px;
-                              text-align: start;"> التدريب العملي</h1>
+                              <h1> التدريب العملي</h1>
                               <div class="sign_btn"><a href="logout.php">Log out</a></div>
                            </div>
                         </nav>
@@ -81,7 +77,7 @@
       <div id="myCarousel" class="carousel slide banner_main" data-ride="carousel">
          <div class="carousel-inner">
             <div class="carousel-item active">
-               <img class="first-slide" src="https://www.aalalbayt.org/wp-content/uploads/2020/06/wise-logo-border.png" alt="First slide" >
+               <img class="first-slide" src="image/WISE.png" alt="First slide" style="height: 950px; wigth:100%">
                <div class="container">
                   
                </div>
