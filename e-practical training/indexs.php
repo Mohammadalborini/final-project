@@ -65,11 +65,7 @@
             color: #fff;
             background: #000;
          }
-         .copyright {
-     margin-top: auto;
-     padding: 20px 0px;
-     background-color: #00aeef;
-}
+         
 
       </style>
    </head>
