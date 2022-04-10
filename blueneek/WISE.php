@@ -29,6 +29,25 @@ $error = $_SESSION['error'];
 
 
     <link rel="stylesheet" href="style/style.css">
+	<style>
+		.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.alert {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+span{
+	margin-right: 9rem;
+}
+
+		</style>
 </head>
 	<body>
 
@@ -54,7 +73,9 @@ $error = $_SESSION['error'];
 						  </div>
 					  </form>
 					  <?php if (isset($error)): ?>
-                    			<span style="color: red;  margin-right: 175px;"><?php echo $error; ?></span><br><br>
+						<div class="alert alert-danger" role="alert" style="display:unset !important">
+										<span>	<?php echo $error; ?>  </span>
+										</div>
                    				<?php
 								$_SESSION['error'] = null; 
 								endif ?>
