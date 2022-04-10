@@ -32,6 +32,145 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 
+         <style>
+            @media (min-width: 312px) and (max-width: 800px) {
+    .sign_r a{
+        text-decoration: none;
+            position: absolute;
+            top: 70%;
+            left: 55%;
+            background: #00aeef;
+            display: inline-block;
+            padding: 15px 35px;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 10px;
+     }
+     .sign_r a:hover{
+        color: #fff;
+        background: #000;
+     }
+   
+     .sign_l a{
+        text-decoration: none;
+            position: absolute;
+            top: 70%;
+            left: 5%;
+            background: #00aeef;
+            display: inline-block;
+            padding: 15px 35px;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 10px;
+     }
+     .sign_l a:hover{
+        color: #fff;
+        background: #000;
+     }
+
+     .collapse h1{
+     color: #fff;
+     font-size: 10px;
+     font-weight: bold;
+     line-height: 5px;
+     margin-right: 50px;
+     font-family: serif;
+                                    
+}
+}
+
+@media (min-width: 550px) and (max-width: 800px) {
+    .sign_r a{
+        text-decoration: none;
+            position: absolute;
+            top: 70%;
+            left: 55%;
+            background: #00aeef;
+            display: inline-block;
+            padding: 15px 55px;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 15px;
+     }
+     .sign_r a:hover{
+        color: #fff;
+        background: #000;
+     }
+   
+     .sign_l a{
+        text-decoration: none;
+            position: absolute;
+            top: 70%;
+            left: 5%;
+            background: #00aeef;
+            display: inline-block;
+            padding: 15px 55px;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 15px;
+     }
+     .sign_l a:hover{
+        color: #fff;
+        background: #000;
+     }
+
+     .collapse h1{
+     color: #fff;
+                                    font-size: 10px;
+                                    font-weight: bold;
+                                    line-height: 5px;
+                                    margin-right: 50px;
+                                    font-family: serif;
+                                    
+}
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+    .sign_r a{
+        text-decoration: none;
+            position: absolute;
+            top: 70%;
+            left: 60%;
+            background: #00aeef;
+            display: inline-block;
+            padding: 15px 65px;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 20px;
+     }
+     .sign_r a:hover{
+        color: #fff;
+        background: #000;
+     }
+   
+     .sign_l a{
+        text-decoration: none;
+            position: absolute;
+            top: 70%;
+            left: 7%;
+            background: #00aeef;
+            display: inline-block;
+            padding: 15px 65px;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 20px;
+     }
+     .sign_l a:hover{
+        color: #fff;
+        background: #000;
+     }
+
+     .collapse h1{
+     color: #fff;
+                                    font-size: 10px;
+                                    font-weight: bold;
+                                    line-height: 5px;
+                                    margin-right: 50px;
+                                    font-family: serif;
+                                    
+}
+}
+            </style>
    </head>
    <!-- body -->
    <body class="main-layout">
