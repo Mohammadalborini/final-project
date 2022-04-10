@@ -68,7 +68,7 @@ $student_id = $_SESSION['Student_id'];
 			<div class="main-body">
 				<!-- Breadcrumb -->
 				<nav aria-label="breadcrumb" class="main-breadcrumb">
-					<ol class="breadcrumb">
+					<ol class="breadcrumb" style=" margin-top: -2rem;">
 					<li class="breadcrumb-item"><a href="student.php">بوابة الطالب</a></li>
 					<li class="breadcrumb-item active" aria-current="page">الرئيسية</li>
 					</ol>
