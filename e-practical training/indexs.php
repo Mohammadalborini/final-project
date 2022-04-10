@@ -33,7 +33,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 
          <style>
-            @media (min-width: 312px) and (max-width: 800px) {
+            @media (min-width: 312px) and (max-width: 549px) {
     .sign_r a{
         text-decoration: none;
             position: absolute;
@@ -70,10 +70,10 @@
 
      .collapse h1{
      color: #fff;
-     font-size: 10px;
+     font-size: 20px;
      font-weight: bold;
-     line-height: 5px;
-     margin-right: 50px;
+     line-height: 10px;
+     margin-right: 100px;
      font-family: serif;
                                     
 }
@@ -116,10 +116,10 @@
 
      .collapse h1{
      color: #fff;
-                                    font-size: 10px;
+                                    font-size: 20px;
                                     font-weight: bold;
                                     line-height: 5px;
-                                    margin-right: 50px;
+                                    margin-right: 150px;
                                     font-family: serif;
                                     
 }
@@ -162,10 +162,10 @@
 
      .collapse h1{
      color: #fff;
-                                    font-size: 10px;
+                                    font-size: 30px;
                                     font-weight: bold;
                                     line-height: 5px;
-                                    margin-right: 50px;
+                                    margin-right: 350px;
                                     font-family: serif;
                                     
 }
@@ -201,13 +201,7 @@
                            <span class="navbar-toggler-icon"></span>
                            </button>
                            <div class="collapse navbar-collapse" id="navbarsExample04">
-                              <h1 style=" color: #fff;
-                                    font-size: 50px;
-                                    font-weight: bold;
-                                    line-height: 22px;
-                                    margin-right: 350px;
-                                    font-family: serif;
-                                    "> التدريب العملي</h1>
+                              <h1> التدريب العملي</h1>
                               <div class="sign_btn"><a href="logout.php">Log out</a></div>
                            </div>
                         </nav>
