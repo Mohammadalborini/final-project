@@ -30,13 +30,13 @@ if($_SERVER['REQUEST_METHOD']== "POST")
             die;
         }else{
             
-            $_SESSION['error'] = "Wrong username or password";
+            $_SESSION['error'] = "اسم المستخدم أو كلمة المرور خطأ";
             header("Location: WISE.php");
           
         }
     }else
     {
-        $_SESSION['error'] = "Wrong username or password";
+        $_SESSION['error'] = "اسم المستخدم أو كلمة المرور خطأ";
         header("Location: WISE.php");
     }
 
