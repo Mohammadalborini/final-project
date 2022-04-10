@@ -14,7 +14,7 @@
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
-      <link rel="icon" href="http://grades.wise.edu.jo:8889/assets/images/wiseicon.ico">
+      <link rel="icon" href="images/logo.png">
       <!-- bootstrap css -->
       <link rel="stylesheet" href="css/bootstrap.min.css">
       <!-- style css -->
