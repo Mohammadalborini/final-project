@@ -31,43 +31,7 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-      <style>
-         .sign_r a{
-            text-decoration: none;
-                position: absolute;
-                top: 70%;
-                left: 60%;
-                background: #00aeef;
-                display: inline-block;
-                padding: 15px 135px;
-                border-radius: 20px;
-                color: #fff;
-                font-size: 35px;
-         }
-         .sign_r a:hover{
-            color: #fff;
-            background: #000;
-         }
 
-         .sign_l a{
-            text-decoration: none;
-                position: absolute;
-                top: 70%;
-                left: 10%;
-                background: #00aeef;
-                display: inline-block;
-                padding: 15px 95px;
-                border-radius: 20px;
-                color: #fff;
-                font-size: 35px;
-         }
-         .sign_l a:hover{
-            color: #fff;
-            background: #000;
-         }
-         
-
-      </style>
    </head>
    <!-- body -->
    <body class="main-layout">
