@@ -63,7 +63,7 @@
                           
                               <form class="searchform mini-widget-searchform" role="search" method="get" action="#">
                           
-                                 <input type="text" class="field searchform-s"  value="" placeholder="ادخال اسم الشركة" title="Search form">
+                                 <input type="text" class="field searchform-s"  value="" placeholder=" ادخال اسم الشركة او الدورة" title="Search form">
                                     <input type="submit" class="assistive-text searchsubmit" value="Go!" style="background: #00aeef ;">
                            
                                  </form>
