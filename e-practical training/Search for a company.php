@@ -73,7 +73,7 @@
                                     <a class="nav-link" href="contact.html">Contact Us</a>
                                  </li>
                               </ul>
-                              <div class="sign_btn"><a href="#">Get A Quote</a></div>
+                              <div class="sign_btn"><a href="logout.php">Log out</a></div>
                            </div>
                         </nav>
                      </div>
@@ -132,38 +132,11 @@
       <!--  footer -->
       <footer>
          <div class="footer">
-            <div class="container">
-               <div class="row border-top">
-                  <div class="col-md-6 padding_bottom1   ">
-                     <h3>Subscribe Now</h3>
-                     <form class="footer_form">
-                        <input class="enter" placeholder="Enter your email" type="type" name="Enter your email">
-                        <button class="submit">submit</button>
-                     </form>
-                  </div>
-                  <div class="col-md-6">
-                     <div class="row">
-                        <div class="col-md-5 offset-md-1 padding_bottom1">
-                           <h3>Links</h3>
-                           <ul class="cont">
-                              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </li>
-                           </ul>
-                        </div>
-                        <div class="col-md-5 offset-md-1">
-                           <h3>Contact us</h3>
-                           <ul class="cont">
-                              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
             <div class="copyright">
                <div class="container">
                   <div class="row">
                      <div class="col-md-12">
-                        <p>© 2019 All Rights Reserved. <a href="https://html.design/"> Free Html Templates</a></p>
+                     <p>© 2022 All Rights Reserved. <a href="https://www.wise.edu.jo/"> The World Islamic Sciences and Education University</a></p>
                      </div>
                   </div>
                </div>
