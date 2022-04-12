@@ -89,7 +89,7 @@
              <div class="row">
                 <div class="col-md-12">
                    <div class="titlepage">
-                      <h2>Our Work</h2>
+                      <h2>اختيار شركة</h2>
                    </div>
                 </div>
              </div>
