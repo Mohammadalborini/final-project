@@ -219,7 +219,7 @@
             <div class="carousel-item active">
                <img class="first-slide" src="image/banner.jpg" alt="First slide" style="height: 610px; width:100%">
                <div class="container">
-               <div class="sign_r"><a href="Search for a company.php" target="_blanck">البحث عن شركة</a></div>
+               <div class="sign_r"><a href="Search for a company.php" >البحث عن شركة</a></div>
 
                <div class="sign_l"><a href="#">المساعدة في ايجاد شركة؟</a></div>
                </div>
