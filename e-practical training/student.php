@@ -298,18 +298,33 @@ $student_id = $_SESSION['Student_id'];
 										   if (mysqli_num_rows($result) > 0) {
 											   while ($row = mysqli_fetch_assoc($result)) {
 												   $text9 = $row['The_number_of_hours_spent'];
-												   if ($text9 >=90){	
-													   echo ' <i class="fas fa-copy"></i>
-													   <a href="indexs.php" target="_blanke">
-														   <medium>التدريب العملي </medium>
-													   </a>	';
+												   if ($text9 >=90){
 
+													$sql = "SELECT id_student FROM practical_training";
+														$result = mysqli_query($con, $sql);
+										   				if (mysqli_num_rows($result) > 0) {
+											  				 while ($row = mysqli_fetch_assoc($result)) {
+												   					$text10 = $row['id_student'];
+																if ($text10 == $student_id) {
+																	echo ' <i class="fas fa-copy"></i>
+																	<a href="indexs.php" target="_blanke">
+																		<medium>التدريب العملي </medium>
+																	</a>';
+																}else{
+																	/*echo '<i class="fas fa-copy"></i>'; */ 
+													  			 echo '
+													   				<P>
+														   				<medium>التدريب العملي </medium>
+													  			    </P>';
+																}
+															}
+														}
 												   }else{
 													   /*echo '<i class="fas fa-copy"></i>'; */ 
 													   echo '
 													   <P>
 														   <medium>التدريب العملي </medium>
-													   </P>';
+													  </P>';
 
 												   }	
 											   }
