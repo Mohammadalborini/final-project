@@ -25,6 +25,7 @@
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel='stylesheet' id='dt-custom-css'  href='https://www.wise.edu.jo/wp-content/uploads/the7-css/custom.css?ver=75b607eb8d3d' type='text/css' media='all' />
       <link rel="icon" href="images/logo.png">
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -59,20 +60,14 @@
                            <span class="navbar-toggler-icon"></span>
                            </button>
                            <div class="collapse navbar-collapse" id="navbarsExample04">
-                              <ul class="navbar-nav mr-auto">
-                                 <li class="nav-item ">
-                                    <a class="nav-link" href="about.html"> About Us  </a>
-                                 </li> 
-                                 <li class="nav-item">
-                                    <a class="nav-link" href="clients.html">Our Clients</a>
-                                 </li>
-                                 <li class="nav-item active">
-                                    <a class="nav-link" href="ourwork.html">Our Work</a>
-                                 </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact Us</a>
-                                 </li>
-                              </ul>
+                          
+                              <form class="searchform mini-widget-searchform" role="search" method="get" action="#">
+                          
+                                 <input type="text" class="field searchform-s"  value="" placeholder="ادخال اسم الشركة" title="Search form">
+                                    <input type="submit" class="assistive-text searchsubmit" value="Go!" style="background: #00aeef ;">
+                           
+                                 </form>
+                           
                               <div class="sign_btn"><a href="logout.php">Log out</a></div>
                            </div>
                         </nav>
