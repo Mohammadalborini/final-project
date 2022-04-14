@@ -25,8 +25,23 @@
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link href="css/material-dashboard.css" rel="stylesheet" />
       <link rel='stylesheet' id='dt-custom-css'  href='https://www.wise.edu.jo/wp-content/uploads/the7-css/custom.css?ver=75b607eb8d3d' type='text/css' media='all' />
       <link rel="icon" href="images/logo.png">
+      <style>
+.table.table-hover tbody tr:hover {
+  background-color: #00aeef;
+}
+.table.table-hover tbody td a {
+   color:black;
+}
+.table.table-hover thead th{
+   text-align: center;
+}
+.table.table-hover tbody tr td{
+   text-align: center;
+}
+    </style>
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -88,38 +103,136 @@
                    </div>
                 </div>
              </div>
-             <div class="row">
-                <div class="col-md-4">
-                   <div class="our_box">
-                      <figure><img src="images/our.jpg" alt="#"/></figure>
-                   </div>
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card" style="background:#00aeef;">
+                <div class="card-body">
+                  <table class="table table-hover" style="color:black;">
+                    <thead >
+                      <th>ID</th>
+                      <th>Pictre</th>
+                      <th>Name</th>
+                      <th>Username</th>
+                      <th>Phone number</th>
+                      <th>Payment (Cash Or Visa)</th>
+                      <th>تقديم الطلب</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td><img src="images/icon.png" style="width:125px; hight:125px;"/> </td>
+                        <td>Clever Mind POB</td>
+                        <td>dfg</td>
+                        <td>dfgdf</td>
+                        <td>fdgdfg</td>
+                        <td>
+                        <a href="#"> تقديم طلب </a>
+                        </td>
+                        
+                      </tr>
+
+                      <tr>
+                        <td>2</td>
+                        <td>dfgd</td>
+                        <td>dfg</td>
+                        <td>dfg</td>
+                        <td>dfgdf</td>
+                        <td>fdgdfg</td>
+                        <td>
+                        <a href="#"> تقديم طلب </a>
+                        </td>
+                        
+                      </tr>
+
+                      <tr>
+                        <td>3</td>
+                        <td>dfgd</td>
+                        <td>dfg</td>
+                        <td>dfg</td>
+                        <td>dfgdf</td>
+                        <td>fdgdfg</td>
+                        <td>
+                        <a href="#"> تقديم طلب </a>
+                        </td>
+                        
+                      </tr>
+
+                      <tr>
+                        <td>4</td>
+                        <td>dfgd</td>
+                        <td>dfg</td>
+                        <td>dfg</td>
+                        <td>dfgdf</td>
+                        <td>fdgdfg</td>
+                        <td>
+                        <a href="#"> تقديم طلب </a>
+                        </td>
+                        
+                      </tr>
+
+                      <tr>
+                        <td>5</td>
+                        <td>dfgd</td>
+                        <td>dfg</td>
+                        <td>dfg</td>
+                        <td>dfgdf</td>
+                        <td>fdgdfg</td>
+                        <td>
+                        <a href="#"> تقديم طلب </a>
+                        </td>
+                        
+                      </tr>
+
+                      <tr>
+                        <td>6</td>
+                        <td>dfgd</td>
+                        <td>dfg</td>
+                        <td>dfg</td>
+                        <td>dfgdf</td>
+                        <td>fdgdfg</td>
+                        <td>
+                        <a href="#"> تقديم طلب </a>
+                        </td>
+                        
+                      </tr>
+
+                      <tr>
+                        <td>7</td>
+                        <td>dfgd</td>
+                        <td>dfg</td>
+                        <td>dfg</td>
+                        <td>dfgdf</td>
+                        <td>fdgdfg</td>
+                        <td>
+                        <a href="#"> تقديم طلب </a>
+                        </td>
+                        
+                      </tr>
+
+                      <tr>
+                        <td>8</td>
+                        <td>dfgd</td>
+                        <td>dfg</td>
+                        <td>dfg</td>
+                        <td>dfgdf</td>
+                        <td>fdgdfg</td>
+                        <td>
+                        <a href="#"> تقديم طلب </a>
+                        </td>
+                        
+                      </tr>
+                  </tbody>
+                  </table>
                 </div>
-                <div class="col-md-4">
-                   <div class="our_box">
-                      <figure><img src="images/our1.jpg" alt="#"/></figure>
-                   </div>
-                </div>
-                <div class="col-md-4">
-                   <div class="our_box">
-                      <figure><img src="images/our.jpg" alt="#"/></figure>
-                   </div>
-                </div>
-                <div class="col-md-4">
-                   <div class="our_box">
-                      <figure><img src="images/our1.jpg" alt="#"/></figure>
-                   </div>
-                </div>
-                <div class="col-md-4">
-                   <div class="our_box">
-                      <figure><img src="images/our.jpg" alt="#"/></figure>
-                   </div>
-                </div>
-                <div class="col-md-4">
-                   <div class="our_box">
-                      <figure><img src="images/our1.jpg" alt="#"/></figure>
-                   </div>
-                </div>
-             </div>
+              </div>
+            </div>
+       
+          </div>
+        </div>
+      </div>
+
           </div>
        </div>
       
