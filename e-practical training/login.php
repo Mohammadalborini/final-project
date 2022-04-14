@@ -31,13 +31,13 @@ if($_SERVER['REQUEST_METHOD']== "POST")
         }else{
             
             $_SESSION['error'] = "اسم المستخدم أو كلمة المرور خطأ";
-            header("Location: WISE.php");
+            header("Location: index.php");
           
         }
     }else
     {
         $_SESSION['error'] = "اسم المستخدم أو كلمة المرور خطأ";
-        header("Location: WISE.php");
+        header("Location: index.php");
     }
 
 }
