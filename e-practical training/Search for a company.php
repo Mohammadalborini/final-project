@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+include("coniction.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -112,6 +118,9 @@
             <div class="col-md-12">
               <div class="card" style="background:#00aeef;">
                 <div class="card-body">
+                   <?php
+                     $result = $con->query("SELECT * FROM companies") or die($con->error);
+                   ?>
                   <table class="table table-hover" style="color:black;">
                     <thead >
                       <th>ID</th>
@@ -124,141 +133,25 @@
                       <th>تقديم الطلب</th>
                     </thead>
                     <tbody>
+                       <?php while ($row = $result->fetch_assoc()):?> 
                       <tr>
-                        <td>1</td>
-                        <td><img src="images/icon.png" style="width:125px; hight:125px;"/> </td>
-                        <td>Clever Mind POB</td>
-                        <td>Web Developer<br>
-                           Mobile Application<br>
-                           QA and PM 
-                        </td>
-                        <td>Online</td>
-                        <td>Amman</td>
-                        <td>course</td>
+                        <td><?php echo $row['id']; ?></td>
+                        <td> <?php
+                         $text1 = $row['imagename'];
+                         $text2 = $row['Exfile'];
+                        echo '<img src="images/'.$text1.'.'.$text2.'" style="width:125px; hight:125px;"/>';  ?></td>
+                        <td><?php echo $row['name']; ?></td>
+                        <td><?php echo $row['The_Course']; ?></td>
+                        <td><?php echo $row['Training_method']; ?></td>
+                        <td><?php echo $row['Location']; ?></td>
+                        <td><?php echo $row['Training_type']; ?></td>
                         <td>
-                        <a href="#"> تقديم طلب </a>
+                        <a href="#" > تقديم طلب </a>
                         </td>
-                        
                       </tr>
-
-                                 <tr>
-                        <td>1</td>
-                        <td><img src="images/icon.png" style="width:125px; hight:125px;"/> </td>
-                        <td>Clever Mind POB</td>
-                        <td>Web Developer<br>
-                           Mobile Application<br>
-                           QA and PM 
-                        </td>
-                        <td>Online</td>
-                        <td>Amman</td>
-                        <td>course</td>
-                        <td>
-                        <a href="#"> تقديم طلب </a>
-                        </td>
-                        
-                      </tr>
-
-                                  <tr>
-                        <td>1</td>
-                        <td><img src="images/icon.png" style="width:125px; hight:125px;"/> </td>
-                        <td>Clever Mind POB</td>
-                        <td>Web Developer<br>
-                           Mobile Application<br>
-                           QA and PM 
-                        </td>
-                        <td>Online</td>
-                        <td>Amman</td>
-                        <td>course</td>
-                        <td>
-                        <a href="#"> تقديم طلب </a>
-                        </td>
-                        
-                      </tr>
-
-                                  <tr>
-                        <td>1</td>
-                        <td><img src="images/icon.png" style="width:125px; hight:125px;"/> </td>
-                        <td>Clever Mind POB</td>
-                        <td>Web Developer<br>
-                           Mobile Application<br>
-                           QA and PM 
-                        </td>
-                        <td>Online</td>
-                        <td>Amman</td>
-                        <td>course</td>
-                        <td>
-                        <a href="#"> تقديم طلب </a>
-                        </td>
-                        
-                      </tr>
-
-                                  <tr>
-                        <td>1</td>
-                        <td><img src="images/icon.png" style="width:125px; hight:125px;"/> </td>
-                        <td>Clever Mind POB</td>
-                        <td>Web Developer<br>
-                           Mobile Application<br>
-                           QA and PM 
-                        </td>
-                        <td>Online</td>
-                        <td>Amman</td>
-                        <td>course</td>
-                        <td>
-                        <a href="#"> تقديم طلب </a>
-                        </td>
-                        
-                      </tr>
-
-                                 <tr>
-                        <td>1</td>
-                        <td><img src="images/icon.png" style="width:125px; hight:125px;"/> </td>
-                        <td>Clever Mind POB</td>
-                        <td>Web Developer<br>
-                           Mobile Application<br>
-                           QA and PM 
-                        </td>
-                        <td>Online</td>
-                        <td>Amman</td>
-                        <td>course</td>
-                        <td>
-                        <a href="#"> تقديم طلب </a>
-                        </td>
-                        
-                      </tr>
-
-                                 <tr>
-                        <td>1</td>
-                        <td><img src="images/icon.png" style="width:125px; hight:125px;"/> </td>
-                        <td>Clever Mind POB</td>
-                        <td>Web Developer<br>
-                           Mobile Application<br>
-                           QA and PM 
-                        </td>
-                        <td>Online</td>
-                        <td>Amman</td>
-                        <td>course</td>
-                        <td>
-                        <a href="#"> تقديم طلب </a>
-                        </td>
-                        
-                      </tr>
-
-                                 <tr>
-                        <td>1</td>
-                        <td><img src="images/icon.png" style="width:125px; hight:125px;"/> </td>
-                        <td>Clever Mind POB</td>
-                        <td>Web Developer<br>
-                           Mobile Application<br>
-                           QA and PM 
-                        </td>
-                        <td>Online</td>
-                        <td>Amman</td>
-                        <td>course</td>
-                        <td>
-                        <a href="#"> تقديم طلب </a>
-                        </td>
-                        
-                      </tr>
+                    
+                      <?php endwhile;?>
+                      
                   </tbody>
                   </table>
                 </div>
