@@ -41,6 +41,9 @@
 .table.table-hover tbody tr td{
    text-align: center;
 }
+.copyright{
+   margin-top:10px;
+}
     </style>
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -78,7 +81,7 @@
                           
                               <form class="searchform mini-widget-searchform" role="search" method="get" action="#">
                           
-                                 <input type="text" class="field searchform-s"  value="" placeholder=" ادخال اسم الشركة او الدورة" title="Search form">
+                                 <input type="text" class="field searchform-s"  value="" placeholder=" ادخال اسم الشركة او نوع التدريب" title="Search form">
                                     <input type="submit" class="assistive-text searchsubmit" value="Go!" style="background: #00aeef ;">
                            
                                  </form>
@@ -112,11 +115,12 @@
                   <table class="table table-hover" style="color:black;">
                     <thead >
                       <th>ID</th>
-                      <th>Pictre</th>
+                      <th>Picture</th>
                       <th>Name</th>
-                      <th>Username</th>
-                      <th>Phone number</th>
-                      <th>Payment (Cash Or Visa)</th>
+                      <th>The Course</th>
+                      <th>Training method</th>
+                      <th>Location</th>
+                      <th>Training type (company or course)</th>
                       <th>تقديم الطلب</th>
                     </thead>
                     <tbody>
@@ -124,100 +128,132 @@
                         <td>1</td>
                         <td><img src="images/icon.png" style="width:125px; hight:125px;"/> </td>
                         <td>Clever Mind POB</td>
-                        <td>dfg</td>
-                        <td>dfgdf</td>
-                        <td>fdgdfg</td>
+                        <td>Web Developer<br>
+                           Mobile Application<br>
+                           QA and PM 
+                        </td>
+                        <td>Online</td>
+                        <td>Amman</td>
+                        <td>course</td>
                         <td>
                         <a href="#"> تقديم طلب </a>
                         </td>
                         
                       </tr>
 
-                      <tr>
-                        <td>2</td>
-                        <td>dfgd</td>
-                        <td>dfg</td>
-                        <td>dfg</td>
-                        <td>dfgdf</td>
-                        <td>fdgdfg</td>
+                                 <tr>
+                        <td>1</td>
+                        <td><img src="images/icon.png" style="width:125px; hight:125px;"/> </td>
+                        <td>Clever Mind POB</td>
+                        <td>Web Developer<br>
+                           Mobile Application<br>
+                           QA and PM 
+                        </td>
+                        <td>Online</td>
+                        <td>Amman</td>
+                        <td>course</td>
                         <td>
                         <a href="#"> تقديم طلب </a>
                         </td>
                         
                       </tr>
 
-                      <tr>
-                        <td>3</td>
-                        <td>dfgd</td>
-                        <td>dfg</td>
-                        <td>dfg</td>
-                        <td>dfgdf</td>
-                        <td>fdgdfg</td>
+                                  <tr>
+                        <td>1</td>
+                        <td><img src="images/icon.png" style="width:125px; hight:125px;"/> </td>
+                        <td>Clever Mind POB</td>
+                        <td>Web Developer<br>
+                           Mobile Application<br>
+                           QA and PM 
+                        </td>
+                        <td>Online</td>
+                        <td>Amman</td>
+                        <td>course</td>
                         <td>
                         <a href="#"> تقديم طلب </a>
                         </td>
                         
                       </tr>
 
-                      <tr>
-                        <td>4</td>
-                        <td>dfgd</td>
-                        <td>dfg</td>
-                        <td>dfg</td>
-                        <td>dfgdf</td>
-                        <td>fdgdfg</td>
+                                  <tr>
+                        <td>1</td>
+                        <td><img src="images/icon.png" style="width:125px; hight:125px;"/> </td>
+                        <td>Clever Mind POB</td>
+                        <td>Web Developer<br>
+                           Mobile Application<br>
+                           QA and PM 
+                        </td>
+                        <td>Online</td>
+                        <td>Amman</td>
+                        <td>course</td>
                         <td>
                         <a href="#"> تقديم طلب </a>
                         </td>
                         
                       </tr>
 
-                      <tr>
-                        <td>5</td>
-                        <td>dfgd</td>
-                        <td>dfg</td>
-                        <td>dfg</td>
-                        <td>dfgdf</td>
-                        <td>fdgdfg</td>
+                                  <tr>
+                        <td>1</td>
+                        <td><img src="images/icon.png" style="width:125px; hight:125px;"/> </td>
+                        <td>Clever Mind POB</td>
+                        <td>Web Developer<br>
+                           Mobile Application<br>
+                           QA and PM 
+                        </td>
+                        <td>Online</td>
+                        <td>Amman</td>
+                        <td>course</td>
                         <td>
                         <a href="#"> تقديم طلب </a>
                         </td>
                         
                       </tr>
 
-                      <tr>
-                        <td>6</td>
-                        <td>dfgd</td>
-                        <td>dfg</td>
-                        <td>dfg</td>
-                        <td>dfgdf</td>
-                        <td>fdgdfg</td>
+                                 <tr>
+                        <td>1</td>
+                        <td><img src="images/icon.png" style="width:125px; hight:125px;"/> </td>
+                        <td>Clever Mind POB</td>
+                        <td>Web Developer<br>
+                           Mobile Application<br>
+                           QA and PM 
+                        </td>
+                        <td>Online</td>
+                        <td>Amman</td>
+                        <td>course</td>
                         <td>
                         <a href="#"> تقديم طلب </a>
                         </td>
                         
                       </tr>
 
-                      <tr>
-                        <td>7</td>
-                        <td>dfgd</td>
-                        <td>dfg</td>
-                        <td>dfg</td>
-                        <td>dfgdf</td>
-                        <td>fdgdfg</td>
+                                 <tr>
+                        <td>1</td>
+                        <td><img src="images/icon.png" style="width:125px; hight:125px;"/> </td>
+                        <td>Clever Mind POB</td>
+                        <td>Web Developer<br>
+                           Mobile Application<br>
+                           QA and PM 
+                        </td>
+                        <td>Online</td>
+                        <td>Amman</td>
+                        <td>course</td>
                         <td>
                         <a href="#"> تقديم طلب </a>
                         </td>
                         
                       </tr>
 
-                      <tr>
-                        <td>8</td>
-                        <td>dfgd</td>
-                        <td>dfg</td>
-                        <td>dfg</td>
-                        <td>dfgdf</td>
-                        <td>fdgdfg</td>
+                                 <tr>
+                        <td>1</td>
+                        <td><img src="images/icon.png" style="width:125px; hight:125px;"/> </td>
+                        <td>Clever Mind POB</td>
+                        <td>Web Developer<br>
+                           Mobile Application<br>
+                           QA and PM 
+                        </td>
+                        <td>Online</td>
+                        <td>Amman</td>
+                        <td>course</td>
                         <td>
                         <a href="#"> تقديم طلب </a>
                         </td>
