@@ -78,8 +78,8 @@ $student_id = $_SESSION['Student_id'];
 				<div class="row gutters-sm">
 					<div class="col-lg-4 col-md-12 mb-3">
 						<div class="card">
-								<div class="badger-overlay">
-								<span class="top-left badger bg-primary">على مقاعد الدراسة</span>
+								<div class="badger-overlay" >
+								<span class="top-left badger bg-primary" style="background:#ffc107!important;">متوقع تخرجه</span>
 							</div>
 
 							<div class="card-body">
