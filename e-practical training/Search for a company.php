@@ -85,12 +85,10 @@ include("coniction.php");
                            </button>
                            <div class="collapse navbar-collapse" id="navbarsExample04">
                           
-                              <form class="searchform mini-widget-searchform" role="search" method="get" action="#">
-                          
-                                 <input type="text" class="field searchform-s"  value="" placeholder=" ادخال اسم الشركة او نوع التدريب" title="Search form">
-                                    <input type="submit" class="assistive-text searchsubmit" value="Go!" style="background: #00aeef ;">
-                           
-                                 </form>
+                              <form class="searchform mini-widget-searchform" role="search" method="POST" action="search.php">
+                                 <input type="text" class="field searchform-s"  value="" placeholder=" ادخال اسم الشركة او نوع التدريب" title="Search form" name="search">
+                                    <input type="submit" name="submit" class="assistive-text searchsubmit" value="Go!" style="background: #00aeef ;">
+                              </form>
                            
                               <div class="sign_btn"><a href="logout.php">Log out</a></div>
                            </div>
