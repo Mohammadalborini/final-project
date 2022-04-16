@@ -1,13 +1,13 @@
 <?php
 session_start();
-
-include("coniction.php");
-
 if ($_SESSION['error'] == ""){
     $_SESSION['error'] = "";
 }else{
     $error = $_SESSION['error'];
 }
+
+include("coniction.php");
+
 
 
 
