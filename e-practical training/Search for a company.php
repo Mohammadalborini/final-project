@@ -49,9 +49,8 @@ include("coniction.php");
 }
 .footer{
    background: #00aeef;
-   background: #00aeef;
    position:absolute;
-   bottom:0;
+   bottom:auto;
    width:100%;
 }
 
