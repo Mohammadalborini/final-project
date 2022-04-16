@@ -53,7 +53,9 @@ include("coniction.php");
    bottom:0;
    width:100%;
 }
-
+.copyright{
+   margin-top:10px;
+}
 
     </style>
       <!--[if lt IE 9]>
@@ -142,8 +144,9 @@ include("coniction.php");
                         <td> <?php
                          $text1 = $row['imagename'];
                          $text2 = $row['Exfile'];
+                         $name = $row['name'];
                         echo '<img src="images/'.$text1.'.'.$text2.'" style="width:125px; hight:125px;"/>';  ?></td>
-                        <td><?php echo $row['name']; ?></td>
+                        <td><?php echo '<a href="'.$name.'.php" target=_blanck>'.$name.'</a>'; ?></td>
                         <td><?php echo $row['The_Course']; ?></td>
                         <td><?php echo $row['Training_method']; ?></td>
                         <td><?php echo $row['Location']; ?></td>
