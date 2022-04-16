@@ -50,7 +50,7 @@ include("coniction.php");
 .footer{
    background: #00aeef;
    position:absolute;
-   bottom:auto;
+   bottom:0;
    width:100%;
 }
 
