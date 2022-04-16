@@ -47,9 +47,15 @@ include("coniction.php");
 .table.table-hover tbody tr td{
    text-align: center;
 }
-.copyright{
-   margin-top:10px;
+.footer{
+   background: #00aeef;
+   background: #00aeef;
+   position:absolute;
+   bottom:0;
+   width:100%;
 }
+
+
     </style>
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>

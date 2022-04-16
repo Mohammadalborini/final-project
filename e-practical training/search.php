@@ -48,7 +48,10 @@ include("coniction.php");
    text-align: center;
 }
 .footer{
-   margin-top:160px;
+   background: #00aeef;
+   position:absolute;
+   bottom:0;
+   width:100%;
 }
     </style>
       <!--[if lt IE 9]>

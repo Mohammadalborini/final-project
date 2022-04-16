@@ -740,7 +740,10 @@ button {
 /** footer **/
 
 .footer {
-     background: #042431;
+     background: #00aeef;
+     position:absolute;
+     bottom:0;
+     width:100%;
      text-align: center;
 }
 
