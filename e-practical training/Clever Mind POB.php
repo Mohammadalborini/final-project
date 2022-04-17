@@ -34,9 +34,13 @@
       <style>
          .footer{
             background: #00aeef;
-            position: fixed;
+            position: relative;
             bottom: 0;
             width: 100%;
+            
+}
+.copyright{
+
 }
       </style>
    </head>
@@ -96,6 +100,42 @@
       <!-- end header -->
       
       <!--  contact -->
+      <div id="contact" class="contact">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Requeste A call back</h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div id="contact" class="contact">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Requeste A call back</h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div id="contact" class="contact">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Requeste A call back</h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
       <div id="contact" class="contact">
          <div class="container">
             <div class="row">

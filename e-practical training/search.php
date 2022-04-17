@@ -49,7 +49,7 @@ include("coniction.php");
 }
 .footer{
    background: #00aeef;
-   position:relative;
+   position:fixed;
    bottom:0;
    width:100%;
 }
@@ -104,7 +104,8 @@ include("coniction.php");
       </header>
       <!-- end header inner -->
       <!-- end header -->
-       <div class="ourwork">
+
+       <div class="ourwork" >
           <div class="container">
              <div class="row">
                 <div class="col-md-12">
@@ -113,12 +114,23 @@ include("coniction.php");
                    </div>
                 </div>
              </div>
-      <div class="content">
+      <div class="content" >
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12">
-              <div class="card" style="background:#00aeef;">
+              <div class="card" style="background:#00aeef;" >
                 <div class="card-body">
+                <table class="table table-hover" style="color:black;">
+                <thead >
+                              <th>ID</th>
+                              <th>Picture</th>
+                              <th>Name</th>
+                              <th>The Course</th>
+                              <th>Training method</th>
+                              <th>Location</th>
+                              <th>Training type (company or course)</th>
+                              <th>تقديم الطلب</th>
+                            </thead>
                    <?php
                  if (isset($_POST['submit'])){
                     $search = mysqli_real_escape_string($con, $_POST['search']);
@@ -136,17 +148,7 @@ include("coniction.php");
                             $text6 = $row['Training_method'];
                             $text7 = $row['Location'];
                             $text8 = $row['Training_type'];
-                            echo ' <table class="table table-hover" style="color:black;">
-                            <thead >
-                              <th>ID</th>
-                              <th>Picture</th>
-                              <th>Name</th>
-                              <th>The Course</th>
-                              <th>Training method</th>
-                              <th>Location</th>
-                              <th>Training type (company or course)</th>
-                              <th>تقديم الطلب</th>
-                            </thead>
+                            echo '
                             <tbody>
                             <tr>
                         <td> '.$text3.'</td>
@@ -162,7 +164,7 @@ include("coniction.php");
                         </td>
                     </tr>
                   </tbody>
-                  </table>';
+                 ';
                         }
                     } else {
                         echo '<p style="color:black;">';
@@ -172,6 +174,7 @@ include("coniction.php");
                 }
                     
                    ?>
+                    </table>
                 </div>
               </div>
             </div>
@@ -182,7 +185,7 @@ include("coniction.php");
 
           </div>
        </div>
-      
+     
       
       <!--  footer -->
       <footer>
