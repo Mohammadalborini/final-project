@@ -49,7 +49,7 @@ include("coniction.php");
 }
 .footer{
    background: #00aeef;
-   position:absolute;
+   position:relative;
    bottom:0;
    width:100%;
 }
