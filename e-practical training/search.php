@@ -53,6 +53,9 @@ include("coniction.php");
    bottom:0;
    width:100%;
 }
+.ourwork{
+   margin-bottom:100px;
+}
     </style>
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -105,7 +108,7 @@ include("coniction.php");
       <!-- end header inner -->
       <!-- end header -->
 
-       <div class="ourwork" >
+       <div class="ourwork">
           <div class="container">
              <div class="row">
                 <div class="col-md-12">
@@ -167,7 +170,7 @@ include("coniction.php");
                  ';
                         }
                     } else {
-                        echo '<p style="color:black;">';
+                        echo '<p style="color:red; text-align:center; font-size:25px;">';
                         echo "There are no results matching your search!";
                         echo '</p>';
                     }

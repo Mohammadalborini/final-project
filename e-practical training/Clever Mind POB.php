@@ -34,14 +34,12 @@
       <style>
          .footer{
             background: #00aeef;
-            position: relative;
+            position: fixed;
             bottom: 0;
             width: 100%;
             
 }
-.copyright{
 
-}
       </style>
    </head>
    <!-- body -->
@@ -100,7 +98,8 @@
       <!-- end header -->
       
       <!--  contact -->
-      <div id="contact" class="contact">
+   <div style="margin-bottom:100px;">
+      <div id="contact" class="contact" >
          <div class="container">
             <div class="row">
                <div class="col-md-12">
@@ -147,6 +146,20 @@
             </div>
          </div>
       </div>
+
+      <div id="contact" class="contact">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Requeste A call back</h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+</div>
       <!-- end contact -->
       <!--  footer -->
       <footer>
