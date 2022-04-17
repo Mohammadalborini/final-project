@@ -101,7 +101,7 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2>Reqeste A call back</h2>
+                     <h2>Requeste A call back</h2>
                   </div>
                </div>
             </div>
