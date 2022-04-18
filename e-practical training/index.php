@@ -1,7 +1,7 @@
 <?php
 include("coniction.php");
 session_start();
-$_SESSION['error'] = "";
+
 
 if ($_SESSION['error'] == ""){
     $_SESSION['error'] = "";
