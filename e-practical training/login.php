@@ -4,6 +4,7 @@ session_start();
 
 include("coniction.php");
 
+$_SESSION['error'] = '';
 
 if($_SERVER['REQUEST_METHOD']== "POST")
 {
