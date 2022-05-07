@@ -34,7 +34,7 @@
       <style>
          .footer{
             background: #00aeef;
-            position: fixed;
+            position: relative;
             bottom: 0;
             width: 100%;
             
