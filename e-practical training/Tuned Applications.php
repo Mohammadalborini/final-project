@@ -170,7 +170,7 @@
 						</div>
 						<p>Tuned Applications<br>
 							Call: 07 8988 0205<br>
-							Email: http://www.tunedapps.com/
+							Email: >TunedApplications.com
 							<br><br>
 							All rights reserver This template is made  with Tuned Applications
 							</p>
