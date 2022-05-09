@@ -143,12 +143,19 @@
 						<div class="feature_head">
 							<span class="lnr lnr-screen"></span>
                             <h4>offline Training program (for free)</h4><br/>
-							<a href=""><h4>تقديم طلب</h4></a>
 						</div>
 
 					</div>
 				</div>
 			</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-8 text-center">
+					<div class="main_title">
+						<a href="" ><h2 style="cursor: pointer;">تقديم طلب</h2></a>
+					</div>
+				</div>
+			</div>
+		</div>
 		</div>
 	</section>
 </div>
