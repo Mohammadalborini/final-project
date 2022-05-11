@@ -195,7 +195,7 @@
                      </div>
                   </div>
                   <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-                     <div class="header_information">
+                     <div class="header_information" style="background: #3bac49;">
                         <nav class="navigation navbar navbar-expand-md navbar-dark ">
                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                            <span class="navbar-toggler-icon"></span>
@@ -230,7 +230,7 @@
     
       <!--  footer -->
       <footer>
-         <div class="footer">
+         <div class="footer" style="background: #3bac49;">
             <div class="copyright">
                <div class="container">
                   <div class="row">
