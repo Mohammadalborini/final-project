@@ -741,12 +741,11 @@ button {
 
 .footer {
      background: #3bac49;
-     position:absolute;
+     position:fixed;
      bottom:0;
      width:100%;
      text-align: center;
 }
-
 .border-top {
      border-top: #fff solid 1px;
      padding-top: 90px;

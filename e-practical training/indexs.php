@@ -170,6 +170,15 @@
                                     
 }
 }
+
+.footer {
+     background: #3bac49;
+     position:fixed;
+     bottom:0;
+     width:100%;
+     text-align: center;
+}
+
             </style>
    </head>
    <!-- body -->
