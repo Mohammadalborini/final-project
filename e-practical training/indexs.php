@@ -231,7 +231,7 @@
       <!--  footer -->
       <footer>
          <div class="footer" style="background: #3bac49;">
-            <div class="copyright">
+            <div class="copyright" style="background: #3bac49;">
                <div class="container">
                   <div class="row">
                      <div class="col-md-12">

@@ -299,7 +299,7 @@ button {
 }
 
 .header_information {
-     background-color: #00aeef;
+     background-color: #3bac49;
      padding: 0 0;
      padding-top: 0px;
      padding-top: 0px;
@@ -457,7 +457,7 @@ button {
          position: absolute;
          top: 70%;
          left: 60%;
-         background: #00aeef;
+         background: #3bac49;
          display: inline-block;
          padding: 15px 135px;
          border-radius: 20px;
@@ -466,7 +466,7 @@ button {
   }
   .sign_r a:hover{
      color: #fff;
-     background: #000;
+     background: #3bac99;
   }
 
   .sign_l a{
@@ -474,7 +474,7 @@ button {
          position: absolute;
          top: 70%;
          left: 10%;
-         background: #00aeef;
+         background: #3bac49;
          display: inline-block;
          padding: 15px 95px;
          border-radius: 20px;
@@ -483,7 +483,7 @@ button {
   }
   .sign_l a:hover{
      color: #fff;
-     background: #000;
+     background: #3bac99;
   }
 
 
@@ -740,7 +740,7 @@ button {
 /** footer **/
 
 .footer {
-     background: #00aeef;
+     background: #3bac49;
      position:absolute;
      bottom:0;
      width:100%;
@@ -802,7 +802,7 @@ ul.cont li {
 .copyright {
      margin-top: 10px;
      padding: 20px 0px;
-     background-color: #00aeef;
+     background-color: #3bac49;
 }
 
 .copyright p {
