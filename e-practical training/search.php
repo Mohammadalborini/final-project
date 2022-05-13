@@ -192,7 +192,7 @@ include("coniction.php");
       
       <!--  footer -->
       <footer>
-         <div class="footer" style="marign-top:165px;">
+         <div class="footer" style="marign-top:165px; background:#3bac49;" >
             <div class="copyright">
                <div class="container">
                   <div class="row">

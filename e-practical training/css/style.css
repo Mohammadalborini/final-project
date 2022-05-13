@@ -741,7 +741,7 @@ button {
 
 .footer {
      background: #3bac49;
-     position:fixed;
+     position:relative;
      bottom:0;
      width:100%;
      text-align: center;

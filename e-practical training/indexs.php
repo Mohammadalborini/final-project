@@ -33,39 +33,49 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 
          <style>
-            @media (min-width: 312px) and (max-width: 549px) {
+
+
+.footer {
+     background: #3bac49;
+     position:relative;
+     bottom:0;
+     width:100%;
+     text-align: center;
+}
+
+@media (min-width: 300px) and (max-width: 599px) {
     .sign_r a{
         text-decoration: none;
             position: absolute;
-            top: 70%;
-            left: 55%;
-            background: #00aeef;
+            top: 50%;
+            left: 30%;
+            background: #3bac49;
             display: inline-block;
-            padding: 15px 35px;
+            padding: 25px 50px;
             border-radius: 20px;
             color: #fff;
-            font-size: 10px;
+            font-size: 15px;
      }
      .sign_r a:hover{
         color: #fff;
-        background: #000;
+        background: #3bac99;
      }
    
      .sign_l a{
         text-decoration: none;
             position: absolute;
-            top: 70%;
-            left: 5%;
-            background: #00aeef;
+            top: 30%;
+            left: 30%;
+            background: #3bac49;
             display: inline-block;
-            padding: 15px 35px;
+            padding: 25px 55px;
             border-radius: 20px;
             color: #fff;
-            font-size: 10px;
+            font-size: 15px;
      }
      .sign_l a:hover{
         color: #fff;
-        background: #000;
+        background: #3bac99;
      }
 
      .collapse h1{
@@ -79,106 +89,52 @@
 }
 }
 
-@media (min-width: 550px) and (max-width: 800px) {
+
+@media (min-width: 600px) and (max-width: 1249px) {
     .sign_r a{
         text-decoration: none;
             position: absolute;
-            top: 70%;
-            left: 55%;
-            background: #00aeef;
+            top: 50%;
+            left: 30%;
+            background: #3bac49;
             display: inline-block;
-            padding: 15px 55px;
+            padding: 25px 75px;
             border-radius: 20px;
             color: #fff;
-            font-size: 15px;
+            font-size: 25px;
      }
      .sign_r a:hover{
         color: #fff;
-        background: #000;
+        background: #3bac99;
      }
    
      .sign_l a{
         text-decoration: none;
             position: absolute;
-            top: 70%;
-            left: 5%;
-            background: #00aeef;
+            top: 30%;
+            left: 30%;
+            background: #3bac49;
             display: inline-block;
-            padding: 15px 55px;
+            padding: 25px 75px;
             border-radius: 20px;
             color: #fff;
-            font-size: 15px;
+            font-size: 25px;
      }
      .sign_l a:hover{
         color: #fff;
-        background: #000;
+        background: #3bac99;
      }
 
      .collapse h1{
      color: #fff;
-                                    font-size: 20px;
-                                    font-weight: bold;
-                                    line-height: 5px;
-                                    margin-right: 150px;
-                                    font-family: serif;
+     font-size: 20px;
+     font-weight: bold;
+     line-height: 10px;
+     margin-right: 100px;
+     font-family: serif;
                                     
 }
 }
-
-@media (min-width: 800px) and (max-width: 1200px) {
-    .sign_r a{
-        text-decoration: none;
-            position: absolute;
-            top: 70%;
-            left: 60%;
-            background: #00aeef;
-            display: inline-block;
-            padding: 15px 65px;
-            border-radius: 20px;
-            color: #fff;
-            font-size: 20px;
-     }
-     .sign_r a:hover{
-        color: #fff;
-        background: #000;
-     }
-   
-     .sign_l a{
-        text-decoration: none;
-            position: absolute;
-            top: 70%;
-            left: 7%;
-            background: #00aeef;
-            display: inline-block;
-            padding: 15px 65px;
-            border-radius: 20px;
-            color: #fff;
-            font-size: 20px;
-     }
-     .sign_l a:hover{
-        color: #fff;
-        background: #000;
-     }
-
-     .collapse h1{
-     color: #fff;
-                                    font-size: 30px;
-                                    font-weight: bold;
-                                    line-height: 5px;
-                                    margin-right: 350px;
-                                    font-family: serif;
-                                    
-}
-}
-
-.footer {
-     background: #3bac49;
-     position:fixed;
-     bottom:0;
-     width:100%;
-     text-align: center;
-}
-
             </style>
    </head>
    <!-- body -->
