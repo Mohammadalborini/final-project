@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include("coniction.php");
+include("coniction.php"); 
 ?>
 
 <!DOCTYPE html>

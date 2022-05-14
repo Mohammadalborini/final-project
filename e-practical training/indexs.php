@@ -1,4 +1,10 @@
+<?php
+session_start();
 
+include("coniction.php");
+
+$student_id = $_SESSION['Student_id'];
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -166,7 +172,19 @@
                            <span class="navbar-toggler-icon"></span>
                            </button>
                            <div class="collapse navbar-collapse" id="navbarsExample04">
-                              <h1> التدريب العملي</h1>
+                           <?php
+			         $sql = "SELECT Fall_name FROM student where Student_id = $student_id ";
+				$result = mysqli_query($con, $sql);
+				if (mysqli_num_rows($result) > 0) {
+					while ($row = mysqli_fetch_assoc($result)) {
+							$text1 = $row['Fall_name'];
+							echo '<h1>';
+	   					    echo $text1;     
+						    echo '</h1>';  		
+							}
+						}
+				?>
+                              
                               <div class="sign_btn"><a href="logout.php">Log out</a></div>
                            </div>
                         </nav>
