@@ -78,7 +78,7 @@ include("coniction.php");
                      <div class="full">
                         <div class="center-desk">
                            <div class="logo">
-                              <a href="Search for a company.php"><img src="images/header icon.png" alt="#" /></a>
+                              <a href="Fliter_search.php"><img src="images/header icon.png" alt="#" /></a>
                            </div>
                         </div>
                      </div>
