@@ -2,6 +2,8 @@
 session_start();
 
 include("coniction.php");
+
+$student_id = $_SESSION['Student_id'];
 ?>
 
 <!DOCTYPE html>
@@ -64,9 +66,7 @@ include("coniction.php");
    <!-- body -->
    <body class="main-layout">
       <!-- loader  -->
-      <div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
-      </div>
+
       <!-- end loader -->
       <!-- header -->
       <header>
@@ -90,12 +90,18 @@ include("coniction.php");
                            <span class="navbar-toggler-icon"></span>
                            </button>
                            <div class="collapse navbar-collapse" id="navbarsExample04">
-                          
-                              <form class="searchform mini-widget-searchform" role="search" method="POST" action="search.php">
-                                 <input type="text" class="field searchform-s"  value="" placeholder=" ادخال اسم الشركة او نوع التدريب" title="Search form" name="search">
-                                    <input type="submit" name="submit" class="assistive-text searchsubmit" value="Go!" style="background: #00aeef ;">
-                              </form>
-                           
+                           <?php
+			         $sql = "SELECT Fall_name FROM student where Student_id = $student_id ";
+				$result = mysqli_query($con, $sql);
+				if (mysqli_num_rows($result) > 0) {
+					while ($row = mysqli_fetch_assoc($result)) {
+							$text1 = $row['Fall_name'];
+							echo '<h1>';
+	   					    echo $text1;     
+						    echo '</h1>';  		
+							}
+						}
+				?>
                               <div class="sign_btn"><a href="logout.php">Log out</a></div>
                            </div>
                         </nav>
@@ -135,13 +141,23 @@ include("coniction.php");
                               <th>Training type (company or course)</th>
                               <th>تقديم الطلب</th>
                             </thead>
+
+                  <!-- Code fliter php -->
                    <?php
-                 if (isset($_POST['submit'])){
-                    $search = mysqli_real_escape_string($con, $_POST['search']);
-                    $sql = "SELECT * FROM companies WHERE name LIKE '%$search%' OR The_Course LIKE '%$search%'";
-                    $result = mysqli_query($con, $sql);
+                 if (isset($_POST['button'])){
+
+                     foreach($_POST['check_list'] as $check) { 
+                        
+                     $query="SELECT * FROM companies WHERE programming_languages  LIKE '%$check%' ";
+                     $result = mysqli_query($con,$query);
+                             
+                     }
+      
+              
+
+
+
                     $queryResult = mysqli_num_rows($result);
-                    
                     if ($queryResult > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {
                             $text1 = $row['imagename'];

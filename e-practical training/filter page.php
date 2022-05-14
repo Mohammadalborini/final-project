@@ -200,70 +200,70 @@ $student_id = $_SESSION['Student_id'];
             <ul>
                 <li>
                     <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" value="java" name="check_list[]">
                         <p>JAVA</p>
                         <span></span>
                     </label>
                 </li>
                 <li>
                     <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" value="js" name="check_list[]">
                         <p>JavaScript</p>
                         <span></span>
                     </label>
                 </li>
                 <li>
                     <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" value="php" name="check_list[]">
                         <p>PHP</p>
                         <span></span>
                     </label>
                 </li>
                 <li>
                     <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" value="html" name="check_list[]">
                         <p>HTML</p>
                         <span></span>
                     </label>
                 </li>
                 <li>
                     <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" value="css" name="check_list[]">
                         <p>CSS</p>
                         <span></span>
                     </label>
                 </li>
                 <li>
                     <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" value="python" name="check_list[]">
                         <p>Python</p>
                         <span></span>
                     </label>
                 </li>
                 <li>
                     <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" value="flutter" name="check_list[]">
                         <p>Flutter</p>
                         <span></span>
                     </label>
                 </li>
                 <li>
                     <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" value="c++" name="check_list[]">
                         <p>C++</p>
                         <span></span>
                     </label>
                 </li>
                 <li>
                     <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" value="ccna" name="check_list[]">
                         <p>CCNA</p>
                         <span></span>
                     </label>
                 </li>
                 <li>
                     <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" value="ccnp" name="check_list[]">
                         <p>CCNP</p>
                         <span></span>
                     </label>
