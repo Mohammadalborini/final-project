@@ -70,7 +70,7 @@ $student_id = $_SESSION['Student_id'];
      .sign_l a{
         text-decoration: none;
             position: absolute;
-            top: 30%;
+            top: 20%;
             left: 30%;
             background: #3bac49;
             display: inline-block;
@@ -83,6 +83,22 @@ $student_id = $_SESSION['Student_id'];
         color: #fff;
         background: #3bac99;
      }
+     .sign_c a{
+   text-decoration: none;
+         position: absolute;
+         top: 40%;
+         left: 30%;
+         background: #3bac49;
+         display: inline-block;
+         padding: 15px 50px;
+         border-radius: 20px;
+         color: #fff;
+         font-size: 35px;
+  }
+  .sign_c a:hover{
+     color: #fff;
+     background: #3bac99;
+  }
 
      .collapse h1{
      color: #fff;
@@ -141,6 +157,59 @@ $student_id = $_SESSION['Student_id'];
                                     
 }
 }
+
+
+
+.sign_r a{
+     text-decoration: none;
+         position: absolute;
+         top: 50%;
+         left: 60%;
+         background: #3bac49;
+         display: inline-block;
+         padding: 15px 135px;
+         border-radius: 20px;
+         color: #fff;
+         font-size: 35px;
+  }
+  .sign_r a:hover{
+     color: #fff;
+     background: #3bac99;
+  }
+
+  .sign_l a{
+     text-decoration: none;
+         position: absolute;
+         top: 50%;
+         left: 10%;
+         background: #3bac49;
+         display: inline-block;
+         padding: 15px 95px;
+         border-radius: 20px;
+         color: #fff;
+         font-size: 35px;
+  }
+  .sign_l a:hover{
+     color: #fff;
+     background: #3bac99;
+  }
+
+  .sign_c a{
+   text-decoration: none;
+         position: absolute;
+         top: 75%;
+         left: 35%;
+         background: #3bac49;
+         display: inline-block;
+         padding: 15px 135px;
+         border-radius: 20px;
+         color: #fff;
+         font-size: 35px;
+  }
+  .sign_c a:hover{
+     color: #fff;
+     background: #3bac99;
+  }
             </style>
    </head>
    <!-- body -->
@@ -202,7 +271,10 @@ $student_id = $_SESSION['Student_id'];
             <div class="carousel-item active">
                <img class="first-slide" src="image/banner.jpg" alt="First slide" style="height: 610px; width:100%">
                <div class="container">
+
                <div class="sign_r"><a href="Search for a company.php" >البحث عن شركة</a></div>
+               
+               <div class="sign_c"><a href="#">إرسال الموافقة</a></div>
 
                <div class="sign_l"><a href="#">المساعدة في ايجاد شركة؟</a></div>
                </div>
