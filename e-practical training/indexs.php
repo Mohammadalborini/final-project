@@ -276,7 +276,7 @@ $student_id = $_SESSION['Student_id'];
                
                <div class="sign_c"><a href="#">إرسال الموافقة</a></div>
 
-               <div class="sign_l"><a href="#">المساعدة في ايجاد شركة؟</a></div>
+               <div class="sign_l"><a href="filter page.php">المساعدة في ايجاد شركة؟</a></div>
                </div>
             </div>
          </div>

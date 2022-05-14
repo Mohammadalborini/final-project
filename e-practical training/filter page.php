@@ -1,4 +1,10 @@
+<?php
+session_start();
 
+include("coniction.php");
+
+$student_id = $_SESSION['Student_id'];
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,10 +16,11 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>blueneek</title>
+      <title>المساعدة في ايجاد شركة</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
+      <link rel="icon" href="images/logo.png">
       <!-- bootstrap css -->
       <link rel="stylesheet" href="css/bootstrap.min.css">
       <!-- style css -->
@@ -32,11 +39,103 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
       <style>
          .footer{
-   background: #00aeef;
+   background: #3bac49;
    position:relative;
    bottom:0;
    width:100%;
+   margin-top: 30px;
 }
+
+
+
+.list{
+    position: relative;
+    background: white;
+    width: 500px; 
+    margin-left: 35%;
+}
+.list h2{
+    background:  #3bac49;
+    color: white;
+    padding: 10px 20px;
+    font-weight: 600;
+}
+.list ul{
+    position: relative;
+    padding: 20px;
+}
+.list ul li{
+    position: relative;
+    list-style: none;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0,0.1);
+}
+
+.list ul li label{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.list ul li label input{
+    visibility: hidden;
+    appearance: none;
+}
+.list ul li label p{
+    position: absolute;
+}
+.list ul li label span{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.list ul li label span::before{
+    content: '';
+    position: absolute;
+    top: 5px;
+    width: 10px;
+    height: 5px;
+    border-left: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    transform: rotate(-40deg);
+}
+
+.list ul li label input:checked ~ span{
+    background: #03a9f4;
+    border: 1px solid #03a9f4;
+}
+.list ul li label input:checked ~ span::before{
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.button {
+  position: relative;
+  left:30%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.button:hover{
+    color: #fff;
+     background: #3bac99;
+}
+
       </style>
    </head>
    <!-- body -->
@@ -68,21 +167,19 @@
                            <span class="navbar-toggler-icon"></span>
                            </button>
                            <div class="collapse navbar-collapse" id="navbarsExample04">
-                              <ul class="navbar-nav mr-auto">
-                                 <li class="nav-item">
-                                    <a class="nav-link" href="about.html"> About Us  </a>
-                                 </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link" href="clients.html">Our Clients</a>
-                                 </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link" href="ourwork.html">Our Work</a>
-                                 </li>
-                                 <li class="nav-item active">
-                                    <a class="nav-link" href="#contact">Contact Us</a>
-                                 </li>
-                              </ul>
-                              <div class="sign_btn"><a href="#">Get A Quote</a></div>
+                           <?php
+			         $sql = "SELECT Fall_name FROM student where Student_id = $student_id ";
+				$result = mysqli_query($con, $sql);
+				if (mysqli_num_rows($result) > 0) {
+					while ($row = mysqli_fetch_assoc($result)) {
+							$text1 = $row['Fall_name'];
+							echo '<h1>';
+	   					    echo $text1;     
+						    echo '</h1>';  		
+							}
+						}
+				?>
+                              <div class="sign_btn"><a href="logout.php">Log out</a></div>
                            </div>
                         </nav>
                      </div>
@@ -95,47 +192,96 @@
       <!-- end header -->
       
       <!--  contact -->
-      <div id="contact" class="contact">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage">
-                     <h2>Reqeste A call back</h2>
-                  </div>
-               </div>
-               <div class="col-md-6 offset-md-3">
-                  <form id="request" class="main_form">
-                     <div class="row">
-                        <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Full Name" type="type" name="Full Name"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Email" type="type" name="Email">                          
-                        </div>
-                        <div class="col-md-12">
-                           <textarea class="contactus" placeholder="Message" type="type" Message="Name">Message </textarea>
-                        </div>
-                        <div class="col-sm-12">
-                           <button class="send_btn">Send</button>
-                        </div>
-                     </div>
-                  </form>
-               </div>
-            </div>
-         </div>
-      </div>
+
+
+            <div class="list">
+            <h2>Languages and Courses</h2>
+        <form method="POST" action="Fliter_search.php">
+            <ul>
+                <li>
+                    <label>
+                        <input type="checkbox" name="">
+                        <p>JAVA</p>
+                        <span></span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="">
+                        <p>JavaScript</p>
+                        <span></span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="">
+                        <p>PHP</p>
+                        <span></span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="">
+                        <p>HTML</p>
+                        <span></span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="">
+                        <p>CSS</p>
+                        <span></span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="">
+                        <p>Python</p>
+                        <span></span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="">
+                        <p>Flutter</p>
+                        <span></span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="">
+                        <p>C++</p>
+                        <span></span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="">
+                        <p>CCNA</p>
+                        <span></span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="">
+                        <p>CCNP</p>
+                        <span></span>
+                    </label>
+                </li>
+            </ul>
+            <button name="button" class="button"> Search </button>
+                    </form>
+        </div>
+
       <!-- end contact -->
       <!--  footer -->
       <footer>
-         <div class="footer">
-            <div class="copyright">
+         <div class="footer" >
+            <div class="copyright" >
                <div class="container">
                   <div class="row">
                      <div class="col-md-12">
-                        <p>© 2019 All Rights Reserved. <a href="https://html.design/"> Free Html Templates</a></p>
+                     <p>© 2022 All Rights Reserved. <a href="https://www.wise.edu.jo/"> The World Islamic Sciences and Education University</a></p>
                      </div>
                   </div>
                </div>
