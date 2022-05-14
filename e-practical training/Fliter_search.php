@@ -113,7 +113,8 @@ include("coniction.php");
              <div class="row">
                 <div class="col-md-12">
                    <div class="titlepage">
-                      <h2>نتائج البحث </h2>
+                      <h2> نتائج البحث </h2><br/>
+                      <h2> الشركات المناسبة للتدريب </h2>
                    </div>
                 </div>
              </div>
