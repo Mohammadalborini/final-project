@@ -145,53 +145,61 @@ $student_id = $_SESSION['Student_id'];
                   <!-- Code fliter php -->
                    <?php
                  if (isset($_POST['button'])){
+                  $arrays = array();
+                  $result = array();
+                  $arrays = $_POST['check_list'];
 
-                     foreach($_POST['check_list'] as $check) { 
+                  foreach($arrays as $chech){
+                     $query="SELECT * FROM companies WHERE programming_languages LIKE '%$chech%' ";
+                     $commint = mysqli_fetch_array(mysqli_query($con,$query));
+
+                     if (in_array($commint, $result)) {
                         
-                     $query="SELECT * FROM companies WHERE programming_languages  LIKE '%$check%' ";
-                     $result = mysqli_query($con,$query);
-                             
+                     }else if(mysqli_num_rows(mysqli_query($con,$query)) > 0){
+                        array_push($result, $commint);
                      }
-      
-              
-
-
-
-                    $queryResult = mysqli_num_rows($result);
-                    if ($queryResult > 0) {
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            $text1 = $row['imagename'];
-                            $text2 = $row['Exfile'];
-                            $text3 = $row['id'];
-                            $text4 = $row['name'];
-                            $text5 = $row['The_Course'];
-                            $text6 = $row['Training_method'];
-                            $text7 = $row['Location'];
-                            $text8 = $row['Training_type'];
-                            echo '
-                            <tbody>
-                            <tr>
-                        <td> '.$text3.'</td>
-                        <td> 
-                        <img src="images/'.$text1.'.'.$text2.'" style="width:125px; hight:125px;"/></td>
-                        <td><a href="'.$text4.'.php" target=_blanck>'.$text4.'</a></td>
-                        <td>'. $text5 .'</td>
-                        <td>'. $text6.' </td>
-                        <td>'. $text7.'</td>
-                        <td>'. $text8 .'</td>
-                        <td>
-                        <a href="#" > تقديم طلب </a>
-                        </td>
-                    </tr>
-                  </tbody>
-                 ';
-                        }
-                    } else {
-                        echo '<p style="color:red; text-align:center; font-size:25px;">';
-                        echo "There are no results matching your search!";
-                        echo '</p>';
-                    }
-                }
+           
+                  }
+                  if (count($result) == 0 ) {
+                     echo '<p style="color:red; text-align:center; font-size:25px;">';
+                     echo "There are no results matching your search!";
+                     echo '</p>';
+               
+                  }
+                  
+               
+                  foreach ($result as $row) {
+ 
+                        $text1 = $row['imagename'];
+                        $text2 = $row['Exfile'];
+                        $text3 = $row['id'];
+                        $text4 = $row['name'];
+                        $text5 = $row['The_Course'];
+                        $text6 = $row['Training_method'];
+                        $text7 = $row['Location'];
+                        $text8 = $row['Training_type'];
+                        echo '
+                        <tbody>
+                        <tr>
+                    <td> '.$text3.'</td>
+                    <td> 
+                    <img src="images/'.$text1.'.'.$text2.'" style="width:125px; hight:125px;"/></td>
+                    <td><a href="'.$text4.'.php" target=_blanck>'.$text4.'</a></td>
+                    <td>'. $text5 .'</td>
+                    <td>'. $text6.' </td>
+                    <td>'. $text7.'</td>
+                    <td>'. $text8 .'</td>
+                    <td>
+                    <a href="#" > تقديم طلب </a>
+                    </td>
+                </tr>
+              </tbody>
+             ';
+                    
+                  }
+                    
+                  }
+                
                     
                    ?>
                     </table>
