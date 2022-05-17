@@ -6,5 +6,5 @@ if(isset($_SESSION['username']))
     unset($_SESSION['username']);
 }
 
-header("Location: ../../Employee Services.php");
+header("Location: Employee Services.php");
 die;

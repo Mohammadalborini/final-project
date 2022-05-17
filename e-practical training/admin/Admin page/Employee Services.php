@@ -1,6 +1,6 @@
 <?php
 
-include("coniction.php");
+include("../../coniction.php");
 session_start();
 
 if ($_SESSION['error'] == ""){

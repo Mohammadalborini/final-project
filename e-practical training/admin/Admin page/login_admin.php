@@ -2,7 +2,7 @@
 
 session_start();
 
-include("coniction.php");
+include("../../coniction.php");
 
 $_SESSION['error'] = '';
 
@@ -27,7 +27,7 @@ if($_SERVER['REQUEST_METHOD']== "POST")
         if($user_data['password']===$password)
         {
             $_SESSION['username'] = $user_data['username'];
-            header("Location: admin/Admin page/user.php");
+            header("Location: user.php");
             die;
         }else{
             
