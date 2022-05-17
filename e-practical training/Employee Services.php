@@ -1,3 +1,17 @@
+<?php
+
+include("coniction.php");
+session_start();
+
+if ($_SESSION['error'] == ""){
+    $_SESSION['error'] = "";
+}else{
+    $error = $_SESSION['error'];
+}
+
+
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
    "http://www.w3.org/TR/html4/strict.dtd">
 <html>
@@ -16,7 +30,7 @@
      
         
 
-<form method=POST action="./index.php" >
+<form method=POST action="login_admin.php" >
     <table width=400 style="border:2px solid black">
     <tr >    
          <td align=RIGHT > <img src="http://hr.wise.edu.jo:8889/se.jpg" width="250"></td>
@@ -48,6 +62,13 @@
     </tr>
     </table>
     </form>
+    <?php if (isset($error)): ?>
+						<div class="alert alert-danger" role="alert" style="display:unset !important">
+										<span>	<?php echo $error; ?>  </span>
+										</div>
+                   				<?php
+								$_SESSION['error'] = null; 
+								endif ?>
     <br><br><br>
 <div id="footer" align="center">
         
