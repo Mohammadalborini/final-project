@@ -14,6 +14,272 @@
 	<!-- main css -->
 	<link rel="stylesheet" href="Tuned Applications/css/style.css">
 </head>
+<style>
+	h1 {
+  font-size: 2em;
+  font-family: "Core Sans N W01 35 Light";
+  font-weight: normal;
+  margin: .67em 0;
+  display: block;
+}
+
+#registered {
+    margin-top: 50px;
+}
+
+#registered img {
+    margin-bottom: 0px;
+    width: 100px;
+    height: 100px;
+}
+
+#registered span {
+    clear: both;
+    display: block;
+}
+
+img {
+    margin-bottom: 20px;
+}
+
+.avatar {
+    margin: 10px 0 20px 0;
+}
+
+.module{
+  position:relative;
+  top:10%;    
+  height:65%;
+  width:450px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.user {
+    color: #66d8fc;
+    font-weight: bold;
+}
+
+.userlist {
+    float:left;
+    padding: 30px;
+}
+
+.userlist span {
+    color: #0590fc;
+}
+
+.welcome{
+  position:relative;
+  top:30%;    
+  height:65%;
+  width:900px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 50px;
+}
+
+::-moz-selection {
+  background: #19547c;
+}
+::selection {
+  background: #19547c;
+}
+input::-moz-selection {
+  background: #037db6;
+}
+input::selection {
+  background: #037db6;
+}
+
+body{
+  color: #fff;
+  background-color:#f0f0f0;
+  font-family:helvetica;
+  background:url('http://clevertechie.com/img/bnet-bg.jpg') #0f2439 no-repeat center top;
+}
+
+.body-content{
+  position:relative;
+  top:20px;
+  height:700px;
+  width:800px;
+  margin-left:auto;
+  margin-right:auto; 
+  background: transparent;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="email"]
+{
+  height:30px;
+  width:100%;;
+  display: inline-block;
+  vertical-align: middle;
+  height: 34px;
+  padding: 0 10px;
+  margin-top: 3px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.7);
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-transition: background-position 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  transition: background-position 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+select:hover,
+textarea:hover,
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.7);
+}
+select:focus,
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  border: 2px solid;
+  border-color: #1e5f99;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+}
+.btn {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 3px 0;
+  padding: 6px 20px;
+  font-size: 15px;
+  line-height: 20px;
+  height: 34px;
+  background-color: rgba(0, 0, 0, 0.15);
+  color: #00aeff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
+  border-radius: 2px;
+  -webkit-transition: background-color 0.2s, box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+.btn.active,
+.btn:active {
+  padding: 7px 19px 5px 21px;
+}
+.btn.disabled:active,
+.btn[disabled]:active,
+.btn.disabled.active,
+.btn[disabled].active {
+  padding: 6px 20px !important;
+}
+.btn:hover,
+.btn:focus {
+  background-color: rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
+}
+.btn:active,
+.btn.active {
+  background-color: rgba(0, 0, 0, 0.15);
+  color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.07);
+  box-shadow: inset 1.5px 1.5px 3px rgba(0, 0, 0, 0.5);
+}
+.btn-primary {
+  background-color: #098cc8;
+  color: #ffffff;
+  border: 1px solid transparent;
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
+  border-radius: 2px;
+  -webkit-transition: background-color 0.2s, box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+  background-image: -webkit-linear-gradient(top, #0f9ada, #0076ad);
+  background-image: linear-gradient(to bottom, #0f9ada, #0076ad);
+  border: 0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #21b0f1;
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
+}
+.btn-primary:active,
+.btn-primary.active {
+  background-color: #006899;
+  color: rgba(255, 255, 255, 0.7);
+  border-color: transparent;
+  box-shadow: inset 1.5px 1.5px 3px rgba(0, 0, 0, 0.5);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-image: -webkit-linear-gradient(top, #37c0ff, #0097dd);
+  background-image: linear-gradient(to bottom, #37c0ff, #0097dd);
+}
+.btn-primary:active,
+.btn-primary.active {
+  background-image: -webkit-linear-gradient(top, #006ea1, #00608d);
+  background-image: linear-gradient(to bottom, #006ea1, #00608d);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6) inset, 0 0 0 1px rgba(255, 255, 255, 0.07) inset;
+}
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.alert {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 4px 20px 4px 20px;
+  font-size: 13px;
+  line-height: 20px;
+  margin-bottom: 20px;
+  text-shadow: none;
+  position: relative;
+  background-color: #272e3b;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #000;
+  box-shadow: 0 0 0 1px #363d49 inset, 0 5px 10px rgba(0, 0, 0, 0.75);
+}
+.alert-error {
+  color: #f00;
+  background-color: #360e10;
+  box-shadow: 0 0 0 1px #551e21 inset, 0 5px 10px rgba(0, 0, 0, 0.75);
+}
+.alert:empty{
+    display: none;
+}
+.alert-success {
+  color: #21ec0c;
+  background-color: #15360e;
+  box-shadow: 0 0 0 1px #2a551e inset, 0 5px 10px rgba(0, 0, 0, 0.75);
+}
+	</style>
+
+	</style>
 
 <body>
 
@@ -52,113 +318,22 @@
 	</header>
 	<!--================Header Menu Area =================-->
 	
-	<!--================Home Banner Area =================-->
-	<section class="home_banner_area">
-		<div class="banner_inner">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-5">
-						<div class="banner_content">
-                            <p>Tuned Applications is a Corporate Training, Software, Recruitment & Consulting Company since 2011.</p>
-							<h2>
-								Tuned Applications
-							</h2>
-				
-							<div class="d-flex align-items-center">
-								<a class="primary_btn" href="#About-us"><span>More Information</span></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-7">
-						<div class="home_right_img">
-							<img class="img-fluid" src="Tuned Applications/img/banner/home-right.png" alt="">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================End Home Banner Area =================-->
-
-	<!--================Start Features Area =================-->
-	<div id="About-us">
-	<section class="section_gap features_area">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-8 text-center">
-					<div class="main_title">
-						<p class="top_title">We Have Exclusive Stunning Features</p>
-						<h2>About Us</h2>
-                        <h1>Description</h1>
-						<p style="color: black;">Tuned Applications is a Corporate Training, Software, Recruitment & Consulting Company since 2011.
-                            Tuned Applications Company is one of the most professional and trustworthy companies in Jordan in the area of the IT field, offering a comprehensive range of training, developmental solutions, consultation, and support to both individuals and corporate professionals locally and regionally.
-                            It was established in 2011 and operates as a fully prepared training corporate.
-							</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="row align-items-center">
-				<div class="col-lg-6">
-					<div class="left_features">
-						<img class="img-fluid" src="Tuned Applications/Images/Images/course.jpg" alt="">
-					</div>
-				</div>
-				<div class="col-lg-5 offset-lg-1">
-					<!-- single features -->
-					<div class="single_feature">
-						<div class="feature_head">
-							<span class="lnr lnr-screen"></span>
-
-							<h4>The Courses</h4>
-                            <p style="color: black;">
-                                Java<br/>
-                                android<br/>
-                                python<br/>
-                                Oracle<br/>
-                                cyber security<br/>
-                                asp net mvc<br/>
-                                Flutter<br/>
-                                QA
-                            </p>
-						</div>
-
-					</div>
-					<!-- single features -->
-					<div class="single_feature">
-						<div class="feature_head">
-							<span class="lnr lnr-screen"></span>
-							<h4>Certificates</h4>
-                            <p style="color: black;">
-                                1-certification degree on pyhton<br/>
-                                2-certification degree on java<br/>
-                                3-certification degree on android<br/>
-                                4-certification degree on oracle<br/>
-                                5-certification degree on cyber securtiy<br/>
-                                6-certification degree on asp .net mvc<br/>
-                                7-certification degree on flutter
-                            </p>
-						</div>
-
-					</div>
-					<!-- single features -->
-					<div class="single_feature">
-						<div class="feature_head">
-							<span class="lnr lnr-screen"></span>
-                            <h4>offline Training program 250,00 Dinar</h4><br/>
-						</div>
-
-					</div>
-				</div>
-			</div>
-			<div class="row justify-content-center">
-						<a href="" ><h2 style="cursor: pointer;">تقديم طلب</h2></a>
-			</div>
-		</div>
-		</div>
-	</section>
+	<link href="//db.onlinewebfonts.com/c/a4e256ed67403c6ad5d43937ed48a77b?family=Core+Sans+N+W01+35+Light" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="form.css" type="text/css">
+<div class="body-content">
+  <div class="module">
+    <h1>Submit a Training Request</h1>
+    <form class="form" action="" method="POST" enctype="multipart/form-data" autocomplete="off">
+      <div class="alert alert-error"></div>
+      <input type="text" placeholder="Student Name" name="username" required />
+      <input type="text" placeholder="Student ID" name="email" required />
+	  <input type="email" placeholder="Email" name="email" required />
+	  <input type="text" placeholder="Specialization" name="email" required />
+	  <input type="text" placeholder="Training Type" name="email" required />
+      <input type="submit" value="Request" name="Request" class="btn btn-block btn-primary" />
+    </form>
+  </div>
 </div>
-	<!--================End Features Area =================-->
 
 
 	<!--================Footer Area =================-->
