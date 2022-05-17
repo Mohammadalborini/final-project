@@ -164,7 +164,7 @@
 			</div>
 
 			<div class="row justify-content-center">
-						<a href="" ><h2 style="cursor: pointer;">تقديم طلب</h2></a>
+						<a href="Clever Mind POB_training_request.php" ><h2 style="cursor: pointer;">تقديم طلب</h2></a>
 			</div>
 		</div>
 	</section>
