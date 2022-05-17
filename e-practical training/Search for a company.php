@@ -150,7 +150,7 @@ include("coniction.php");
                         <td><?php echo $row['Location']; ?></td>
                         <td><?php echo $row['Training_type']; ?></td>
                         <td>
-                        <a href="#" > تقديم طلب </a>
+                        <a href="<?php echo $name; ?>" > تقديم طلب </a>
                         </td>
                       </tr>
                     
