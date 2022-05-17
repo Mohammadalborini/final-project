@@ -77,7 +77,7 @@ span{
 								<div class="form-group mt-4"> <input type="password" name="password" id="mail" class="form-control" required=""> <label class="form-control-placeholder" for="mail">كلمة المرور</label> </div>
 								<div class="row justify-content-center my-3"> <button type="submit" name="login" value="login" class="btn btn-success rounded-pill pr-5 pl-5">الدخول</button> </div>
 
-								<div class="row justify-content-center my-3"> <a href="Employee Services.php" class="btn btn-success rounded-pill pr-5 pl-5" style="margin-top:15px;">الدخول بصفة مسؤول</a> </div>
+								<div class="row justify-content-center my-3"> <a href="admin/Admin page/Employee Services.php" class="btn btn-success rounded-pill pr-5 pl-5" style="margin-top:15px;">الدخول بصفة مسؤول</a> </div>
 							</div>					  
 						  </div>
 					  </form>
