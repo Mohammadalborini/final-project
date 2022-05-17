@@ -27,7 +27,7 @@ if($_SERVER['REQUEST_METHOD']== "POST")
         if($user_data['password']===$password)
         {
             $_SESSION['username'] = $user_data['username'];
-            header("Location: student.php");
+            header("Location: admin/Admin page/user.php");
             die;
         }else{
             
