@@ -1,17 +1,14 @@
-<!--
-=========================================================
-* Material Dashboard Dark Edition - v2.1.0
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-dashboard-dark
-* Copyright 2019 Creative Tim (http://www.creative-tim.com)
+<?php 
 
-* Coded by www.creative-tim.com
+session_start();
 
-=========================================================
+include("../../coniction.php");
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
+$username = $_SESSION['username'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
