@@ -4,6 +4,14 @@ session_start();
 include("coniction.php");
 
 $student_id = $_SESSION['Student_id'];
+
+
+if ($_SESSION['error2'] == ""){
+    $_SESSION['error2'] = "";
+}else{
+    $error = $_SESSION['error2'];
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -140,11 +148,11 @@ $student_id = $_SESSION['Student_id'];
    </head>
    <!-- body -->
    <body class="main-layout">
-      <!-- loader  -->
+      <!-- loader 
       <div class="loader_bg">
          <div class="loader"><img src="images/loading.gif" alt="#" /></div>
       </div>
-      <!-- end loader -->
+      end loader -->
       <!-- header -->
       <header>
          <!-- header inner -->
@@ -194,7 +202,7 @@ $student_id = $_SESSION['Student_id'];
       <!--  contact -->
 
 
-            <div class="list">
+            <div class="list" style="margin-top:50px;">
             <h2>Languages and Courses</h2>
         <form method="POST" action="Fliter_search.php">
             <ul>
@@ -271,6 +279,13 @@ $student_id = $_SESSION['Student_id'];
             </ul>
             <button name="button" class="button"> Search </button>
                     </form>
+                    <?php if (isset($error)): ?>
+						<div class="list" style="top:-810px; left: -35%; background:red; color:white; font-size:25px;">
+										<?php echo $error; ?>  
+										</div>
+                   				<?php
+								$_SESSION['error2'] = null; 
+								endif ?>
         </div>
 
       <!-- end contact -->

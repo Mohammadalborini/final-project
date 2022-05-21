@@ -4,6 +4,8 @@ session_start();
 include("coniction.php");
 
 $student_id = $_SESSION['Student_id'];
+
+$_SESSION['error2'] = '';
 ?>
 
 <!DOCTYPE html>
@@ -145,6 +147,11 @@ $student_id = $_SESSION['Student_id'];
                   <!-- Code fliter php -->
                    <?php
                  if (isset($_POST['button'])){
+                    if (empty($_POST['check_list'])) {
+                     $_SESSION['error2'] = 'You must choose at least one item!';
+                       echo "<script> window.location.href='filter page.php'; </script>";
+                     exit();
+                    }else {
                   $arrays = array();
                   $result = array();
                   $arrays = $_POST['check_list'];
@@ -197,7 +204,7 @@ $student_id = $_SESSION['Student_id'];
              ';
                     
                   }
-                    
+               }
                   }
                 
                     
