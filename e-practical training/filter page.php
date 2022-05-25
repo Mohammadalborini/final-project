@@ -280,7 +280,7 @@ if ($_SESSION['error2'] == ""){
             <button name="button" class="button"> Search </button>
                     </form>
                     <?php if (isset($error)): ?>
-						<div class="list" style="top:-810px; left: -35%; background:red; color:white; font-size:25px;">
+						<div class="list" style="top:-810px; left: -35%;  color:red; font-size:25px;">
 										<?php echo $error; ?>  
 										</div>
                    				<?php
