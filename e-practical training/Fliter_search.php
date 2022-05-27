@@ -197,7 +197,7 @@ $_SESSION['error2'] = '';
                     <td>'. $text7.'</td>
                     <td>'. $text8 .'</td>
                     <td>
-                    <a href="'.$text4.'_training_request.php" > تقديم طلب </a>
+                    <a href="'.$text4.'_training_request.php" target=_blanck> تقديم طلب </a>
                     </td>
                 </tr>
               </tbody>

@@ -91,7 +91,7 @@
 						<p class="top_title">We Have Exclusive Stunning Features</p>
 						<h2>About Us</h2>
                         <h1>Description</h1>
-						<p style="color: black;">Our Vision for Clever Mind ICT is to
+						<p style="color: white;">Our Vision for Clever Mind ICT is to
                             become number one Tech
                             Solutions & Training innovators
                             company that provides Web &
@@ -105,10 +105,10 @@
 			</div>
 
             <div class="row justify-content-center">
-				<div class="col-lg-8 text-center">
-					<div class="main_title">
-						<h2>More Details</h2>
-						<p style="color: black;">The training consists of two stages, the first stage is a theoretical course on (the basics of training and project building) QA and the second stage is practical (depends on building and developing projects from the simplest project to the largest project). Online training only from two to three months,
+				<div class="col-lg-8 text-center" >
+					<div class="main_title" >
+						<h2 style="color: white;">More Details</h2>
+						<p style="color: white;">The training consists of two stages, the first stage is a theoretical course on (the basics of training and project building) QA and the second stage is practical (depends on building and developing projects from the simplest project to the largest project). Online training only from two to three months,
                              for students, graduates, employees, etc. There is no accreditation for all university students for university training. Training will be 3-4 days a week. The goal of the training is for the student to gain strong practical experience in the field of training and work on many projects to prove his skills. <br/><br/>
                              As for the follow-up with the student: the training consists of an explanation of recorded files, recorded lectures, practical applications, strong projects, and in some lectures via Skype or Zoom. Private training means following up with each student on a case-by-case basis so that we can identify weaknesses, address them, and strengthen you in the entire field of training.
 							</p>
@@ -125,10 +125,10 @@
 					<!-- single features -->
 					<div class="single_feature">
 						<div class="feature_head">
-							<span class="lnr lnr-screen"></span>
+							<span class="lnr lnr-screen" style="color: white;"></span>
 
-							<h4>The Courses</h4>
-                            <p style="color: black;">
+							<h4 style="color: white;">The Courses</h4>
+                            <p style="color: white;">
                                 1- Web Training Languages: HTML, CSS, JavaScript, PHP<br/>
                                 2- Android Training Languages: Java Using Android studio.<br/>
                                 3- IOS Training Languages: Swift Using XCode "Must have MAC Laptop"
@@ -139,9 +139,9 @@
 					<!-- single features -->
 					<div class="single_feature">
 						<div class="feature_head">
-							<span class="lnr lnr-screen"></span>
-							<h4>Certificates</h4>
-                            <p style="color: black;">
+							<span class="lnr lnr-screen" style="color: white;"></span>
+							<h4 style="color: white;">Certificates</h4>
+                            <p style="color: white;">
                                 1- Certificate of the theoretical course<br/>
                                 2- Certificate of training experience<br/>
                                 3- Certificate of thanks and appreciation<br/>
@@ -154,8 +154,8 @@
 					<!-- single features -->
 					<div class="single_feature">
 						<div class="feature_head">
-							<span class="lnr lnr-screen"></span>
-                            <h4>Online Training program 50,000 dinars</h4>
+							<span class="lnr lnr-screen" style="color: white;"></span>
+                            <h4 style="color: white;">Online Training program 50,000 dinars</h4>
 						
 						</div>
 

@@ -4,7 +4,6 @@ session_start();
 
 include("coniction.php");
 
-$student_id = $_SESSION['Student_id'];
 ?>
 
 <!doctype html>
@@ -335,10 +334,10 @@ input[type="email"]:focus {
     <form class="form" action="" method="POST" enctype="multipart/form-data" autocomplete="off">
       <div class="alert alert-error"></div>
       <input type="text" placeholder="Student Name" name="username" required />
-      <input type="text" placeholder="Student ID" name="email" required />
+      <input type="text" placeholder="Student ID" name="student_id" required />
 	  <input type="email" placeholder="Email" name="email" required />
-	  <input type="text" placeholder="Specialization" name="email" required />
-	  <input type="text" placeholder="Training Type" name="email" required />
+	  <input type="text" placeholder="Specialization" name="spec" required />
+	  <input type="text" placeholder="Training Type" name="train" required />
       <input type="submit" value="Request" name="Request" class="btn btn-block btn-primary" />
     </form>
   </div>
@@ -417,3 +416,23 @@ input[type="email"]:focus {
 </body>
 
 </html>
+
+<?php
+
+if(isset($_POST['Request'])) {
+    $username = $_POST['username'];
+    $student_id = $_POST['student_id'];
+    $email = $_POST['email'];
+    $spec = $_POST['spec'];
+    $train = $_POST['train'];
+
+    $sql = "INSERT into company_database (student_name, student_id, email, specialization, training_type)
+    VALUE ('$username','$student_id','$email','$spec', '$train')";
+    mysqli_query($con, $sql);
+    echo '<p style="position: absolute; top: 150px; margin-left: 410px; font-size: 35px; color: green;">';
+    echo 'The request has been submitted successfully';
+    echo '</p>';
+}
+
+
+?>

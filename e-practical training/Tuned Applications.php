@@ -81,7 +81,7 @@
 	<!--================End Home Banner Area =================-->
 
 	<!--================Start Features Area =================-->
-	<div id="About-us">
+	<div id="About-us" style="color: white;">
 	<section class="section_gap features_area">
 		<div class="container">
 			<div class="row justify-content-center">
@@ -90,7 +90,7 @@
 						<p class="top_title">We Have Exclusive Stunning Features</p>
 						<h2>About Us</h2>
                         <h1>Description</h1>
-						<p style="color: black;">Tuned Applications is a Corporate Training, Software, Recruitment & Consulting Company since 2011.
+						<p>Tuned Applications is a Corporate Training, Software, Recruitment & Consulting Company since 2011.
                             Tuned Applications Company is one of the most professional and trustworthy companies in Jordan in the area of the IT field, offering a comprehensive range of training, developmental solutions, consultation, and support to both individuals and corporate professionals locally and regionally.
                             It was established in 2011 and operates as a fully prepared training corporate.
 							</p>
@@ -108,10 +108,10 @@
 					<!-- single features -->
 					<div class="single_feature">
 						<div class="feature_head">
-							<span class="lnr lnr-screen"></span>
+							<span class="lnr lnr-screen" style="color: white;"></span>
 
-							<h4>The Courses</h4>
-                            <p style="color: black;">
+							<h4 style="color: white;">The Courses</h4>
+                            <p >
                                 Java<br/>
                                 android<br/>
                                 python<br/>
@@ -127,9 +127,9 @@
 					<!-- single features -->
 					<div class="single_feature">
 						<div class="feature_head">
-							<span class="lnr lnr-screen"></span>
-							<h4>Certificates</h4>
-                            <p style="color: black;">
+							<span class="lnr lnr-screen" style="color: white;"></span>
+							<h4 style="color: white;">Certificates</h4>
+                            <p >
                                 1-certification degree on pyhton<br/>
                                 2-certification degree on java<br/>
                                 3-certification degree on android<br/>
@@ -144,8 +144,8 @@
 					<!-- single features -->
 					<div class="single_feature">
 						<div class="feature_head">
-							<span class="lnr lnr-screen"></span>
-                            <h4>offline Training program 250,00 Dinar</h4><br/>
+							<span class="lnr lnr-screen" style="color: white;"></span>
+                            <h4 style="color: white;">offline Training program 250,00 Dinar</h4><br/>
 						</div>
 
 					</div>

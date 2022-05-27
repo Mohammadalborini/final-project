@@ -150,7 +150,7 @@ include("coniction.php");
                         <td><?php echo $row['Location']; ?></td>
                         <td><?php echo $row['Training_type']; ?></td>
                         <td>
-                        <a href="<?php echo $name.'_training_request.php'; ?>" > تقديم طلب </a>
+                        <a href="<?php echo $name.'_training_request.php'; ?>" target=_blanck > تقديم طلب </a>
                         </td>
                       </tr>
                     
