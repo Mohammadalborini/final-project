@@ -7,7 +7,7 @@ $student_id = $_SESSION['Student_id'];
 
 
 if ($_SESSION['error2'] == null){
-    $_SESSION['error2'] = "";
+    $_SESSION['error2'] = null;
 }else{
     $error = $_SESSION['error2'];
 }
