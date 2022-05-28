@@ -161,7 +161,7 @@ $student_id = $_SESSION['Student_id'];
 				if (mysqli_num_rows($result) > 0) {
 					while ($row = mysqli_fetch_assoc($result)) {
 							$text1 = $row['Fall_name'];
-							echo '<h1>';
+							echo '<h1 style="margin-bottom: 55px;">';
 	   					    echo $text1;     
 						    echo '</h1>';  		
 							}
