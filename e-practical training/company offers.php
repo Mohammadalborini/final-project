@@ -3,9 +3,6 @@ session_start();
 
 include("coniction.php");
 
-$student_id = $_SESSION['Student_id'];
-
-
 ?>
 
 <!DOCTYPE html>
@@ -68,6 +65,7 @@ div, form, input, label, p {
       background: #fff;
       box-shadow: 0 0 8px #006622;
       margin-left: 25%; 
+      margin-top: 75px; 
       }
       input {
       margin-bottom: 10px;
@@ -181,7 +179,7 @@ div, form, input, label, p {
 
       <!--  form -->
       <div class="testbox">
-      <form method="POST" action="">
+      <form method="POST" action="" enctype="multipart/form-data">
         <fieldset>
           <legend>الرجاء من الشركات ادخال كافة المعلومات</legend>
            <div class="colums">
@@ -204,6 +202,10 @@ div, form, input, label, p {
           <div class="item">
             <label >الشهادات التي تقدمها<span>*</span></label>
             <input type="text"   name="Certi" required/>
+          </div>
+          <div class="item">
+            <label >إيميل الشركة<span>*</span></label>
+            <input type="text"   name="email" required/>
           </div>
           <div class="item">
             <label >موقع الشركة<span>*</span></label>
@@ -254,9 +256,13 @@ div, form, input, label, p {
 
 if(isset($_POST['submit'])) {
     $name = $_POST['name'];
-    $student_id = $_POST['id'];
-    $Spec = $_POST['Spec'];
-    $company = $_POST['company'];
+    $cours = $_POST['cours'];
+    $method = $_POST['method'];
+    $type = $_POST['type'];
+    $Certi = $_POST['Certi'];
+    $email = $_POST['email'];
+    $location = $_POST['location'];
+
 
     $file = $_FILES['file'];
     $fileName = $_FILES['file']['name'];
@@ -268,40 +274,47 @@ if(isset($_POST['submit'])) {
     $fileExt = explode('.', $fileName);
     $fileActualExt = strtolower(end($fileExt));
   
-    $allowed = array('pdf');
+    $allowed = array('jpg', 'jpeg', 'png');
+
+    $result = $con->query("SELECT * FROM companies_offers") or die($con->error);
+     $queryResult = mysqli_num_rows($result); 
+     $numrow= $queryResult;
+    
     
         if (in_array($fileActualExt, $allowed)) {
             if ($fileError === 0) {
                 if ($fileSize < 20000000) {
+                  for ($i=-1; $i<=$numrow; $i++){
                  
-                    $fileNameDB= $name;
-  
-                    $fileNameNew=  $name.'.'.$fileActualExt;
-                
-                    $fileDestination = 'pdf/'.$fileNameNew;
+                     $fileNameDB= "image".$i;
+   
+                     $fileNameNew=  "image".$i.'.'.$fileActualExt;
+                 }
+                    $fileDestination = 'upload/'.$fileNameNew;
   
                     move_uploaded_file($fileTmpName, $fileDestination);
             
 
-      $sql = "INSERT into student_accepted (student_name, student_id, Specialization, Company_name, pdf_name)
-              VALUE ('$name','$student_id','$Spec','$company', '$fileNameDB')";
+      $sql = "INSERT into companies_offers (name, The_Course, Training_method, Location, Training_type, Certificates, email ,imagename, Exfile)
+              VALUE ('$name','$cours','$method','$location','$type', '$Certi','$email', '$fileNameDB', '$fileActualExt')";
               mysqli_query($con, $sql);
-              echo '<p style="position: absolute; top: 110px; margin-left: 680px; font-size: 30px; color: green;">';
-              echo 'تم إرسال بنجاح';
+              echo '<p style="position: absolute; top: 110px; margin-left: 400px; font-size: 30px; color: green;">';
+              echo 'Submitted successfully
+              Please wait for a reply to the email';
               echo '</p>';
               
   
   }else {
-      echo '<p style="position: absolute; top: 110px; margin-left: 680px; font-size: 30px; color: red;">';
+      echo '<p style="position: absolute; top: 110px; margin-left: 650px; font-size: 30px; color: red;">';
       echo '
-      ملفك كبير جدًا';
+      Your file is too big!';
       echo '</p>';
   }
   
   }else {
-      echo '<p style="position: absolute; top: 110px; margin-left: 680px; font-size: 30px; color: red;">';
+      echo '<p style="position: absolute; top: 110px; margin-left: 650px; font-size: 30px; color: red;">';
       echo '
-      كان هناك خطأ في تحميل الملف الخاص بك'; 
+      There was an error uploading your file!'; 
       echo '</p>';  }
 
 }
