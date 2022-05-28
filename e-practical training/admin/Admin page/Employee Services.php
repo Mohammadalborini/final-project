@@ -60,8 +60,9 @@ if ($_SESSION['error'] == ""){
     cursor: pointer;'></td>
         <td> &nbsp </td>
     </tr>
-    </table>
+</table>
     </form>
+   
     <?php if (isset($error)): ?>
 						<div class="alert alert-danger" role="alert" style="display:unset !important">
 										<span>	<?php echo $error; ?>  </span>
@@ -69,7 +70,9 @@ if ($_SESSION['error'] == ""){
                    				<?php
 								$_SESSION['error'] = null; 
 								endif ?>
-    <br><br><br>
+    <br><br>
+    <a href="../../index.php" style="margin-top:50px;"> بوابة الطالب </a>
+    <br><br><br><br><br><br> <br><br>
 <div id="footer" align="center">
         
 <p style='font-family: Arial,Helvetica,sans-serif; font-size:16px;
