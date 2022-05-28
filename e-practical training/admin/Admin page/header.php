@@ -43,67 +43,24 @@ $username = $_SESSION['username'];
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item">
+          <li class="nav-item" >
             <a class="nav-link" href="./user.php">
-              <i class="material-icons">person</i>
-              <p>Users</p>
+           <i class="material-icons">business</i>
+              <p>Companies offers</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item " >
             <a class="nav-link" href="./latest_news.php">
-              <i class="material-icons">content_paste</i>
-              <p>Latest news</p>
+            <i class="material-icons">business</i>
+              <p>Available companies</p>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" >
             <a class="nav-link" href="./training.php">
-              <i class="material-icons">library_books</i>
-              <p>Training courses</p>
+            <i class="material-icons">content_paste</i>
+              <p>Student accepted</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./latest_events.php">
-              <i class="material-icons">bubble_chart</i>
-              <p>Latest events</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./attended.php">
-              <i class="material-icons">location_ons</i>
-              <p>Attended Courses & Events</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./jobs.php">
-              <i class="material-icons">notifications</i>
-              <p>Jobs</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./feedback.php">
-              <i class="material-icons">content_paste</i>
-              <p>Feedback</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./policy.php">
-              <i class="material-icons">content_paste</i>
-              <p>Policy and Privacy</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./notifications.php">
-              <i class="material-icons">notifications</i>
-              <p>Notifications</p>
-            </a>
-          </li>
-          
-          <!-- <li class="nav-item active-pro ">
-                <a class="nav-link" href="./upgrade.html">
-                    <i class="material-icons">unarchive</i>
-                    <p>Upgrade to PRO</p>
-                </a>
-            </li> -->
         </ul>
       </div>
     </div>
