@@ -3,8 +3,8 @@ include("coniction.php");
 session_start();
 
 
-if ($_SESSION['error'] == ""){
-    $_SESSION['error'] = "";
+if ($_SESSION['error'] == null){
+    $_SESSION['error'] = null;
 }else{
     $error = $_SESSION['error'];
 }
