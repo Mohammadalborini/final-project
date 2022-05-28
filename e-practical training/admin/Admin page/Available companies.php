@@ -58,7 +58,7 @@
                                 echo '<img src="../../upload/'.$text1.'.'.$text2.'" width="100px" height="100px" alt="#"/>';  ?> 
                           </td>
                         <td>
-                        <form action="edit Available companies" method="POST" style="display: inline">
+                        <form action="edit_Available_companies" method="POST" style="display: inline">
                               <button type="submit" class="btn btn-primary">Edit</button>
                               <input  type="hidden" name="id" value="<?php echo $row['id'];?>">
                             </form>
