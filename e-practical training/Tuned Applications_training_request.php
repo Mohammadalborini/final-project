@@ -285,7 +285,6 @@ input[type="email"]:focus {
   background-color: #15360e;
   box-shadow: 0 0 0 1px #2a551e inset, 0 5px 10px rgba(0, 0, 0, 0.75);
 }
-	</style>
 
 	</style>
 
@@ -327,7 +326,6 @@ input[type="email"]:focus {
 	<!--================Header Menu Area =================-->
 	
 	<link href="//db.onlinewebfonts.com/c/a4e256ed67403c6ad5d43937ed48a77b?family=Core+Sans+N+W01+35+Light" rel="stylesheet" type="text/css"/>
-<link rel="stylesheet" href="form.css" type="text/css">
 <div class="body-content">
   <div class="module">
     <h1>Submit a Training Request</h1>
