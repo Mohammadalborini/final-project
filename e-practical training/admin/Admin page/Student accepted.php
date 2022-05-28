@@ -84,3 +84,17 @@
       
 <?php include "footer.php" ?>
       
+<?php
+
+if (isset($_POST['delete'])){
+  $id = $_POST['del'];
+  $result = $con->query("SELECT * FROM student_accepted WHERE id='$id' ") or die($con->error);
+    while ($row = $result->fetch_assoc()){
+      $id = $row['id'];
+    $sql = "DELETE FROM student_accepted WHERE id='$id' ";
+            mysqli_query($con, $sql); 
+            echo "<script> alert('The company has been removed.') </script>";
+}
+
+}
+?>

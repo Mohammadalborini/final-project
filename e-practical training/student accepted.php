@@ -205,6 +205,7 @@ $student_id = $_SESSION['Student_id'];
 		<div class="form-group">
             <button type="submit" name="submit" onclick="javascript: return confirm('هل أنت متأكد من المعلومات التي ادخلتها؟');" class="btn btn-success btn-lg btn-block">إرسال</button>
         </div>
+        <a href="indexs.php" class="btn btn-success btn-lg btn-block">العودة الى الصفحة الرئيسية</a>
     </form>
 </div>
 
