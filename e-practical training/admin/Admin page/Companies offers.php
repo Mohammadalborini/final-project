@@ -15,7 +15,7 @@
                    $_SESSION['numrow'] = $queryResult;
                    ?>
                   <table class="table table-hover">
-                    <thead>
+                    <thead class=" text-primary">
                       <th>ID</th>
                       <th>Name</th>
                       <th>Email</th>
