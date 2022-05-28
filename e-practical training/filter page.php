@@ -49,11 +49,11 @@ if ($_SESSION['error2'] == null){
    </head>
    <!-- body -->
    <body class="main-layout">
-      <!-- loader 
+      <!-- loader  -->
       <div class="loader_bg">
          <div class="loader"><img src="images/loading.gif" alt="#" /></div>
       </div>
-      end loader -->
+       <!-- end loader -->
       <!-- header -->
       <header>
          <!-- header inner -->

@@ -156,7 +156,7 @@ include("coniction.php");
                             <tr>
                         <td> '.$text3.'</td>
                         <td> 
-                        <img src="images/'.$text1.'.'.$text2.'" style="width:125px; hight:125px;"/></td>
+                        <img src="upload/'.$text1.'.'.$text2.'" style="width:125px; hight:125px;"/></td>
                         <td><a href="'.$text4.'.php" target=_blanck>'.$text4.'</a></td>
                         <td>'. $text5 .'</td>
                         <td>'. $text6.' </td>
