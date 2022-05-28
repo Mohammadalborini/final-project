@@ -30,15 +30,11 @@ if (isset($_POST['id'])){
                   <h4 class="card-title">Edit Student accepted </h4>
                 </div>
                 <div class="card-body">
-<?php
-      $imagename = $_SESSION['imagename'];
-      $Exfile= $_SESSION['Exfile'];
-?>
 <form action="" method="POST" enctype="multipart/form-data">
     <label>Studetn Name</label>
     <input autocomplete="off" type="text" class="form-control" name="name" value="<?php echo $_SESSION['student_name']; ?>" >
     <label>ID Student</label>
-    <input autocomplete="off" type="text" class="form-control" name="idstudent" value="<?php echo $_SESSION['student_id']; ?>" >
+    <input autocomplete="off" type="text" class="form-control" name="student_id" value="<?php echo $_SESSION['student_id']; ?>" >
     <label>Specialization</label>
     <input autocomplete="off" type="text" class="form-control" name="Specialization" value="<?php echo $_SESSION['Specialization']; ?>" >
     <label>Company name</label>
@@ -74,14 +70,11 @@ if (isset($_POST['id'])){
 if (isset($_POST['edit'])){
 
     $name = $_POST['name'];
-    $The_Course = $_POST['The_Course'];
-    $Training_method = $_POST['Training_method'];
-    $Location = $_POST['Location'];
-    $Training_type = $_POST['Training_type'];
-    $Certificates = $_POST['Certificates'];
+    $student_id = $_POST['student_id'];
+    $Specialization = $_POST['Specialization'];
+    $Company_name = $_POST['Company_name'];
 
-    $imagename = $_SESSION['imagename'];
-    $Exfile = $_SESSION['Exfile'];
+    $pdf_name = $_SESSION['pdf_name'];
 
   if (empty($_POST['file'])){
     $file = $_FILES['file'];
@@ -94,30 +87,27 @@ if (isset($_POST['edit'])){
     $fileExt = explode('.', $fileName);
     $fileActualExt = strtolower(end($fileExt));
 
-    $_SESSION['fileActualExt'] = $fileActualExt;
-
-    $allowed = array('jpg', 'jpeg', 'png', 'pdf');
+    $allowed = array('pdf');
     
         if (in_array($fileActualExt, $allowed)) {
             if ($fileError === 0) {
                 if ($fileSize < 20000000) {
                   
     
-                    $fileNameDB= $imagename;
-                    $_SESSION['fileNameDB'] = $fileNameDB;
+                    $fileNameDB= $pdf_name;
+                    $_SESSION['pdf_name'] = $fileNameDB;
   
                     $fileNameNew=  $imagename.'.'.$fileActualExt;
                 
-                    $fileDestination = '../../upload/'.$fileNameNew;
+                    $fileDestination = '../../pdf/'.$fileNameNew;
   
                     move_uploaded_file($fileTmpName, $fileDestination);
 
-                    $fileNameDB = $_SESSION['fileNameDB'];
-                    $fileActualExt = $_SESSION['fileActualExt'];
+                    $fileNameDB = $_SESSION['pdf_name'];
         
                     $id1 = $_SESSION['id'];
-                    $sql= "UPDATE student_accepted SET name='$name',The_Course ='$The_Course',Training_method='$Training_method',Location='$Location',
-                    Training_type ='$Training_type', Certificates='$Certificates', imagename='$fileNameDB', Exfile='$fileActualExt' WHERE id = '$id1';";
+                    $sql= "UPDATE student_accepted SET student_name='$name', student_id ='$student_id',Specialization='$Specialization',Company_name='$Company_name',
+                    pdf_name='$fileNameDB'  WHERE id = '$id1';";
                     mysqli_query($con, $sql);
                     echo "<script> alert('The data has been modified.') </script>";
                  
@@ -126,12 +116,11 @@ if (isset($_POST['edit'])){
             }
           }
 
-          $imagename = $_SESSION['imagename'];
-          $Exfile = $_SESSION['Exfile'];
+          $pdf_name = $_SESSION['pdf_name'];
         
           $id1 = $_SESSION['id'];
-          $sql= "UPDATE student_accepted SET name='$name', The_Course ='$The_Course', Training_method='$Training_method', Location='$Location',
-          Training_type ='$Training_type', Certificates='$Certificates', imagename='$imagename', Exfile='$Exfile'  WHERE id = '$id1' ";
+          $sql= "UPDATE student_accepted SET student_name='$name', student_id ='$student_id', Specialization='$Specialization', Company_name='$Company_name',
+          pdf_name='$pdf_name' WHERE id = '$id1' ";
           mysqli_query($con, $sql);
           echo "<script> alert('The data has been modified.') </script>";
 }
