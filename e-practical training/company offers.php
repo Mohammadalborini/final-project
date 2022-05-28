@@ -134,6 +134,16 @@ div, form, input, label, p {
                                     margin-right: 350px;
                                     font-family: serif;
 }
+.condition p{
+   color: #000;
+   font-size: 25px;
+   font-weight: bold;
+   text-align: right;
+   line-height: 10px;
+   margin-top:  80px;
+   margin-right: 380px;
+   font-family: serif;
+}
       </style>
    </head>
    <!-- body -->
@@ -178,6 +188,12 @@ div, form, input, label, p {
       <!-- end header -->
 
       <!--  form -->
+      <div class="condition">
+      <p>:الرجاء الالتزام بشروط التالية
+  <br/><br/> <br/><br/>  الالتزام بمدة تدريب لا تقل عن 280 ساعة للطالب والسماح للمشرف السؤول عنه متابعة اخبار التدريب-
+      </p>
+
+      </div>
       <div class="testbox">
       <form method="POST" action="" enctype="multipart/form-data">
         <fieldset>
