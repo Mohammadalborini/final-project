@@ -30,7 +30,7 @@
                         Specialization
                         </th>
                         <th>
-                        Company_name
+                        Company name
                         </th>
                         <th>
                         PDF
