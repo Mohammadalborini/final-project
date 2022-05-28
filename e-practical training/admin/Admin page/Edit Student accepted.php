@@ -5,18 +5,15 @@ include "header.php";
 if (isset($_POST['id'])){
   $id = $_POST['id'];
   $_SESSION['id'] = $id;
-  $result = $con->query("SELECT * FROM companies WHERE id='$id' ") or die($con->error);
+  $result = $con->query("SELECT * FROM student_accepted WHERE id='$id' ") or die($con->error);
     while ($row = $result->fetch_assoc()){
 
     $_SESSION['id'] = $row['id'];
-    $_SESSION['name'] = $row['name'];
-    $_SESSION['The_Course'] = $row['The_Course'];
-    $_SESSION['Training_method'] = $row['Training_method'];
-    $_SESSION['Location'] = $row['Location'];
-    $_SESSION['Training_type'] = $row['Training_type'];
-    $_SESSION['Certificates'] = $row['Certificates'];
-    $_SESSION['imagename'] = $row['imagename'];
-    $_SESSION['Exfile'] = $row['Exfile'];
+    $_SESSION['student_name'] = $row['student_name'];
+    $_SESSION['student_id'] = $row['student_id'];
+    $_SESSION['Specialization'] = $row['Specialization'];
+    $_SESSION['Company_name'] = $row['Company_name'];
+    $_SESSION['pdf_name'] = $row['pdf_name'];
      
   }}?>
 
@@ -30,7 +27,7 @@ if (isset($_POST['id'])){
              
                   <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Edit company information </h4>
+                  <h4 class="card-title">Edit Student accepted </h4>
                 </div>
                 <div class="card-body">
 <?php
@@ -38,22 +35,19 @@ if (isset($_POST['id'])){
       $Exfile= $_SESSION['Exfile'];
 ?>
 <form action="" method="POST" enctype="multipart/form-data">
-    <label>name</label>
-    <input autocomplete="off" type="text" class="form-control" name="name" value="<?php echo $_SESSION['name']; ?>" >
-    <label>The Course</label>
-    <input autocomplete="off" type="text" class="form-control" name="The_Course" value="<?php echo $_SESSION['The_Course']; ?>" >
-    <label>Training method</label>
-    <input autocomplete="off" type="text" class="form-control" name="Training_method" value="<?php echo $_SESSION['Training_method']; ?>" >
-    <label>Location</label>
-    <input autocomplete="off" type="text" class="form-control" name="Location" value="<?php echo $_SESSION['Location']; ?>" >
-    <label>Training_type</label>
-    <input autocomplete="off" type="text" class="form-control" name="Training_type" value="<?php echo $_SESSION['Training_type']; ?>">
-    <label>Certificates</label>
-    <input autocomplete="off" type="text" class="form-control" name="Certificates" value="<?php echo $_SESSION['Certificates']; ?>">
-    <label>Picture</label><br>
+    <label>Studetn Name</label>
+    <input autocomplete="off" type="text" class="form-control" name="name" value="<?php echo $_SESSION['student_name']; ?>" >
+    <label>ID Student</label>
+    <input autocomplete="off" type="text" class="form-control" name="idstudent" value="<?php echo $_SESSION['student_id']; ?>" >
+    <label>Specialization</label>
+    <input autocomplete="off" type="text" class="form-control" name="Specialization" value="<?php echo $_SESSION['Specialization']; ?>" >
+    <label>Company name</label>
+    <input autocomplete="off" type="text" class="form-control" name="Company_name" value="<?php echo $_SESSION['Company_name']; ?>" >
+    <label>PDF</label><br>
     <?php
+    $namepdf =  $_SESSION['pdf_name'];
     echo '
-     <img src="../../upload/'.$imagename.'.'.$Exfile.'" width="100px" height="100px" alt="#"/>
+    <a download href="../../pdf/'.$namepdf.'.pdf" >محمد عبدالحكيم توفيق عبدالله</a>
      ';?>
     <input name="file" type="file" class="form-control">
  
@@ -61,7 +55,7 @@ if (isset($_POST['id'])){
 
     <div class="mt-5">
         <button type="submit" name="edit" value="save" class="btn btn-primary">Save changes</button>
-        <a href="Available companies.php" onclick="javascript: return confirm('Are you sure?');" class="btn btn-danger">Cancel</a>
+        <a href="Student accepted.php" onclick="javascript: return confirm('Are you sure?');" class="btn btn-danger">Cancel</a>
     </div>
     
   
@@ -122,7 +116,7 @@ if (isset($_POST['edit'])){
                     $fileActualExt = $_SESSION['fileActualExt'];
         
                     $id1 = $_SESSION['id'];
-                    $sql= "UPDATE companies SET name='$name',The_Course ='$The_Course',Training_method='$Training_method',Location='$Location',
+                    $sql= "UPDATE student_accepted SET name='$name',The_Course ='$The_Course',Training_method='$Training_method',Location='$Location',
                     Training_type ='$Training_type', Certificates='$Certificates', imagename='$fileNameDB', Exfile='$fileActualExt' WHERE id = '$id1';";
                     mysqli_query($con, $sql);
                     echo "<script> alert('The data has been modified.') </script>";
@@ -136,7 +130,7 @@ if (isset($_POST['edit'])){
           $Exfile = $_SESSION['Exfile'];
         
           $id1 = $_SESSION['id'];
-          $sql= "UPDATE companies SET name='$name', The_Course ='$The_Course', Training_method='$Training_method', Location='$Location',
+          $sql= "UPDATE student_accepted SET name='$name', The_Course ='$The_Course', Training_method='$Training_method', Location='$Location',
           Training_type ='$Training_type', Certificates='$Certificates', imagename='$imagename', Exfile='$Exfile'  WHERE id = '$id1' ";
           mysqli_query($con, $sql);
           echo "<script> alert('The data has been modified.') </script>";
