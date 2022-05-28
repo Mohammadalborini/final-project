@@ -44,19 +44,19 @@ $username = $_SESSION['username'];
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item" >
-            <a class="nav-link" href="./user.php">
+            <a class="nav-link" href="./Companies offers.php">
            <i class="material-icons">business</i>
               <p>Companies offers</p>
             </a>
           </li>
           <li class="nav-item " >
-            <a class="nav-link" href="./latest_news.php">
+            <a class="nav-link" href="./Available companies.php">
             <i class="material-icons">business</i>
               <p>Available companies</p>
             </a>
           </li>
           <li class="nav-item" >
-            <a class="nav-link" href="./training.php">
+            <a class="nav-link" href="./Student accepted.php">
             <i class="material-icons">content_paste</i>
               <p>Student accepted</p>
             </a>
