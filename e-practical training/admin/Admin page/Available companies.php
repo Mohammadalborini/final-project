@@ -58,10 +58,10 @@
                                 echo '<img src="../../upload/'.$text1.'.'.$text2.'" width="100px" height="100px" alt="#"/>';  ?> 
                           </td>
                         <td>
-                        <form action="edit_Available_companies" method="POST" style="display: inline">
+                        <form action="edit_Available_companies.php" method="POST" style="display: inline">
                               <button type="submit" class="btn btn-primary">Edit</button>
                               <input  type="hidden" name="id" value="<?php echo $row['id'];?>">
-                            </form>
+                          </form>
                             <form action="" method="POST" style="display: inline">
                               <input  type="hidden" name="del" value="<?php echo $row['id'];?>">
                               <button onclick="javascript: return confirm('Are you sure?');"  type="submit" name="delete" class="btn btn-danger">Delete</button>
@@ -83,3 +83,18 @@
       </div>
 <?php include "footer.php" ?>
       
+
+<?php
+
+if (isset($_POST['delete'])){
+  $id = $_POST['del'];
+  $result = $con->query("SELECT * FROM companies WHERE id='$id' ") or die($con->error);
+    while ($row = $result->fetch_assoc()){
+      $id = $row['id'];
+    $sql = "DELETE FROM companies WHERE id='$id' ";
+            mysqli_query($con, $sql); 
+            echo "<script> alert('The company has been removed.') </script>";
+}
+
+}
+?>

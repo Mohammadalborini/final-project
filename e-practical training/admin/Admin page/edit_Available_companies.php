@@ -30,7 +30,7 @@ if (isset($_POST['id'])){
              
                   <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Edit</h4>
+                  <h4 class="card-title">Edit company information </h4>
                 </div>
                 <div class="card-body">
 <?php
@@ -77,13 +77,14 @@ if (isset($_POST['id'])){
 
 <?php
 
-if (isset($_POST['edit_slide'])){
+if (isset($_POST['edit'])){
 
-    $title = $_POST['title'];
-    $sub_title = $_POST['sub_title'];
-    $description = $_POST['description'];
-    $Name_of_blogger = $_POST['Name_of_blogger'];
-    $Date_of_publication = $_POST['Date_of_publication'];
+    $name = $_POST['name'];
+    $The_Course = $_POST['The_Course'];
+    $Training_method = $_POST['Training_method'];
+    $Location = $_POST['Location'];
+    $Training_type = $_POST['Training_type'];
+    $Certificates = $_POST['Certificates'];
 
     $imagename = $_SESSION['imagename'];
     $Exfile = $_SESSION['Exfile'];
@@ -113,7 +114,7 @@ if (isset($_POST['edit_slide'])){
   
                     $fileNameNew=  $imagename.'.'.$fileActualExt;
                 
-                    $fileDestination = '../upload/'.$fileNameNew;
+                    $fileDestination = '../../upload/'.$fileNameNew;
   
                     move_uploaded_file($fileTmpName, $fileDestination);
 
@@ -121,9 +122,10 @@ if (isset($_POST['edit_slide'])){
                     $fileActualExt = $_SESSION['fileActualExt'];
         
                     $id1 = $_SESSION['id'];
-                    $sql= "UPDATE companies SET title='$title', sub_title='$sub_title', description ='$description', name_of_blogger='$Name_of_blogger', Data='$Date_of_publication', imagename='$fileNameDB', Exfile='$fileActualExt'  WHERE id = '$id1' ";
+                    $sql= "UPDATE companies SET name='$name',The_Course ='$The_Course',Training_method='$Training_method',Location='$Location',
+                    Training_type ='$Training_type', Certificates='$Certificates', imagename='$fileNameDB', Exfile='$fileActualExt' WHERE id = '$id1';";
                     mysqli_query($con, $sql);
-                    echo "<script> alert('Slider Edited.') </script>";
+                    echo "<script> alert('The data has been modified.') </script>";
                  
                 }
               }
@@ -134,9 +136,10 @@ if (isset($_POST['edit_slide'])){
           $Exfile = $_SESSION['Exfile'];
         
           $id1 = $_SESSION['id'];
-          $sql= "UPDATE companies SET title='$title', sub_title='$sub_title', description ='$description', name_of_blogger='$Name_of_blogger', Data='$Date_of_publication', imagename='$imagename', Exfile='$Exfile'  WHERE id = '$id1' ";
+          $sql= "UPDATE companies SET name='$name', The_Course ='$The_Course', Training_method='$Training_method', Location='$Location',
+          Training_type ='$Training_type', Certificates='$Certificates', imagename='$imagename', Exfile='$Exfile'  WHERE id = '$id1' ";
           mysqli_query($con, $sql);
-          echo "<script> alert('Slider Edited.') </script>";
+          echo "<script> alert('The data has been modified.') </script>";
 }
 ?>
 
