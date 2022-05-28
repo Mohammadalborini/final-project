@@ -203,7 +203,7 @@ $student_id = $_SESSION['Student_id'];
             <input type="file" name="file" required="required">
         </div>       
 		<div class="form-group">
-            <button type="submit" name="submit" class="btn btn-success btn-lg btn-block">إرسال</button>
+            <button type="submit" name="submit" onclick="javascript: return confirm('هل أنت متأكد من المعلومات التي ادخلتها؟');" class="btn btn-success btn-lg btn-block">إرسال</button>
         </div>
     </form>
 </div>
