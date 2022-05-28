@@ -62,7 +62,7 @@
                           ?>
                           </td>
                           <td>
-                          <form action="" method="POST" style="display: inline">
+                          <form action="Edit Student accepted.php" method="POST" style="display: inline">
                               <button type="submit" name="accept" class="btn btn-primary">Edit</button>
                               <input  type="hidden" name="id" value="<?php echo $row['id'];?>">
                             </form>
