@@ -300,7 +300,7 @@ $student_id = $_SESSION['Student_id'];
 												   $text9 = $row['The_number_of_hours_spent'];
 												   if ($text9 >=90){
 
-													$sql = "SELECT id_student FROM practical_training";
+													$sql = "SELECT id_student FROM student_in_practical_training";
 														$result = mysqli_query($con, $sql);
 										   				if (mysqli_num_rows($result) > 0) {
 											  				 while ($row = mysqli_fetch_assoc($result)) {

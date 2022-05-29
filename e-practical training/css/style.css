@@ -353,6 +353,15 @@ button {
                                     font-family: serif;
 }
 
+.collapse h1{
+     color: #fff;
+                                    font-size: 50px;
+                                    font-weight: bold;
+                                    line-height: 22px;
+                                    margin-right: 350px;
+                                    font-family: serif;
+}
+
 
 /*-- header area --*/
 

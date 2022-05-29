@@ -60,6 +60,14 @@ $_SESSION['error2'] = '';
 .ourwork{
    margin-bottom:100px;
 }
+.collapse h1{
+     color: #fff;
+                                    font-size: 50px;
+                                    font-weight: bold;
+                                    line-height: 22px;
+                                    margin-right: 350px;
+                                    font-family: serif;
+}
     </style>
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>

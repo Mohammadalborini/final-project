@@ -431,7 +431,7 @@ if(isset($_POST['Request'])) {
     $spec = $_POST['spec'];
     $train = $_POST['train'];
 
-    $sql = "INSERT into company_database (student_name, student_id, email, specialization, training_type)
+    $sql = "INSERT into companies_databases (student_name, student_id, email, specialization, training_type)
     VALUE ('$username','$student_id','$email','$spec', '$train')";
     mysqli_query($con, $sql);
     echo '<p style="position: absolute; top: 150px; margin-left: 410px; font-size: 35px; color: green;">';

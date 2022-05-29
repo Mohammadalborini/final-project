@@ -210,6 +210,14 @@ $student_id = $_SESSION['Student_id'];
      color: #fff;
      background: #3bac99;
   }
+  .collapse h1{
+     color: #fff;
+                                    font-size: 50px;
+                                    font-weight: bold;
+                                    line-height: 22px;
+                                    margin-right: 350px;
+                                    font-family: serif;
+}
             </style>
    </head>
    <!-- body -->
