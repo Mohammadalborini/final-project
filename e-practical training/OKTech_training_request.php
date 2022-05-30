@@ -424,13 +424,25 @@ if(isset($_POST['Request'])) {
     $spec = $_POST['spec'];
     $train = $_POST['train'];
 
+    $sql = "SELECT * FROM companies_databases WHERE student_id = '$student_id'";
+    $reulet = mysqli_num_rows(mysqli_query($con, $sql));
+    
+    if ($reulet = 1) {
+      echo '<p style="position: absolute; top: 150px; margin-left: 530px; font-size: 35px; color: red;">';
+      echo 'The student is already there! <br/><br/>';
+      echo 'Sorry you can not register!';
+      echo '</p>';
+    }else {
+
     $sql = "INSERT into companies_databases (student_name, student_id, email, specialization, training_type)
     VALUE ('$username','$student_id','$email','$spec', '$train')";
     mysqli_query($con, $sql);
     echo '<p style="position: absolute; top: 150px; margin-left: 410px; font-size: 35px; color: green;">';
     echo 'The request has been submitted successfully';
     echo '</p>';
+  }
 }
+
 
 
 ?>

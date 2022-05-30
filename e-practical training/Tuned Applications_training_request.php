@@ -418,19 +418,31 @@ input[type="email"]:focus {
 <?php
 
 if(isset($_POST['Request'])) {
-    $username = $_POST['username'];
-    $student_id = $_POST['student_id'];
-    $email = $_POST['email'];
-    $spec = $_POST['spec'];
-    $train = $_POST['train'];
+  $username = $_POST['username'];
+  $student_id = $_POST['student_id'];
+  $email = $_POST['email'];
+  $spec = $_POST['spec'];
+  $train = $_POST['train'];
 
-    $sql = "INSERT into companies_databases (student_name, student_id, email, specialization, training_type)
-    VALUE ('$username','$student_id','$email','$spec', '$train')";
-    mysqli_query($con, $sql);
-    echo '<p style="position: absolute; top: 150px; margin-left: 410px; font-size: 35px; color: green;">';
-    echo 'The request has been submitted successfully';
+  $sql = "SELECT * FROM companies_databases WHERE student_id = '$student_id' and student_name = '$username' ";
+  $reulet = mysqli_num_rows(mysqli_query($con, $sql));
+  
+  if ($reulet = 1) {
+    echo '<p style="position: absolute; top: 150px; margin-left: 530px; font-size: 35px; color: red;">';
+    echo 'The student is already there! <br/><br/>';
+    echo 'Sorry you can not register!';
     echo '</p>';
+  }else {
+
+  $sql = "INSERT into companies_databases (student_name, student_id, email, specialization, training_type)
+  VALUE ('$username','$student_id','$email','$spec', '$train')";
+  mysqli_query($con, $sql);
+  echo '<p style="position: absolute; top: 150px; margin-left: 410px; font-size: 35px; color: green;">';
+  echo 'The request has been submitted successfully';
+  echo '</p>';
 }
+}
+
 
 
 ?>
