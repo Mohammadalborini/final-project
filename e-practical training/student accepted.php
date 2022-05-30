@@ -34,6 +34,7 @@ $student_id = $_SESSION['Student_id'];
       <!-- Scrollbar Custom CSS -->
       <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
       <!-- Tweaks for older IEs-->
+       <link href="css/material-dashboard.css" rel="stylesheet" />
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
       <!--[if lt IE 9]>
@@ -215,6 +216,76 @@ $student_id = $_SESSION['Student_id'];
         <a href="indexs.php" class="btn btn-success btn-lg btn-block">العودة الى الصفحة الرئيسية</a>
     </form>
 </div>
+
+
+<?php
+ $result = $con->query("SELECT * FROM student_accepted WHERE student_id = '$student_id' and student_name = '$text1' ") or die($con->error);
+ $queryResult = mysqli_num_rows($result);
+
+ if ($queryResult = 1 ):
+   while ($row = $result->fetch_assoc()):
+      ?>
+      <p style="position: absolute; top: 710px; margin-left: 600px; font-size: 30px; color: green;">
+تم تقديم طلب القبول بنجاح
+   </p>
+   <p style="position: absolute; top: 750px; margin-left: 370px; font-size: 30px; color: green;">
+اذا اردت تعديل اي معلومة الرجاء التواصل مع ديوان كلية تكنولوجيا المعلومات
+   </p>
+   <br/><br/>
+    <div class="card-body">
+   <div id="typography">
+     <div class="table-responsive">
+         <table class="table">
+           <thead class=" text-primary">
+             <th>
+               Full Name
+             </th>
+             <th>
+               ID Student
+             </th>
+             <th>
+             Specialization
+             </th>
+             <th>
+             Company name
+             </th>
+             <th>
+             PDF Name
+             </th>
+           </thead>
+           <tbody>
+          
+             <tr>
+               <td>
+               <?php echo $row['student_name'] ?>
+               </td>
+               <td>
+               <?php echo $row['student_id'] ?>
+               </td>
+               <td>
+               <?php echo $row['Specialization'] ?>
+               </td>
+               <td>
+               <?php echo $row['Company_name'] ?>
+               </td>
+               <td>
+          <?php echo'  <a href="pdf/'.$row['pdf_name'].'.pdf" >محمد عبدالحكيم توفيق عبدالله</a>';?>
+              
+               </td>
+             </tr>
+           </tbody>
+         </table>
+       </div>
+   </div>
+ </div>
+ <?php endwhile; ?>
+ <?php endif; ?>
+ 
+
+ 
+
+
+
 
       <!-- end contact -->
       <!--  footer -->
