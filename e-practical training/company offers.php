@@ -292,7 +292,7 @@ if(isset($_POST['submit'])) {
   
     $allowed = array('jpg', 'jpeg', 'png');
 
-    $result = $con->query("SELECT * FROM companies_offers") or die($con->error);
+    $result = $con->query("SELECT * FROM companies") or die($con->error);
      $queryResult = mysqli_num_rows($result); 
      $numrow= $queryResult;
     
