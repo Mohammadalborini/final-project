@@ -269,7 +269,7 @@ $student_id = $_SESSION['Student_id'];
                <?php echo $row['Company_name'] ?>
                </td>
                <td>
-          <?php echo'  <a href="pdf/'.$row['pdf_name'].'.pdf" >محمد عبدالحكيم توفيق عبدالله</a>';?>
+          <?php echo'  <a href="pdf/'.$row['pdf_name'].'.pdf" target=_blanck>محمد عبدالحكيم توفيق عبدالله</a>';?>
               
                </td>
              </tr>
