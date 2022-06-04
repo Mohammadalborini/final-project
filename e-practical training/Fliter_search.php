@@ -156,6 +156,8 @@ $_SESSION['error2'] = '';
 
                   <!-- Code fliter php -->
                    <?php
+
+
                  if (isset($_POST['button'])){
                     if (empty($_POST['check_list'])) {
                      $_SESSION['error2'] = 'You must choose at least one item!';
@@ -168,15 +170,26 @@ $_SESSION['error2'] = '';
                    
                   foreach($arrays as $chech){
                      $query="SELECT * FROM companies WHERE programming_languages LIKE '%$chech%'";
-                     $commint = mysqli_fetch_array(mysqli_query($con,$query));
+                     $commint = array();
+
+                     $commint_new = mysqli_query($con,$query);
+
                      
-                     if (in_array($commint, $result)) {
+                     $commint= mysqli_fetch_all($commint_new, MYSQLI_ASSOC);
+
+
+                        foreach ($commint as $record){
+                           if (in_array($record, $result)) {
                      
-                     }else if(mysqli_num_rows(mysqli_query($con,$query)) > 0){
-                        array_push($result, $commint);
-                       
-                     }
-           
+                           }else if(mysqli_num_rows(mysqli_query($con,$query)) > 0){
+                              array_push($result, $record);
+                             
+                           }
+
+                        }
+                  
+                        sort($result);
+                     
                   }
                   if (count($result) == 0 ) {
                      echo '<p style="color:red; text-align:center; font-size:25px;">';
@@ -217,7 +230,7 @@ $_SESSION['error2'] = '';
                   }
                }
                   }
-                
+                  
                     
                    ?>
                     </table>
