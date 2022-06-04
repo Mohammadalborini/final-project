@@ -218,6 +218,17 @@ $student_id = $_SESSION['Student_id'];
                                     margin-right: 350px;
                                     font-family: serif;
 }
+
+.Instructions a{
+         text-decoration: none;
+         position: absolute;
+         top: 15%;
+         left: 60%;
+         color: #fff;
+         font-size: 35px;
+         font-weight: bold;
+}
+
             </style>
    </head>
    <!-- body -->
@@ -261,7 +272,9 @@ $student_id = $_SESSION['Student_id'];
 							}
 						}
 				?>
-                              
+                     <div class="Instructions">
+                       <a href="student manual 3.pdf" target=_blanck >الإرشادات  </a>
+                        </div>
                               <div class="sign_btn"><a href="logout.php">Log out</a></div>
                            </div>
                         </nav>
