@@ -165,15 +165,16 @@ $_SESSION['error2'] = '';
                   $arrays = array();
                   $result = array();
                   $arrays = $_POST['check_list'];
-
+                   
                   foreach($arrays as $chech){
-                     $query="SELECT * FROM companies WHERE programming_languages LIKE '%$chech%' ";
+                     $query="SELECT * FROM companies WHERE programming_languages LIKE '%$chech%'";
                      $commint = mysqli_fetch_array(mysqli_query($con,$query));
-
+                     
                      if (in_array($commint, $result)) {
-                        
+                     
                      }else if(mysqli_num_rows(mysqli_query($con,$query)) > 0){
                         array_push($result, $commint);
+                       
                      }
            
                   }

@@ -164,14 +164,11 @@ $student_id = $_SESSION['Student_id'];
 										   if (mysqli_num_rows($result) > 0) {
 											   while ($row = mysqli_fetch_assoc($result)) {
 												   $text4 = $row['Email'];
-												   $text5 = $row['outlook'];
 
 												   echo '<a href="';
-												   echo $text5;
 												   echo '" dir="ltr">';
-
 												   echo $text4;
-												   echo '</a></p>';
+												   echo '</a>';
 												   
 												    		
 											   }
