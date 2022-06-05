@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 04, 2022 at 07:53 PM
+-- Generation Time: Jun 05, 2022 at 04:15 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -54,7 +54,7 @@ CREATE TABLE `companies` (
   `Location` varchar(256) NOT NULL,
   `Training_type` varchar(256) NOT NULL,
   `Certificates` varchar(256) NOT NULL,
-  `programming_languages` varchar(256) DEFAULT NULL,
+  `programming_languages` varchar(256) NOT NULL,
   `imagename` varchar(25) NOT NULL,
   `Exfile` varchar(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -68,11 +68,13 @@ INSERT INTO `companies` (`id`, `name`, `The_Course`, `Training_method`, `Locatio
 (2, 'Tuned Applications', 'Java,android,python,Oracle,cyber security,asp net mvc,Flutter,QA', 'offline(in company)', 'Al Shakhshir Complex, Al Shaheed St 21, Amman', 'course', '1-certification degree on pyhton\r\n2-certification degree on java\r\n3-certification degree on android\r\n4-certification degree on oracle\r\n5-certification degree on cyber securtiy\r\n6-certification degree on asp .net mvc\r\n7-certification degree on flutter', 'Java,android,python,Oracle,cyber security,asp .net mvc,Flutter,QA', 'icon2', 'jpg'),
 (3, 'OKTech', 'NETWORK basics course,\nCCNA Network Design and Management Course,\nMCSA Server Systems and Management Course,\nMICROSOFT EXCHANGING SERVER 2012 Course,\nComputer maintenance, software + hardware course,\nCCNA Network Design and Management Course,\nCCNA+ SECURITY . Network Security and Protection Course,\nKALI LINUX Penetration Testing Systems Course,\nCEH Ethical Penetration Testing Course', 'offline(in company)', 'Jordan University Street - Patrol Signal - Jamal Awad Al-Awamleh Complex - Fifth Floor', 'course', 'Issuing accredited certificates from Al-Balqa Applied University and the Ministry of Education and Higher Education,\r\nThe student obtains a certificate of attendance from the company equivalent to one year of experience in the labor market,\r\nAssisting the ', 'CCNA,SECURITY,KALI LINUX,CEH,CCNP', 'icon3', 'png'),
 (4, 'Ayyash', 'Cyber security', 'offline', 'Gaza/Palestine', 'Company', ' Cyber security certificate', 'Cyber security', 'image2', 'jpg'),
-(5, 'Mohammad ', 'Web Developer, Mobile Application', 'offline', 'amman/jordan', 'course', 'Web Developer certificate, Mobile Application certificate', 'Java,python', 'image0', 'jpg'),
-(6, 'Ali', 'Web Developer, Mobile Application, Oracle', 'online', 'amman/jordan', 'course', 'Web Developer certificate, Mobile Application certificate, Oracle certificate', 'Java', 'image0', 'jpg'),
-(7, 'Ahmmad', 'Web Developer, Mobile Application, Oracle, Java', 'offline', 'Amman', 'course', 'Web Developer certificate, Mobile Application certificate, Oracle certificate, Java certificate', 'Java,c++', 'image0', 'jpg'),
-(8, 'Company1', 'java, python', 'offline', 'Amman', 'Company', 'java certificate, python certificate', 'Java,c++', 'image0', 'jpg'),
-(9, 'Company2', 'flitter, siwft', 'offline', 'Amman', 'course', 'flitter certificate, swift certificate', 'Java,c++', 'image1', 'jpg');
+(5, 'Mohammad ', 'Web Developer, Mobile Application', 'offline', 'amman/jordan', 'course', 'Web Developer certificate, Mobile Application certificate', 'html,css,js,php,mysql,java', 'image0', 'jpg'),
+(6, 'Ali', 'Web Developer, Mobile Application, Oracle', 'online', 'amman/jordan', 'course', 'Web Developer certificate, Mobile Application certificate, Oracle certificate', 'Java,php,html,css,js,mysql,Oracle', 'image0', 'jpg'),
+(7, 'Ahmmad', 'Web Developer, Mobile Application, Oracle, Java', 'offline', 'Amman', 'course', 'Web Developer certificate, Mobile Application certificate, Oracle certificate, Java certificate', 'Java,Oracle', 'image0', 'jpg'),
+(8, 'Company1', 'java, python', 'offline', 'Amman', 'Company', 'java certificate, python certificate', 'Java,python', 'image0', 'jpg'),
+(9, 'Company2', 'flitter, siwft', 'offline', 'Amman', 'course', 'flitter certificate, swift certificate', 'flitter, siwft', 'image1', 'jpg'),
+(10, 'Company3', 'c++, c', 'offline', 'Amman', 'course', 'c++ certificate, c certificate', 'c++, c', 'image7', 'jpg'),
+(11, 'Company4', 'java, python, flitter', 'offline', 'Amman', 'Company', 'java certificate, python certificate, flitter certificate', 'java, python, flitter', 'image9', 'jpg');
 
 -- --------------------------------------------------------
 
@@ -111,6 +113,7 @@ CREATE TABLE `companies_offers` (
   `Training_type` varchar(256) NOT NULL,
   `Certificates` varchar(256) NOT NULL,
   `email` varchar(256) NOT NULL,
+  `programming_languages` varchar(256) NOT NULL,
   `imagename` varchar(25) NOT NULL,
   `Exfile` varchar(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -119,8 +122,8 @@ CREATE TABLE `companies_offers` (
 -- Dumping data for table `companies_offers`
 --
 
-INSERT INTO `companies_offers` (`id`, `name`, `The_Course`, `Training_method`, `Location`, `Training_type`, `Certificates`, `email`, `imagename`, `Exfile`) VALUES
-(13, 'Company3', 'c++, c', 'offline', 'Amman', 'course', 'c++ certificate, c certificate', 'company3@gmail.com', 'image7', 'jpg');
+INSERT INTO `companies_offers` (`id`, `name`, `The_Course`, `Training_method`, `Location`, `Training_type`, `Certificates`, `email`, `programming_languages`, `imagename`, `Exfile`) VALUES
+(18, 'Company5', 'java', 'online', 'Amman', 'course', 'java certificate', 'company4@gmail.com', 'java', 'image11', 'jpg');
 
 -- --------------------------------------------------------
 
@@ -258,7 +261,7 @@ ALTER TABLE `admin_page`
 -- AUTO_INCREMENT for table `companies`
 --
 ALTER TABLE `companies`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `companies_databases`
@@ -270,7 +273,7 @@ ALTER TABLE `companies_databases`
 -- AUTO_INCREMENT for table `companies_offers`
 --
 ALTER TABLE `companies_offers`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `student_accepted`
