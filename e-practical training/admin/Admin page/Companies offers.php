@@ -24,6 +24,7 @@
                       <th>Location</th>
                       <th>Training type</th>
                       <th>Certificates</th>
+                      <th>languages</th>
                       <th>Image</th>
                       <th></th>
                     </thead>
@@ -38,6 +39,7 @@
                         <td><?php echo $row['Location']; ?></td>
                         <td><?php echo $row['Training_type']; ?></td>
                         <td><?php echo $row['Certificates']; ?></td>
+                        <td><?php echo $row['programming_languages']; ?></td>
 
                         <td>
                         <?php
@@ -83,12 +85,13 @@ if (isset($_POST['accept'])) {
     $Location =  $row['Location'];
     $Training_type = $row['Training_type'];
     $Certificates = $row['Certificates'];
+    $programming_languages = $row['programming_languages'];
 
     $imagename =   $row['imagename'];
     $Exfile = $row['Exfile'];
      
-    $sql= "INSERT INTO companies(name, The_Course, Training_method, Location, Training_type, Certificates, imagename, Exfile)
-     VALUES ('$name', '$The_Course', '$Training_method', '$Location', '$Training_type', '$Certificates',  '$imagename', '$Exfile') ";
+    $sql= "INSERT INTO companies(name, The_Course, Training_method, Location, Training_type, Certificates, programming_languages, imagename, Exfile)
+     VALUES ('$name', '$The_Course', '$Training_method', '$Location', '$Training_type', '$Certificates', '$programming_languages' ,  '$imagename', '$Exfile') ";
       mysqli_query($con, $sql);
       echo "<script> alert('Successfully approved.') </script>";
       $sqls= "DELETE FROM `companies_offers` WHERE id = '$id'";
