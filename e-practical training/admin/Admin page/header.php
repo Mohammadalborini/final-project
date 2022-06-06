@@ -61,6 +61,12 @@ $username = $_SESSION['username'];
               <p>Student accepted</p>
             </a>
           </li>
+          <li class="nav-item" >
+            <a class="nav-link" href="./Student assessment.php">
+            <i class="material-icons">content_paste</i>
+              <p>Student assessment</p>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
