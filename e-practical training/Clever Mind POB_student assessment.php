@@ -27,31 +27,9 @@ include("coniction.php");
   font-size: 2em;
   font-family: "Core Sans N W01 35 Light";
   font-weight: normal;
-  margin: .67em 0;
+  margin: .67em 0.50em;
   display: block;
-}
-
-#registered {
-    margin-top: 50px;
-}
-
-#registered img {
-    margin-bottom: 0px;
-    width: 100px;
-    height: 100px;
-}
-
-#registered span {
-    clear: both;
-    display: block;
-}
-
-img {
-    margin-bottom: 20px;
-}
-
-.avatar {
-    margin: 10px 0 20px 0;
+  width:590px;
 }
 
 .module{
@@ -333,14 +311,15 @@ input[type="email"]:focus {
 <link rel="stylesheet" href="form.css" type="text/css">
 <div class="body-content">
   <div class="module">
-    <h1>Submit a Training Request</h1>
+    <h1>Student evaluation during the training period</h1>
     <form class="form" action="" method="POST" enctype="multipart/form-data" autocomplete="off">
       <div class="alert alert-error"></div>
       <input type="text" placeholder="Fall Name" name="username" required />
       <input type="text" placeholder="Student ID" name="student_id" required />
-	    <input type="email" placeholder="Email" name="email" required />
-	    <input type="text" placeholder="Specialization" name="spec" required />
-	    <input type="text" placeholder="Training Type" name="train" required />
+	    <input type="text" placeholder="Commitment" name="evaluation1" maxlength="3" minlength="1"  required />
+	    <input type="text" placeholder="The performance" name="evaluation2" maxlength="3" minlength="1" required />
+      <input type="text" placeholder="Interaction" name="evaluation3" maxlength="3" minlength="1" required />
+	    <input type="file" name="file" /><br/><br/>
       <input type="submit" value="Request" name="Request" class="btn btn-block btn-primary" />
     </form>
   </div>
@@ -427,28 +406,78 @@ input[type="email"]:focus {
 if(isset($_POST['Request'])) {
     $username = $_POST['username'];
     $student_id = $_POST['student_id'];
-    $email = $_POST['email'];
-    $spec = $_POST['spec'];
-    $train = $_POST['train'];
+    $evaluation1 = $_POST['evaluation1'];
+    $evaluation2 = $_POST['evaluation2'];
+    $evaluation3 = $_POST['evaluation3'];
 
+  if (empty($_POST['file'])) {
     $sql = "SELECT * FROM companies_databases WHERE student_id = '$student_id'";
     $reulet = mysqli_num_rows(mysqli_query($con, $sql));
-    
     if ($reulet = 1) {
-      echo '<p style="position: absolute; top: 150px; margin-left: 530px; font-size: 35px; color: red;">';
-      echo 'The student is already there! <br/><br/>';
-      echo 'Sorry you can not register!';
-      echo '</p>';
-    }else {
+      $sql= "UPDATE companies_databases SET evaluation1 = '$evaluation1%', evaluation2 = '$evaluation2%',
+       evaluation3 = '$evaluation3%'  WHERE student_id = '$student_id' ";
+       mysqli_query($con, $sql);
+       echo '<p style="position: absolute; top: 150px; margin-left: 550px; font-size: 35px; color: green;">';
+       echo 'Updated successfully';
+       echo '</p>';
 
-    $sql = "INSERT into companies_databases (student_name, student_id, email, specialization, training_type)
-    VALUE ('$username','$student_id','$email','$spec', '$train')";
-    mysqli_query($con, $sql);
-    echo '<p style="position: absolute; top: 150px; margin-left: 410px; font-size: 35px; color: green;">';
-    echo 'The request has been submitted successfully';
-    echo '</p>';
+    }else {
+      echo '<p style="position: absolute; top: 150px; margin-left: 550px; font-size: 35px; color: red;">';
+      echo 'There is no student with this name';
+      echo '</p>';
+    }
   }
+else {
+
+  $file = $_FILES['file'];
+  $fileName = $_FILES['file']['name'];
+  $fileTmpName = $_FILES['file']['tmp_name'];
+  $fileSize = $_FILES['file']['size'];
+  $fileError = $_FILES['file']['error'];
+  $fileType = $_FILES['file']['type'];
+
+  $fileExt = explode('.', $fileName);
+  $fileActualExt = strtolower(end($fileExt));
+
+  $allowed = array('pdf');
+  
+      if (in_array($fileActualExt, $allowed)) {
+          if ($fileError === 0) {
+              if ($fileSize < 20000000) {
+               
+                  $fileNameDB= $username;
+
+                  $fileNameNew=  $username.'.'.$fileActualExt;
+              
+                  $fileDestination = 'Reviews/'.$fileNameNew;
+
+                  move_uploaded_file($fileTmpName, $fileDestination);
+          
+
+    $sql = "UPDATE companies_databases SET secret_assessment = '$fileNameDB'  WHERE student_id = '$student_id'";
+            mysqli_query($con, $sql);
+            echo '<p style="position: absolute; top: 110px; margin-left: 550px; font-size: 30px; color: green;">';
+            echo 'Updated successfully';
+            echo '</p>';
+            
+
+}else {
+    echo '<p style="position: absolute; top: 110px; margin-left: 550px; font-size: 30px; color: red;">';
+    echo 'Your file is too big';
+    echo '</p>';
 }
 
+}else {
+    echo '<p style="position: absolute; top: 110px; margin-left: 550px; font-size: 30px; color: red;">';
+    echo 'There was an error uploading your file'; 
+    echo '</p>';
+    }
+
+}
+
+}
+
+
+}
 
 ?>
