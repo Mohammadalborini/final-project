@@ -111,7 +111,8 @@ include("coniction.php");
              <div class="row">
                 <div class="col-md-12">
                    <div class="titlepage">
-                      <h2>اختيار شركة</h2>
+                      <h2>اختيار شركة</h2><br/>
+                      <h2>الرجاء الدخول الى موقع الشركة عن طريق أسم الشركة للمزيد من المعلومات</h2>
                    </div>
                 </div>
              </div>
