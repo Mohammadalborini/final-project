@@ -36,7 +36,8 @@
                         <td><?php echo $row['email']; ?></td>
                         <td><?php echo $row['The_Course']; ?></td>
                         <td><?php echo $row['Training_method']; ?></td>
-                        <td><?php echo $row['Location']; ?></td>
+                        <td><?php echo $row['Location']; ?><br/>
+                        <a href=" <?php echo $row['map']; ?>" target=_blanck> إضغط هنا </a></td>
                         <td><?php echo $row['Training_type']; ?></td>
                         <td><?php echo $row['Certificates']; ?></td>
                         <td><?php echo $row['programming_languages']; ?></td>
@@ -83,6 +84,7 @@ if (isset($_POST['accept'])) {
     $The_Course =  $row['The_Course'];
     $Training_method = $row['Training_method'];
     $Location =  $row['Location'];
+    $map = $row['map'];
     $Training_type = $row['Training_type'];
     $Certificates = $row['Certificates'];
     $programming_languages = $row['programming_languages'];
@@ -90,8 +92,8 @@ if (isset($_POST['accept'])) {
     $imagename =   $row['imagename'];
     $Exfile = $row['Exfile'];
      
-    $sql= "INSERT INTO companies(name, The_Course, Training_method, Location, Training_type, Certificates, programming_languages, imagename, Exfile)
-     VALUES ('$name', '$The_Course', '$Training_method', '$Location', '$Training_type', '$Certificates', '$programming_languages' ,  '$imagename', '$Exfile') ";
+    $sql= "INSERT INTO companies(name, The_Course, Training_method, Location, Loca_map, Training_type, Certificates, programming_languages, imagename, Exfile)
+     VALUES ('$name', '$The_Course', '$Training_method', '$Location', '$map', '$Training_type', '$Certificates', '$programming_languages' ,  '$imagename', '$Exfile') ";
       mysqli_query($con, $sql);
       echo "<script> alert('Successfully approved.') </script>";
       $sqls= "DELETE FROM `companies_offers` WHERE id = '$id'";

@@ -228,6 +228,10 @@ div, form, input, label, p {
             <input type="text"   name="location" required/>
           </div>
           <div class="item">
+            <label >(send a link)موقع الشركة على الخريطة<span>*</span></label>
+            <input type="text"   name="map" required/>
+          </div>
+          <div class="item">
             <label >لغات البرمجة التي تستخدمها الشركة<span>*</span></label>
             <input type="text"   name="lagu" required/>
           </div>
@@ -282,6 +286,7 @@ if(isset($_POST['submit'])) {
     $Certi = $_POST['Certi'];
     $email = $_POST['email'];
     $location = $_POST['location'];
+    $map = $_POST['map'];
     $lagu = $_POST['lagu'];
 
 
@@ -316,8 +321,8 @@ if(isset($_POST['submit'])) {
                     move_uploaded_file($fileTmpName, $fileDestination);
             
 
-      $sql = "INSERT into companies_offers (name, The_Course, Training_method, Location, Training_type, Certificates, email,programming_languages ,imagename, Exfile)
-              VALUE ('$name','$cours','$method','$location','$type', '$Certi','$email', '$lagu', '$fileNameDB', '$fileActualExt')";
+      $sql = "INSERT into companies_offers (name, The_Course, Training_method, Location, map, Training_type, Certificates, email,programming_languages ,imagename, Exfile)
+              VALUE ('$name','$cours','$method','$location','$map','$type', '$Certi','$email', '$lagu', '$fileNameDB', '$fileActualExt')";
               mysqli_query($con, $sql);
               echo '<p style="position: absolute; top: 110px; margin-left: 400px; font-size: 30px; color: green;">';
               echo 'Submitted successfully

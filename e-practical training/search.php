@@ -150,6 +150,7 @@ include("coniction.php");
                             $text5 = $row['The_Course'];
                             $text6 = $row['Training_method'];
                             $text7 = $row['Location'];
+                            $map = $row['Loca_map'];
                             $text8 = $row['Training_type'];
                             echo '
                             <tbody>
@@ -160,7 +161,8 @@ include("coniction.php");
                         <td><a href="'.$text4.'.php" target=_blanck>'.$text4.'</a></td>
                         <td>'. $text5 .'</td>
                         <td>'. $text6.' </td>
-                        <td>'. $text7.'</td>
+                        <td>'. $text7.'<br/>
+                        <a href="'.$map.'" target=_blanck> إضغط هنا </a></td>
                         <td>'. $text8 .'</td>
                         <td>
                         <a href="'.$text4.'_training_request.php" target=_blanck> تقديم طلب </a>
