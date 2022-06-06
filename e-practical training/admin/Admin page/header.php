@@ -63,7 +63,7 @@ $username = $_SESSION['username'];
           </li>
           <li class="nav-item" >
             <a class="nav-link" href="./Student assessment.php">
-            <i class="material-icons">content_paste</i>
+            <i class="fa fa-check" aria-hidden="true"></i>
               <p>Student assessment</p>
             </a>
           </li>
