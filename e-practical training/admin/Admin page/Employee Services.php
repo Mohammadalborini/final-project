@@ -70,8 +70,7 @@ if ($_SESSION['error'] == ""){
                    				<?php
 								$_SESSION['error'] = null; 
 								endif ?>
-    <br><br>
-    <a href="../../index.php" style="margin-top:50px;"> بوابة الطالب </a>
+
     <br><br><br><br><br><br> <br><br>
 <div id="footer" align="center">
         
