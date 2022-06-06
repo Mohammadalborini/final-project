@@ -47,7 +47,8 @@
                         <td> <?php echo $row['name']; ?> </td>
                         <td><?php echo $row['The_Course']; ?></td>
                         <td><?php echo $row['Training_method']; ?></td>
-                        <td><?php echo $row['Location']; ?></td>
+                        <td><?php echo $row['Location']; ?><br/>
+                        <a href=" <?php echo $row['Loca_map']; ?>" target=_blanck> إضغط هنا </a></td>
                         <td><?php echo $row['Training_type']; ?></td>
                         <td><?php echo $row['Certificates']; ?></td>
 

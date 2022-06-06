@@ -13,6 +13,7 @@ if (isset($_POST['id'])){
     $_SESSION['The_Course'] = $row['The_Course'];
     $_SESSION['Training_method'] = $row['Training_method'];
     $_SESSION['Location'] = $row['Location'];
+    $_SESSION['Loca_map'] = $row['Loca_map'];
     $_SESSION['Training_type'] = $row['Training_type'];
     $_SESSION['Certificates'] = $row['Certificates'];
     $_SESSION['imagename'] = $row['imagename'];
@@ -46,6 +47,8 @@ if (isset($_POST['id'])){
     <input autocomplete="off" type="text" class="form-control" name="Training_method" value="<?php echo $_SESSION['Training_method']; ?>" >
     <label>Location</label>
     <input autocomplete="off" type="text" class="form-control" name="Location" value="<?php echo $_SESSION['Location']; ?>" >
+    <label>Location map link</label>
+    <input autocomplete="off" type="text" class="form-control" name="Loca_map" value="<?php echo $_SESSION['Loca_map']; ?>" >
     <label>Training_type</label>
     <input autocomplete="off" type="text" class="form-control" name="Training_type" value="<?php echo $_SESSION['Training_type']; ?>">
     <label>Certificates</label>
@@ -83,6 +86,7 @@ if (isset($_POST['edit'])){
     $The_Course = $_POST['The_Course'];
     $Training_method = $_POST['Training_method'];
     $Location = $_POST['Location'];
+    $Loca_map = $_POST['Loca_map'];
     $Training_type = $_POST['Training_type'];
     $Certificates = $_POST['Certificates'];
 
@@ -122,7 +126,7 @@ if (isset($_POST['edit'])){
                     $fileActualExt = $_SESSION['fileActualExt'];
         
                     $id1 = $_SESSION['id'];
-                    $sql= "UPDATE companies SET name='$name',The_Course ='$The_Course',Training_method='$Training_method',Location='$Location',
+                    $sql= "UPDATE companies SET name='$name',The_Course ='$The_Course',Training_method='$Training_method',Location='$Location', Loca_map='$Loca_map'
                     Training_type ='$Training_type', Certificates='$Certificates', imagename='$fileNameDB', Exfile='$fileActualExt' WHERE id = '$id1';";
                     mysqli_query($con, $sql);
                     echo "<script> alert('The data has been modified.') </script>";
@@ -136,7 +140,7 @@ if (isset($_POST['edit'])){
           $Exfile = $_SESSION['Exfile'];
         
           $id1 = $_SESSION['id'];
-          $sql= "UPDATE companies SET name='$name', The_Course ='$The_Course', Training_method='$Training_method', Location='$Location',
+          $sql= "UPDATE companies SET name='$name', The_Course ='$The_Course', Training_method='$Training_method', Location='$Location',Loca_map='$Loca_map'
           Training_type ='$Training_type', Certificates='$Certificates', imagename='$imagename', Exfile='$Exfile'  WHERE id = '$id1' ";
           mysqli_query($con, $sql);
           echo "<script> alert('The data has been modified.') </script>";
