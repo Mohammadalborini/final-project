@@ -175,7 +175,7 @@ $student_id = $_SESSION['Student_id'];
 							}
 						}
 				?>
-                              <div class="sign_btn"><a href="logout.php" style="margin-bottom: 55px;">Log out</a></div>
+                              <div class="sign_btn"><a href="logout.php" style="margin-bottom: 55px;">تسجيل خروج</a></div>
                            </div>
                         </nav>
                      </div>
