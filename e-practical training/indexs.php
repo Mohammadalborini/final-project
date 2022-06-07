@@ -275,7 +275,7 @@ $student_id = $_SESSION['Student_id'];
                      <div class="Instructions">
                        <a href="student manual 3.pdf" target=_blanck >الإرشادات  </a>
                         </div>
-                              <div class="sign_btn"><a href="logout.php">Log out</a></div>
+                              <div class="sign_btn"><a href="logout.php">تسجيل خروج</a></div>
                            </div>
                         </nav>
                      </div>

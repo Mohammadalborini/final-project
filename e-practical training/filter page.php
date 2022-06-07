@@ -97,7 +97,7 @@ if ($_SESSION['error2'] == null){
 							}
 						}
 				?>
-                              <div class="sign_btn"><a href="logout.php">Log out</a></div>
+                              <div class="sign_btn"><a href="logout.php">تسجيل خروج</a></div>
                            </div>
                         </nav>
                      </div>

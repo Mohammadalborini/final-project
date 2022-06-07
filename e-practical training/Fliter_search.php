@@ -68,6 +68,18 @@ $_SESSION['error2'] = '';
                                     margin-right: 350px;
                                     font-family: serif;
 }
+.sign_btn {
+     padding-left: 50px;
+}
+
+.sign_btn a {
+     background-color: #fff;
+     display: inline-block;
+     padding: 7px 35px;
+     border-radius: 20px;
+     color: #292e39;
+     font-size: 17px;
+}
     </style>
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -114,7 +126,7 @@ $_SESSION['error2'] = '';
 							}
 						}
 				?>
-                              <div class="sign_btn"><a href="logout.php">Log out</a></div>
+                              <div class="sign_btn"><a href="logout.php">تسجيل خروج</a></div>
                            </div>
                         </nav>
                      </div>

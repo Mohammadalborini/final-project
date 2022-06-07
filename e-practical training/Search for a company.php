@@ -95,7 +95,7 @@ include("coniction.php");
                                     <input type="submit" name="submit" class="assistive-text searchsubmit" value="Go!" style="background: #00aeef ;">
                               </form>
                            
-                              <div class="sign_btn"><a href="logout.php">Log out</a></div>
+                              <div class="sign_btn"><a href="logout.php">تسجيل خروج</a></div>
                            </div>
                         </nav>
                      </div>
