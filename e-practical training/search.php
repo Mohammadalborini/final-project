@@ -93,7 +93,7 @@ include("coniction.php");
                           
                               <form class="searchform mini-widget-searchform" role="search" method="POST" action="search.php">
                                  <input type="text" class="field searchform-s"  value="" placeholder=" ادخال اسم الشركة او نوع التدريب" title="Search form" name="search">
-                                    <input type="submit" name="submit" class="assistive-text searchsubmit" value="Go!" style="background: #00aeef ;">
+                                    <input type="submit" name="submit" class="assistive-text searchsubmit" value="بحث" style="background: #00aeef ;">
                               </form>
                            
                               <div class="sign_btn"><a href="logout.php">تسجيل خروج</a></div>
