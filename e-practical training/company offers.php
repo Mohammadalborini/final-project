@@ -289,6 +289,14 @@ if(isset($_POST['submit'])) {
     $map = $_POST['map'];
     $lagu = $_POST['lagu'];
 
+    $sql = "SELECT * FROM companies_offers WHERE name='$name' ";
+    $result = mysqli_query($con, $sql);    
+    $num = mysqli_num_rows($result);
+              if ($num = 1) {
+               echo '<p style="position: absolute; top: 110px; margin-left: 400px; font-size: 30px; color: red;">';
+               echo 'The company already exists!';
+               echo '</p>';
+              } else {
 
     $file = $_FILES['file'];
     $fileName = $_FILES['file']['name'];
@@ -319,7 +327,8 @@ if(isset($_POST['submit'])) {
                     $fileDestination = 'upload/'.$fileNameNew;
   
                     move_uploaded_file($fileTmpName, $fileDestination);
-            
+
+  
 
       $sql = "INSERT into companies_offers (name, The_Course, Training_method, Location, map, Training_type, Certificates, email,programming_languages ,imagename, Exfile)
               VALUE ('$name','$cours','$method','$location','$map','$type', '$Certi','$email', '$lagu', '$fileNameDB', '$fileActualExt')";
@@ -343,7 +352,9 @@ if(isset($_POST['submit'])) {
       echo '
       There was an error uploading your file!'; 
       echo '</p>';  }
+   
 
+}
 }
 }
 
