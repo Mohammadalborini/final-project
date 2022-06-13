@@ -113,7 +113,7 @@ if ($_SESSION['error2'] == null){
 
 
             <div class="list" style="margin-top:50px;">
-            <h2>Languages and Courses</h2>
+            <h2>لغات البرمجة و الدورات</h2>
         <form method="POST" action="Fliter_search.php">
             <ul>
                 <li>
@@ -187,7 +187,7 @@ if ($_SESSION['error2'] == null){
                     </label>
                 </li>
             </ul>
-            <button name="button" class="button"> Search </button>
+            <button name="button" class="button"> بحث </button>
                     </form>
                     <?php if (isset($error)): ?>
 						<div class="list" style="top:-810px; left: -35%;  color:red; font-size:25px;">

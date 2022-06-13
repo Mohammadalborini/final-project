@@ -172,7 +172,7 @@ $_SESSION['error2'] = '';
 
                  if (isset($_POST['button'])){
                     if (empty($_POST['check_list'])) {
-                     $_SESSION['error2'] = 'You must choose at least one item!';
+                     $_SESSION['error2'] = '!يجب عليك اختيار عنصر واحد على الأقل';
                        echo "<script> window.location.href='filter page.php'; </script>";
                      exit();
                     }else {
@@ -205,7 +205,7 @@ $_SESSION['error2'] = '';
                   }
                   if (count($result) == 0 ) {
                      echo '<p style="color:red; text-align:center; font-size:25px;">';
-                     echo "There are no results matching your search!";
+                     echo "!لا توجد نتائج مطابقة لبحثك";
                      echo '</p>';
                
                   }
