@@ -264,43 +264,43 @@ $student_id = $_SESSION['Student_id'];
 												<hr>
 
 												<i class="fas fa-pen"></i>
-												<a onclick="return studentClasses('3180605071');"  href="">
+												<a   href="">
 													<medium>التسجيل الذاتي</medium>
 												</a>
 												<hr>
 												
 												<i class="far fa-sticky-note"></i>
-												<a onclick="return availableClasses('3180605071');" href="">
+												<a  href="">
 													<medium>الشعب المتاحة</medium>
 												</a>
 												<hr>
 												
 												<i class="far fa-clock"></i>
-												<a onclick="return reg_date('3180605071')" href="">
+												<a  href="">
 													<medium>مواعيد التسجيل</medium>
 												</a>
 												<hr>
 												
 												<i class="far fa-calendar-alt"></i>
-												<a onclick="return final_exam('3180605071');" href="">
+												<a  href="">
 													<medium>مواعيد الامتحانات</medium>
 												</a>
 												<hr>
 												
 												<i class="far fa-calendar-alt"></i>
-												<a href="levelexamsdates.php">
+												<a href="">
 													<medium>مواعيد امتحانات المستوى</medium>
 												</a>
 												<hr>
 												
 												<i class="fas fa-coins"></i>
-												<a onclick="return res_hours('3180605071')" href="">
+												<a  href="">
 													<medium>تحديد عدد ساعات الدفع</medium>
 												</a>
 												<hr>
 												
 												<i class="far fa-copy fa-fw "></i>
-												<a onclick="return openofferedCourses()" href="#">
+												<a  href="#">
 													<medium>جريدة المواد </medium>
 												</a>	
                                                 <hr>
