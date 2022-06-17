@@ -78,8 +78,23 @@ $student_id = $_SESSION['Student_id'];
 				<div class="row gutters-sm">
 					<div class="col-lg-4 col-md-12 mb-3">
 						<div class="card">
-								<div class="badger-overlay" >
-								<span class="top-left badger bg-primary" >على مقاعد الدراسة</span>
+							<div class="badger-overlay">
+							<?php
+											$sql = "SELECT * FROM student where Student_id = $student_id ";
+											$result = mysqli_query($con, $sql);
+										   if (mysqli_num_rows($result) > 0) {
+											   while ($row = mysqli_fetch_assoc($result)) {
+												$num = $row['The_number_of_hours_spent'];
+												if ($num >=120) {
+													echo '<span class="top-left badger bg-primary"  style="background:#ffc107!important;">متوقع تخرجه</span>';
+												}
+												   else {
+													echo '<span class="top-left badger bg-primary" >على مقاعد الدراسة</span>';
+												   }
+												   
+											   }
+											}
+										?>
 							</div>
 
 							<div class="card-body">
