@@ -427,7 +427,7 @@ if(isset($_POST['Request'])) {
     $sql = "SELECT * FROM companies_databases WHERE student_id = '$student_id'";
     $reulet = mysqli_num_rows(mysqli_query($con, $sql));
     
-    if ($reulet = 1) {
+    if ($reulet == 1) {
       echo '<p style="position: absolute; top: 150px; margin-left: 530px; font-size: 35px; color: red;">';
       echo 'The student is already there! <br/><br/>';
       echo 'Sorry you can not register!';
