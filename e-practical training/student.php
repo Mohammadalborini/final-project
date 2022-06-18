@@ -79,22 +79,9 @@ $student_id = $_SESSION['Student_id'];
 					<div class="col-lg-4 col-md-12 mb-3">
 						<div class="card">
 							<div class="badger-overlay">
-							<?php
-											$sql = "SELECT * FROM student where Student_id = $student_id ";
-											$result = mysqli_query($con, $sql);
-										   if (mysqli_num_rows($result) > 0) {
-											   while ($row = mysqli_fetch_assoc($result)) {
-												$num = $row['The_number_of_hours_spent'];
-												if ($num >=120) {
-													echo '<span class="top-left badger bg-primary"  style="background:#ffc107!important;">متوقع تخرجه</span>';
-												}
-												   else {
-													echo '<span class="top-left badger bg-primary" >على مقاعد الدراسة</span>';
-												   }
-												   
-											   }
-											}
-										?>
+			
+							<span class="top-left badger bg-primary" >على مقاعد الدراسة</span>
+										
 							</div>
 
 							<div class="card-body">
@@ -312,7 +299,7 @@ $student_id = $_SESSION['Student_id'];
 												   $text9 = $row['The_number_of_hours_spent'];
 												   if ($text9 >=90){
 
-													$sql = "SELECT id_student FROM student_in_practical_training";
+													$sql = "SELECT id_student FROM student_in_practical_training where id_student = $student_id";
 														$result = mysqli_query($con, $sql);
 										   				if (mysqli_num_rows($result) > 0) {
 											  				 while ($row = mysqli_fetch_assoc($result)) {
@@ -330,6 +317,12 @@ $student_id = $_SESSION['Student_id'];
 													  			    </P>';
 																}
 															}
+														}else{
+															 /*echo '<i class="fas fa-copy"></i>'; */ 
+															 echo '
+															 <P>
+																 <medium>التدريب العملي </medium>
+															</P>';
 														}
 												   }else{
 													   /*echo '<i class="fas fa-copy"></i>'; */ 
