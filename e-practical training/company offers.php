@@ -293,7 +293,7 @@ if(isset($_POST['submit'])) {
     $sql = "SELECT * FROM companies_offers WHERE name='$name' ";
     $result = mysqli_query($con, $sql);    
     $num = mysqli_num_rows($result);
-              if ($num = 1) {
+              if ($num == 1) {
                echo '<p style="position: absolute; top: 110px; margin-left: 400px; font-size: 30px; color: red;">';
                echo 'The company already exists!';
                echo '</p>';
