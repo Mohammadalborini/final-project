@@ -93,57 +93,64 @@ if (isset($_POST['edit'])){
     $imagename = $_SESSION['imagename'];
     $Exfile = $_SESSION['Exfile'];
 
+
+
   if (empty($_POST['file'])){
-    $file = $_FILES['file'];
-    $fileName = $_FILES['file']['name'];
-    $fileTmpName = $_FILES['file']['tmp_name'];
-    $fileSize = $_FILES['file']['size'];
-    $fileError = $_FILES['file']['error'];
-    $fileType = $_FILES['file']['type'];
-  
-    $fileExt = explode('.', $fileName);
-    $fileActualExt = strtolower(end($fileExt));
 
-    $_SESSION['fileActualExt'] = $fileActualExt;
-
-    $allowed = array('jpg', 'jpeg', 'png', 'pdf');
-    
-        if (in_array($fileActualExt, $allowed)) {
-            if ($fileError === 0) {
-                if ($fileSize < 20000000) {
-                  
-    
-                    $fileNameDB= $imagename;
-                    $_SESSION['fileNameDB'] = $fileNameDB;
+    $imagename = $_SESSION['imagename'];
+    $Exfile = $_SESSION['Exfile'];
   
-                    $fileNameNew=  $imagename.'.'.$fileActualExt;
+    $id1 = $_SESSION['id'];
+    $sql= "UPDATE companies SET name='$name', The_Course ='$The_Course', Training_method='$Training_method', Location='$Location', Loca_map='$Loca_map',
+    Training_type ='$Training_type', Certificates='$Certificates', imagename='$imagename', Exfile='$Exfile'  WHERE id = '$id1' ";
+    mysqli_query($con, $sql); 
+    echo "<script> alert('The data has been modified.') </script>";
+
+
+}else {
+            $file = $_FILES['file'];
+            $fileName = $_FILES['file']['name'];
+            $fileTmpName = $_FILES['file']['tmp_name'];
+            $fileSize = $_FILES['file']['size'];
+            $fileError = $_FILES['file']['error'];
+            $fileType = $_FILES['file']['type'];
+          
+            $fileExt = explode('.', $fileName);
+            $fileActualExt = strtolower(end($fileExt));
+        
+            $_SESSION['fileActualExt'] = $fileActualExt;
+        
+            $allowed = array('jpg', 'jpeg', 'png');
+            
+                if (in_array($fileActualExt, $allowed)) {
+        
+                    if ($fileError === 0) {
+                        if ($fileSize < 20000000) {
+                     
+            
+                            $fileNameDB= $imagename;
+                            $_SESSION['fileNameDB'] = $fileNameDB;
+          
+                            $fileNameNew=  $imagename.'.'.$fileActualExt;
+                        
+                            $fileDestination = '../../upload/'.$fileNameNew;
+          
+                            move_uploaded_file($fileTmpName, $fileDestination);
+        
+                            $fileNameDB = $_SESSION['fileNameDB'];
+                            $fileActualExt = $_SESSION['fileActualExt'];
                 
-                    $fileDestination = '../../upload/'.$fileNameNew;
-  
-                    move_uploaded_file($fileTmpName, $fileDestination);
+                            $id1 = $_SESSION['id'];
+                            $sql= "UPDATE companies SET name='$name', The_Course ='$The_Course', Training_method='$Training_method', Location='$Location', Loca_map='$Loca_map',
+                            Training_type ='$Training_type', Certificates='$Certificates', imagename='$fileNameDB', Exfile='$fileActualExt' WHERE id = '$id1'";
+                            mysqli_query($con, $sql);
+                            echo "<script> alert('The data has been modified.') </script>";
+                         
+                        }
+                      }
+                    }
 
-                    $fileNameDB = $_SESSION['fileNameDB'];
-                    $fileActualExt = $_SESSION['fileActualExt'];
-        
-                    $id1 = $_SESSION['id'];
-                    $sql= "UPDATE companies SET name='$name',The_Course ='$The_Course',Training_method='$Training_method',Location='$Location', Loca_map='$Loca_map'
-                    Training_type ='$Training_type', Certificates='$Certificates', imagename='$fileNameDB', Exfile='$fileActualExt' WHERE id = '$id1';";
-                    mysqli_query($con, $sql);
-                    echo "<script> alert('The data has been modified.') </script>";
-                 
-                }
-              }
-            }
-          }
-
-          $imagename = $_SESSION['imagename'];
-          $Exfile = $_SESSION['Exfile'];
-        
-          $id1 = $_SESSION['id'];
-          $sql= "UPDATE companies SET name='$name', The_Course ='$The_Course', Training_method='$Training_method', Location='$Location',Loca_map='$Loca_map'
-          Training_type ='$Training_type', Certificates='$Certificates', imagename='$imagename', Exfile='$Exfile'  WHERE id = '$id1' ";
-          mysqli_query($con, $sql);
-          echo "<script> alert('The data has been modified.') </script>";
+        }
 }
 ?>
 
