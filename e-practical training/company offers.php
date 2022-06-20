@@ -222,7 +222,7 @@ div, form, input, label, p {
           </div>
           <div class="item">
             <label >إيميل الشركة<span>*</span></label>
-            <input type="text"   name="email" required/>
+            <input type="email"   name="email" required/>
           </div>
           <div class="item">
             <label >موقع الشركة<span>*</span></label>
