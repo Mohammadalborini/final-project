@@ -7,7 +7,7 @@ if (isset($_SESSION['error'])){
 }else{
 	$_SESSION['error'] = null;
 }
-s
+
 ?>
 
 <!DOCTYPE html>
